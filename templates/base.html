@@ -16,6 +16,7 @@
     {% block corecss %}
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
         <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;400&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css">
         <link rel="stylesheet" href="{% static 'css/base.css' %}">
     {% endblock %}
 
@@ -36,6 +37,11 @@
   </head>
   <body>
     <header class="container-fluid fixed-top">
+        <div id="delivery-banner" class="row text-center">
+            <div class="col bg-black text-white">
+                <h6 class="my-1">Free delivery on orders over ${{ free_delivery_threshold }}</h6>                
+            </div>            
+        </div>
         <div id="topnav" class="row bg-white pt-lg-2 d-none d-lg-flex">
             <div class="col-12 col-lg-4 my-auto py-1 py-lg-0 text-center text-lg-left">
                 <a href="{% url 'home' %}" class="navbar-brand nav-link main-logo-link">
@@ -62,8 +68,9 @@
                     <li class="list-inline-item dropdown">
                         <a class="text-black nav-link" href="#" id="user-options" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                             <div class="text-center">
-                                <div><i class="fas fa-user fa-lg"></i></div>
-                                <p class="my-0">My Account</p>
+                                <!-- <div><i class="far fa-user fa-lg"></i></div> -->
+                                <div><i class="bi bi-person fa-lg"></i></div>
+                                <!-- <p class="my-0">My Account</p> -->
                             </div>
                         </a>
                         <div class="dropdown-menu border-0" aria-labelledby="user-options">
@@ -82,14 +89,23 @@
                     <li class="list-inline-item">
                         <a class="{% if grand_total %}text-info font-weight-bold{% else %}text-black{% endif %} nav-link" href="">
                             <div class="text-center">
-                                <div><i class="fas fa-shopping-bag fa-lg"></i></div>
-                                <p class="my-0">
+                                <div>
+                                    <!-- <i class="fas fa-shopping-bag fa-lg"> -->
+                                    <i class="bi bi-bag fa-lg">
+                                        {% if grand_total %}
+                                            ${{ grand_total|floatformat:2 }}
+                                        {% else %}
+                                            $0.00
+                                        {% endif %}
+                                    </i>
+                                </div>
+                                <!-- <p class="my-0">
                                     {% if grand_total %}
                                         ${{ grand_total|floatformat:2 }}
                                     {% else %}
                                         $0.00
                                     {% endif %}
-                                </p>
+                                </p> -->
                             </div>
                         </a>
                     </li>
@@ -105,11 +121,11 @@
                 {% include 'includes/main-nav.html' %}
             </nav>
         </div>
-        <div id="delivery-banner" class="row text-center">
+        <!-- <div id="delivery-banner" class="row text-center">
             <div class="col bg-black text-white">
                 <h4 class="logo-font my-1">Free delivery on orders over ${{ free_delivery_threshold }}!</h4>                
             </div>            
-        </div>
+        </div> -->
     </header>
 
     {% if messages %}
@@ -121,6 +137,33 @@
 
     {% block content %}
     {% endblock %}
+    
+    <footer class="page-footer grey darken-1">
+        <div class="container">
+            <div class="row">
+                <div class="col l6 s12 text-white">
+                    <h5 class="text-white">About Jiira</h5>
+                    <p class="text-white">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa deserunt fugit natus modi magni voluptatum quaerat beatae sapiente 
+                        saepe omnis eveniet soluta sequi, inventore, nulla vitae porro expedita laudantium ea!
+                    </p>
+                </div>
+                <div class="col l4 offset-l2 s12">
+                    <h5 class="text-white">Follow us on:</h5>
+                    <ul class="social-links">
+                        <li><a class="text-white" href="https://www.facebook.com" target="_blank" rel="noopener"><i class="fab fa-facebook-square"></i> Facebook</a></li>
+                        <li><a class="text-white" href="https://www.twitter.com/" target="_blank" rel="noopener"><i class="fab fa-twitter-square"></i> Twitter</a></li>
+                        <li><a class="text-white" href="https://www.instagram.com" target="_blank" rel="noopener"><i class="fab fa-instagram-square"></i> Instagram</a></li>
+                        <li><a class="text-white" href="https://www.linkedin.com" target="_blank" rel="noopener"><i class="fab fa-linkedin"></i> LinkedIn</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="footer-copyright">
+            <div class="container" id="copyright">
+                © 2021 John Routledge
+            </div>
+        </div>
+    </footer>
 
     {% block postloadjs %}
     {% endblock %}
