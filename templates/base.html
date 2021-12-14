@@ -36,12 +36,14 @@
     <title>Jiira {% block extra_title %}{% endblock %}</title>
   </head>
   <body>
+    <!----- Navbar -------------------------------------->
     <header class="container-fluid fixed-top">
         <div id="delivery-banner" class="row text-center">
-            <div class="col bg-black text-white">
+            <div class="col bg-pink text-black">
                 <h6 class="my-1">Free delivery on orders over ${{ free_delivery_threshold }}</h6>                
             </div>            
         </div>
+        <!----- Logo -------------------------------------->
         <div id="topnav" class="row bg-white pt-lg-2 d-none d-lg-flex">
             <div class="col-12 col-lg-4 my-auto py-1 py-lg-0 text-center text-lg-left">
                 <a href="{% url 'home' %}" class="navbar-brand nav-link main-logo-link">
@@ -49,6 +51,7 @@
                     <!-- <h2 class="logo-font text-black my-0"><strong>Jiira</strong></h2> -->
                 </a>
             </div>
+            <!----- Searchbox -------------------------------------->
             <div class="col-12 col-lg-4 my-auto py-1 py-lg-0">
                 <form method="GET" action="">
                     <div class="input-group w-100">
@@ -65,6 +68,7 @@
             </div>
             <div class="col-12 col-lg-4 my-auto py-1 py-lg-0">
                 <ul class="list-inline list-unstyled text-center text-lg-right my-0">
+                    <!----- My Account -------------------------------------->
                     <li class="list-inline-item dropdown">
                         <a class="text-black nav-link" href="#" id="user-options" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                             <div class="text-center">
@@ -86,6 +90,7 @@
                             {% endif %}
                         </div>
                     </li>
+                    <!----- Bag Items -------------------------------------->
                     <li class="list-inline-item">
                         <a class="{% if grand_total %}text-info font-weight-bold{% else %}text-black{% endif %} nav-link" href="">
                             <div class="text-center">
@@ -95,7 +100,7 @@
                                         {% if grand_total %}
                                             ${{ grand_total|floatformat:2 }}
                                         {% else %}
-                                            $0.00
+                                            
                                         {% endif %}
                                     </i>
                                 </div>
@@ -112,6 +117,7 @@
                 </ul>
             </div>
         </div>
+        <!----- Site Links -------------------------------------->
         <div class="row bg-white">
             <nav class="navbar navbar-expand-lg navbar-light w-100">
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#main-nav" aria-controls="main-nav" aria-expanded="false" aria-label="Toggle navigation">
@@ -137,29 +143,40 @@
 
     {% block content %}
     {% endblock %}
-    
-    <footer class="page-footer grey darken-1">
-        <div class="container">
-            <div class="row">
-                <div class="col l6 s12 text-white">
-                    <h5 class="text-white">About Jiira</h5>
-                    <p class="text-white">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa deserunt fugit natus modi magni voluptatum quaerat beatae sapiente 
-                        saepe omnis eveniet soluta sequi, inventore, nulla vitae porro expedita laudantium ea!
-                    </p>
-                </div>
-                <div class="col l4 offset-l2 s12">
-                    <h5 class="text-white">Follow us on:</h5>
-                    <ul class="social-links">
-                        <li><a class="text-white" href="https://www.facebook.com" target="_blank" rel="noopener"><i class="fab fa-facebook-square"></i> Facebook</a></li>
-                        <li><a class="text-white" href="https://www.twitter.com/" target="_blank" rel="noopener"><i class="fab fa-twitter-square"></i> Twitter</a></li>
-                        <li><a class="text-white" href="https://www.instagram.com" target="_blank" rel="noopener"><i class="fab fa-instagram-square"></i> Instagram</a></li>
-                        <li><a class="text-white" href="https://www.linkedin.com" target="_blank" rel="noopener"><i class="fab fa-linkedin"></i> LinkedIn</a></li>
-                    </ul>
-                </div>
+
+
+    <!----- Footer -------------------------------------->
+    <footer class="container-fluid footer-container bg-pink text-black">
+        <div class="row">
+            <!----- Site Links ----->
+            <div class="col-12 col-md-2 offset-md-3 text-left mt-4">
+                <h5>Explore</h5>
+                <hr>
+                <p><a href="" class="footer-menu-link text-black">Necklaces</a></p>
+                <p><a href="" class="footer-menu-link text-black">Earrings</a></p>
+                <p><a href="" class="footer-menu-link text-black">Bracelets</a></p>
+                <p><a href="" class="footer-menu-link text-black">Special Offers</a></p>
+            </div>
+            <!----- Contact Info ----->
+            <div class="col-12 col-md-3 text-left mt-4">
+                <h5>Contact</h5>
+                <hr>
+                <p><i class="fas fa-phone"></i> +6653555333</p>
+                <p><i class="fas fa-envelope-open"></i> info@jiira.com</p>
+                <p><i class="fas fa-map-marker-alt"></i> Jiira Jewellery, 555 Chang Pheuak Rd, Chiang Mai, Thailand.</p>
+            </div>
+            <!----- Social Links ----->
+            <div class="col-12 col-md-3 text-left mt-4">
+                <h5>Follow</h5>
+                <hr>
+                <p><a href="https://www.facebook.com" target="_blank" rel="noopener" class="text-black"><i class="fab fa-facebook-square text-black"></i> Facebook</a></p>
+                <p><a href="https://www.twitter.com/" target="_blank" rel="noopener" class="text-black"><i class="fab fa-twitter-square"></i> Twitter</a></p>
+                <p><a href="https://www.instagram.com" target="_blank" rel="noopener" class="text-black"><i class="fab fa-instagram-square"></i> Instagram</a></p>
+                <p><a href="https://www.pinterest.com" target="_blank" rel="noopener" class="text-black"><i class="fab fa-pinterest"></i> Pinterest</a></p>
             </div>
         </div>
         <div class="footer-copyright">
-            <div class="container" id="copyright">
+            <div class="container text-black" id="copyright">
                 © 2021 John Routledge
             </div>
         </div>

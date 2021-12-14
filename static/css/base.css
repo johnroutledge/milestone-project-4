@@ -64,6 +64,10 @@ body {
     background: #000 !important;
 }
 
+.bg-pink {
+    background: #CC9ABA;
+}
+
 /* -------------------------------- Media Queries */
 
 /* Slightly larger container on xl screens */
