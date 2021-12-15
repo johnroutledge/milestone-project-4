@@ -14,6 +14,20 @@ body {
     height: 100px;
 }
 
+#homepage-section {
+    background-color: white;
+}
+
+.section-heading {
+    margin-top: 7rem;
+}
+
+.footer-copyright {
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    text-align: right;
+}
+
 /* from Bulma */
 .icon {
     align-items: center;
