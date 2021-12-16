@@ -17,9 +17,9 @@
                 Necklaces
             </a>
             <div class="dropdown-menu border-0" aria-labelledby="necklaces-link">
-                <a href="" class="dropdown-item">All Necklaces</a>
-                <a href="" class="dropdown-item">Pendant Necklaces</a>
-                <a href="" class="dropdown-item">Chokers</a>
+                <a href="{% url 'products' %}?category=necklaces" class="dropdown-item">All Necklaces</a>
+                <a href="{% url 'products' %}?category=pendant_necklaces" class="dropdown-item">Pendant Necklaces</a>
+                <a href="{% url 'products' %}?category=choker_necklaces" class="dropdown-item">Chokers</a>
             </div>
         </li>
 
@@ -28,21 +28,20 @@
                 Earrings
             </a>
             <div class="dropdown-menu border-0" aria-labelledby="earrings-link">
-                <a href="" class="dropdown-item">All Earrings</a>
-                <a href="" class="dropdown-item">Stud Earrings</a>
-                <a href="" class="dropdown-item">Drop Earrings</a>
+                <a href="{% url 'products' %}?category=earrings" class="dropdown-item">All Earrings</a>
+                <a href="{% url 'products' %}?category=stud_earrings" class="dropdown-item">Stud Earrings</a>
+                <a href="{% url 'products' %}?category=drop_earrings" class="dropdown-item">Drop Earrings</a>
             </div>
         </li>
 
         <li class="nav-item dropdown">
             <a class="logo-font font-weight-bold nav-link text-black" href="#" id="specials-link" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                Special Offers
+                Rings
             </a>
             <div class="dropdown-menu border-0" aria-labelledby="specials-link">
-                <a href="" class="dropdown-item">New Arrivals</a>
-                <a href="" class="dropdown-item">Deals</a>
-                <a href="" class="dropdown-item">Clearance</a>
-                <a href="" class="dropdown-item">All Specials</a>
+                <a href="{% url 'products' %}?category=rings" class="dropdown-item">All Rings</a>
+                <a href="{% url 'products' %}?category=band_rings" class="dropdown-item">Band Rings</a>
+                <a href="{% url 'products' %}?category=linked_rings" class="dropdown-item">Linked Rings</a>
             </div>
         </li>
     </ul>
