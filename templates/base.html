@@ -25,9 +25,9 @@
 
     {% block corejs %}
         <script src="https://kit.fontawesome.com/e7868c6bc8.js" crossorigin="anonymous"></script>
-        <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>    
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
         <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
-        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>        
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
     {% endblock %}
 
     {% block extra_js %}
@@ -40,8 +40,8 @@
     <header class="container-fluid fixed-top">
         <div id="delivery-banner" class="row text-center">
             <div class="col bg-pink text-black">
-                <h6 class="my-1">Free delivery on orders over ${{ free_delivery_threshold }}</h6>                
-            </div>            
+                <h6 class="my-1">Free delivery on orders over ${{ free_delivery_threshold }}</h6>
+            </div>
         </div>
         <!----- Logo -------------------------------------->
         <div id="topnav" class="row bg-white pt-lg-2 d-none d-lg-flex">
@@ -90,17 +90,17 @@
                             {% endif %}
                         </div>
                     </li>
-                    <!----- Bag Items -------------------------------------->
+                    <!----- Basket Items -------------------------------------->
                     <li class="list-inline-item">
-                        <a class="{% if grand_total %}text-info font-weight-bold{% else %}text-black{% endif %} nav-link" href="">
+                        <a class="{% if grand_total %}text-info font-weight-bold{% else %}text-black{% endif %} nav-link" href="{% url 'view_basket' %}">
                             <div class="text-center">
                                 <div>
                                     <!-- <i class="fas fa-shopping-bag fa-lg"> -->
                                     <i class="bi bi-bag fa-lg">
-                                        {% if grand_total %}
-                                            ${{ grand_total|floatformat:2 }}
+                                        {% if basket_items %}
+                                            ${{ product_count }}
                                         {% else %}
-                                            
+                                            0
                                         {% endif %}
                                     </i>
                                 </div>
@@ -129,8 +129,8 @@
         </div>
         <!-- <div id="delivery-banner" class="row text-center">
             <div class="col bg-black text-white">
-                <h4 class="logo-font my-1">Free delivery on orders over ${{ free_delivery_threshold }}!</h4>                
-            </div>            
+                <h4 class="logo-font my-1">Free delivery on orders over ${{ free_delivery_threshold }}!</h4>
+            </div>
         </div> -->
     </header>
 
@@ -185,6 +185,6 @@
     {% block postloadjs %}
     {% endblock %}
 
-    
+
   </body>
 </html>
