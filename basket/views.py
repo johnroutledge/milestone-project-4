@@ -18,18 +18,18 @@ def add_to_basket(request, item_id):
     basket = request.session.get('basket', {})
 
     if size:
-        if item_id in list(bag.keys()):
-            if size in bag[item_id]['items_by_size'].keys():
-                bag[item_id]['items_by_size'][size] += quantity
+        if item_id in list(basket.keys()):
+            if size in basket[item_id]['items_by_size'].keys():
+                basket[item_id]['items_by_size'][size] += quantity
             else:
-                bag[item_id]['items_by_size'][size] = quantity
+                basket[item_id]['items_by_size'][size] = quantity
         else:
-            bag[item_id] = {'items_by_size': {size: quantity}}
+            basket[item_id] = {'items_by_size': {size: quantity}}
     else:
-        if item_id in list(bag.keys()):
-            bag[item_id] += quantity
+        if item_id in list(basket.keys()):
+            basket[item_id] += quantity
         else:
-            bag[item_id] = quantity
+            basket[item_id] = quantity
 
     request.session['basket'] = basket
     return redirect(redirect_url)
