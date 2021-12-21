@@ -19,7 +19,7 @@ body {
 }
 
 .section-heading {
-    margin-top: 7rem;
+    margin-top: 3rem;
 }
 
 .footer-copyright {
@@ -124,7 +124,18 @@ a.category-badge > span.badge:hover {
     cursor: pointer;
 }
 
-/* ------------------------------- bootstrap toasts */
+/* --------- homepage fade-in effects: credit: Kevin Powell's YouTube channel */
+
+.fade-in {
+    opacity: 0;
+    transition: opacity 1000ms ease-in;
+}
+
+.fade-in.appear {
+    opacity: 1;
+}
+
+/* --------- bootstrap toasts */
 
 .message-container {
     position: fixed;
