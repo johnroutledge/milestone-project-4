@@ -44,7 +44,7 @@
                         <div class="py-5" >
                             <p>
                                 <span><i class="fas fa-user"></i> {{ post.author|upper }}</span> 
-                                <span><i class="fas fa-calendar-alt"></i> {{ post.created_on }}</span>
+                                <span><i class="fas fa-calendar-alt"></i> {{ post.date_created }}</span>
                                 <span><i class="fas fa-comment"></i> {{ post.comments.count }}</span>
                             </p>
                             <a class="text-reset" href="{% url 'blog_post_detail' post.slug %}">

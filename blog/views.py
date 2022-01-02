@@ -28,6 +28,7 @@ def blog(request):
 def blog_post_detail(request, slug):
     """ Display full blog post plus any comments """
     post = Post.objects.get(slug=slug)
+    comments = post.comments
 
     if request.method == 'POST':
         form = CommentForm(request.POST)
@@ -42,6 +43,7 @@ def blog_post_detail(request, slug):
     template = 'blog/blog_post_detail.html'
     context = {
         'post': post,
+        'comments': comments,
         'form': form,
     }
 

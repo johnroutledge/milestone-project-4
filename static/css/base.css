@@ -210,6 +210,13 @@ input[name='q']::placeholder {
     overflow-y: auto;
 }
 
+/* -------------------------------- Blog */
+.post-img-container {
+    height: 75vh;
+    min-height: 100%;
+    width: 100%;
+}
+
 /* -------------------------------- Media Queries */
 
 /* Slightly larger container on xl screens */
