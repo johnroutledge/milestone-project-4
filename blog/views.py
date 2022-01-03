@@ -112,9 +112,9 @@ def delete_blog_post(request, slug):
     """ Delete blog post """
     if not request.user.is_superuser:
         messages.error(request, 'Jiira admin access only.')
-        return redirect(reverse('homepage'))
+        return redirect(reverse('home'))
 
     post = get_object_or_404(Post, slug=slug)
     post.delete()
     messages.success(request, 'Post successfully deleted.')
-    return redirect(reverse('blog_post_detail'))
+    return redirect(reverse('blog'))
