@@ -66,7 +66,32 @@ ADD MORE HERE
 
 User Stories:
 
-ADD STORIES TABLE HERE
+| # | As a/an       | I want to be able to...                          | So that I can...                            |
+|---|---------------|--------------------------------------------------|---------------------------------------------|
+| 1 | Shopper       | easily see what the page is about                | decide if it's relevant to my needs         |
+| 2 | Shopper       | view the products                                | choose what I want to buy                   |
+| 3 | Shopper       | view each product's details                      | learn more about its price/features/size    |
+| 4 | Shopper       | find promotions                                  | save money                                  |
+| 5 | Shopper       | see the total of my shopping basket              | stay within my budget                       |
+| 6 | Shopper       | sort products                                    | locate them quicker by price, name, type    |
+| 7 | Shopper       | search for products                              | find what I'm looking for                   |
+| 8 | Shopper       | see my search results                            | decide if it's what I want                  |
+| 9 | Shopper       | choose qunatity and size of jewellery            | purchase exactly what I want                |
+|10 | Shopper       | see what's in my shopping basket                 | make sure I have what I want and the cost   |
+|11 | Shopper       | adjust my basket                                 | make easy udates before the checkout        |
+|12 | Shopper       | easily enter my payment information              | pay quickly and confidently                 |
+|13 | Shopper       | see an order confirmation                        | be sure I've made the correct purchase      |
+|14 | Shopper       | receive an email copy of my order                | have physical proof of my purchase          |
+|15 | Site User     | easily register for an account                   | make subsequent purchase quicker            |
+|16 | Site User     | have email confirmation of registering           | be sure it was done correctly               |
+|17 | Site User     | have my own Jiira profile                        | store my details and view purchase history  |
+|18 | Site User     | easily login/logout                              | make subsequent purchases quicker           |
+|19 | Store Owner   | add a product                                    | increase my offerings and make more money   |
+|20 | Store Owner   | edit a product                                   | be sure details and prices are correct      |
+|21 | Store Owner   | delete a product                                 | remove any out of trend/stock products      |
+|22 | Store Owner   | add a blog post                                  | inform users of Jiira's news and events     |
+|23 | Store Owner   | edit a blog post                                 | change the text/image                       |
+|24 | Store Owner   | delete a blog post                               | remove posts no longer relevant/suitable    |
 
 
 **Structure**
@@ -108,41 +133,45 @@ The Jiira logo used in the nav bar was used to maintain consistency.
 
 **Implemented**
 
-*Generic Features*
+*Generic*
 * Responsive design on the vast majority of devices
 * Navigation bar, including logo and link to the home page, a search box, an account icon and shopping basket icon which also displays the number of items currently in the basket.
 * Links in the navigation bar collapse to a hamburger button on smaller devices such as smartphones and tablets.
 * Delivery banner which displays the purchase requirement for free delivery.
+* Toast messages giving users meaningful feedback to their actions on the website
 * Footer with with navigation links to all pages, Jiira's contact details, social media links and copyright information.
 * 'Back to top' button where applicable.
 
-*Homepage Features*
+*Home*
 * Hero image with call to action button
 * Sections with fade-in images and text for the various categories of jewellery Jiira has to offer
 
-*Blog Page Features*
+*Blog*
 * Images along with truncated version of each blog post and links to the full posts
 * Details of the author and date published
 
-*Blog Detail Page Features*
+*Blog Detail*
 * Each full blog post along with any comments left by visitors to the site
 * A from where people can leave comments on a post (this includes a call to action to be the first to comment)
 * The ability to edit or delete a blog post (admin logins only)
 
-*Product Pages Features*
-*
-*
+*Product*
+* Clear pictures of the products
+* Ability to sort products by name and price
+
+*Product Detail*
+* The product detail page gives a larger image
+* Also gives users the ability to select a quantity to add to the basket
+
+*Basket*
+* Shows all the products in the basket
+* Also shows the total amount due
 *
 
-*Basket Pages Features*
-*
-*
-*
-
-*Checkout Page Freatures*
-*
-*
-*
+*Checkout*
+* Users can enter delivery and payment information for their purchase
+* This information is pre-filled if the user already has logged in to their saved profile
+* Webhooks were employed to ensure smooth and secure transactions
 
 **Future Features to Implement**
 * A Thai version of the website
@@ -150,6 +179,7 @@ The Jiira logo used in the nav bar was used to maintain consistency.
 * A wishlist feature
 * Inventory tracking so stock availability can be shown on website
 * 'Track my order' functionality so that customers can see the status of their order
+* 'User Reviews' section
 * Confirmation when editing or deleting products for admin logins
 * Skip navigation links for visitors to the site with certain disablities to enhance their UX
 * The ability to accept or edit cookies
@@ -166,25 +196,76 @@ The Jiira logo used in the nav bar was used to maintain consistency.
 
 ## Technologies Employed
 
+*IDE*
+* Gitpod
+
+*Languages*
 * Python
 * HTML
 * CSS
 * JavaScript
-* JQuery
+
+*Frameworks, Templates & Libraries*
 * Django
+* JQuery
 * Jinja
-* Heroku
-* Github/Gitpod
-* Stripe
-* Amazon Web Services
 * Bootstrap
 * Font Awesome
 * Google Fonts
-* Google Dev Tools 
-* Google Lighthouse
+
+*Storage & Hosting*
+* Heroku
+* Github
+* Amazon Web Services
+
+*Databases*
+* SQLite3 for development
+* PostgresSQL for the deployed site
+
+*Payment Service*
+* Stripe
+
+*Other Tools*
+* Google Dev Tools (including Lighthouse)
 * Pep8online.com (to check Python code for PEP 8 requirements)
 * W3C Validator (to check validity of HTML and CSS)
 * Code Beautify (to beautify JavaScript)
 * dbdiagram.io (to produce the MongoDB ERD)
 
+
 ***
+
+
+## Testing file
+
+Due to the amount of information regarding testing, it has been detailed in the following separate [file](readme/testing/TESTING.md).
+
+
+***
+
+## Credits
+
+**Content**
+
+- Product descriptions and blog posts were translated from Thai to English by my wife, Chonchanok Routledge.
+- Cryptocurrency coin descriptions taken from wikipedia.com and investopedia.com
+
+**Media**
+
+- All images were taken by Jiratchaya Chaiyasak
+- The Jiira logo was designed by Jiratchaya Chaiyasak
+- All other icons used in the site are from FontAwesome.com and Bootstrap
+
+**Code**
+
+- Core setup, use of Django, linking to Stripe, Heroku, PostgresSQL and Amazon Web Services were all taken from the Code Institute's Full Stack Frameworks with Django Boutique Ado walkthrough project
+- 
+- Kevin Powell's YouTube channel video 'INSERT CREDIT'
+
+
+**Acknowledgements**
+
+- To Jira Chaiyasak for giving me the opportunity to develop this website for her.
+- To my wife, my sister, Julie Jobburn, and various work colleagues for testing the app on multiple devices.
+- To my fellow Code Institute students who, via Slack, gave me guidance with various issues.
+- To Brian Macharia, my Code Institute mentor, for giving me invaluable tips and insight throughout the whole process.
