@@ -40,7 +40,7 @@
   </head>
   <body>
     <!----- Navbar -------------------------------------->
-    <header class="container-fluid fixed-top">
+    <header class="container-fluid fixed-top nav-bar">
         <div id="delivery-banner" class="row text-center">
             <div class="col bg-pink text-black">
                 <h6 class="my-1">Free delivery on orders over ${{ free_delivery_threshold }}</h6>
@@ -50,31 +50,31 @@
         <div id="topnav" class="row bg-white pt-lg-2 d-none d-lg-flex">
             <div class="col-12 col-lg-4 my-auto py-1 py-lg-0 text-center text-lg-left">
                 <a href="{% url 'home' %}" class="navbar-brand nav-link main-logo-link">
-                    <!-- <img src="media/logo_jiira.png" class="image-resonsive"> -->
-                    <img src="{% static 'images/logo_jiira.png' %}" class="image-resonsive">
+                    <!-- <img src="media/logo_jiira.png" class="image-responsive"> -->
+                    <img src="{% static 'images/logo_jiira.png' %}" class="image-responsive" id="nav-logo">
                     <!-- <h2 class="logo-font text-black my-0"><strong>Jiira</strong></h2> -->
                 </a>
             </div>
-            <!----- Searchbox -------------------------------------->
-            <div class="col-12 col-lg-4 my-auto py-1 py-lg-0">
-                <form method="GET" action="{% url 'products' %}">
-                    <div class="input-group w-100">
-                        <input class="form-control border border-black rounded-0" type="text" name="q" placeholder="Search site">
-                        <div class="input-group-append">
-                            <button class="form-control btn btn-black border border-black rounded-0" type="submit">
-                                <span class="icon">
-                                    <i class="fas fa-search"></i>
-                                </span>
-                            </button>
-                        </div>
-                    </div>
-                </form>
-            </div>
-            <div class="col-12 col-lg-4 my-auto py-1 py-lg-0">
+            <div class="col-12 col-lg-8 my-auto py-1 py-lg-0 text-lg-right">
                 <ul class="list-inline list-unstyled text-center text-lg-right my-0">
+                    <!----- Searchbox -------------------------------------->
+                    <li class="list-inline-item">
+                        <form method="GET" action="{% url 'products' %}">
+                            <div class="input-group w-80">
+                                <input class="form-control border border-grey rounded-0" type="text" name="q" placeholder="Search site">
+                                <div class="input-group-append">
+                                    <button class="form-control btn btn-white border border-grey rounded-0" type="submit">
+                                        <span class="icon">
+                                            <i class="bi bi-search"></i>
+                                        </span>
+                                    </button>
+                                </div>
+                            </div>
+                        </form>
+                    </li>
                     <!----- My Account -------------------------------------->
                     <li class="list-inline-item dropdown">
-                        <a class="text-black nav-link" href="#" id="user-options" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <a class="text-black nav-link nav-link-fade-up" href="#" id="user-options" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                             <div class="text-center">
                                 <!-- <div><i class="far fa-user fa-lg"></i></div> -->
                                 <div><i class="bi bi-person fa-lg"></i></div>
@@ -97,9 +97,9 @@
                     </li>
                     <!----- Basket Items -------------------------------------->
                     <li class="list-inline-item">
-                        <a class="{% if grand_total %}text-info font-weight-bold{% else %}text-black{% endif %} nav-link" href="{% url 'view_basket' %}">
+                        <a class="{% if grand_total %}text-info font-weight-bold{% else %}text-black{% endif %} nav-link nav-link-fade-up" href="{% url 'view_basket' %}">
                             <div class="text-center">
-                                <div>
+                                <div id="basket-icon">
                                     <!-- <i class="fas fa-shopping-bag fa-lg"> -->
                                     <i class="bi bi-bag fa-lg">
                                         <span id="basket-count">
@@ -202,6 +202,7 @@
             </div>
         </div>
     </footer>
+    <script src="{% static 'js/base.js' %}"></script>
 
     {% block postloadjs %}
     <script type="text/javascript">

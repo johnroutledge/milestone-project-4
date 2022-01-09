@@ -11,12 +11,21 @@ body {
 }
 
 #topnav {
-    height: 100px;
+    height: 70px;
+}
+
+#basket-icon {
+    color: black !important;
 }
 
 #basket-count {
+    color: #000 !important;
     font-style: normal;
     font-size: small;
+}
+
+#delivery-banner {
+    height: 30px;
 }
 
 #homepage-section {
@@ -42,12 +51,20 @@ body {
     width: 1.5rem;
 }
 
-.logo-font {
+/* .logo-font {
     text-transform: uppercase;
-}
+} */
 
 .main-logo-link {
     width: fit-content;
+}
+
+#nav-logo {
+    max-height: 4rem;
+}
+
+.inline-div {
+    display: inline-block;
 }
 
 .shop-now-button {
@@ -70,8 +87,9 @@ body {
 .btn-outline-black:hover,
 .btn-outline-black:active,
 .btn-outline-black:focus {
-    background: black;
-    color: white !important;
+    /* background: black;
+    color: white !important; */
+    background: #ffcad4;
 }
 
 .shop-now-button:hover,
@@ -111,8 +129,8 @@ body {
 }
 
 a.category-badge > span.badge:hover {
-    background: #212529 !important;
-    color: #fff !important;
+    background: #ffcad4 !important;
+    /* color: #fff !important; */
 }
 
 .btt-button {
@@ -132,6 +150,61 @@ a.category-badge > span.badge:hover {
 input[name='q']::placeholder {
     color: #aab7c4;
 }
+
+/* .nav-link:hover,
+.nav-link:active,
+.nav-link:focus {
+    border-bottom: 2px solid #ffcad4 !important;
+} */
+
+.nav-link {
+    /* font-weight: bold;
+    font-size: 14px; */
+    text-transform: uppercase;
+    text-decoration: none;
+    /* color: #031D44; */
+    padding: 10px 0px;
+    margin: 0px 10px;
+    display: inline-block;
+    position: relative;
+    /* opacity: 0.75; */
+}
+
+
+/* --------- nav link fade-in effects: credit: codepen.io Animated Nav Link Hover Underline */
+.nav-link:hover {
+    opacity: 1;
+}
+  
+.nav-link::before {
+    transition: 300ms;
+    height: 3px;
+    content: "";
+    position: absolute;
+    background-color: #ffcad4;
+}
+  
+/* .nav-link-ltr::before {
+    width: 0%;
+    bottom: 10px;
+}
+  
+.nav-link-ltr:hover::before {
+    width: 90%;
+} */
+
+.nav-link-fade-up::before {
+    width: 90%;
+    bottom: 2px;
+    opacity: 0;
+}
+  
+.nav-link-fade-up:hover::before {
+    bottom: 8px;
+    opacity: 1;
+}
+  
+  
 
 /* --------- homepage fade-in effects: credit: Kevin Powell's YouTube channel */
 .fade-in {
@@ -161,10 +234,10 @@ input[name='q']::placeholder {
 
 /* from CSS-tricks.com: https://css-tricks.com/snippets/css/css-triangle/ */
 .arrow-up {
-    width: 0; 
-    height: 0; 
+    width: 0;
+    height: 0;
     border-left: 4px solid transparent;
-    border-right: 4px solid transparent; 
+    border-right: 4px solid transparent;
     border-bottom: 10px solid black;
     position: absolute;
     top: -10px;
@@ -269,7 +342,7 @@ input[name='q']::placeholder {
 }
 
 .allauth-form-inner-content button:hover,
-.allauth-form-inner-content input[type='submit']:hover {	
+.allauth-form-inner-content input[type='submit']:hover {
 	color: #fff;
     background-color: #222;
     border-color: #222;
