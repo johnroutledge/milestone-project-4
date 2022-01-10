@@ -81,9 +81,9 @@ body {
 }
 
 .btn-black {
-    background: black;
-    color: white;
-    font-size: smaller;
+    background: black !important;;
+    color: white !important;;
+    font-size: smaller !important;;
 }
 
 .thick-btn-border {
@@ -93,10 +93,10 @@ body {
 
 
 .btn-outline-black {
-    background: white;
+    background: white !important;;
     color: black !important; /* use important to override link colors for <a> elements */
-    border: 1px solid black;
-    font-size: smaller;
+    border: 1px solid black !important;;
+    font-size: smaller !important;; 
 }
 
 .btn-outline-black:hover,
@@ -104,7 +104,7 @@ body {
 .btn-outline-black:focus {
     /* background: black;
     color: white !important; */
-    background: black;
+    background: black!important;
     color: white !important;
 }
 
@@ -116,8 +116,8 @@ body {
 .btn-black:focus {
     /* background: #222;
     color: white; */
-    background: #ffcad4;
-    color: black;
+    background: #ffcad4 !important;;
+    color: black !important;;
 }
 
 .text-black {
@@ -284,7 +284,7 @@ input[name='q']::placeholder {
 }
 
 .toast-capper {
-    height: 2px;
+    height: 4px;
 }
 
 /* from CSS-tricks.com: https://css-tricks.com/snippets/css/css-triangle/ */
@@ -300,6 +300,10 @@ input[name='q']::placeholder {
 }
 
 /* Convenience classes - colors copied from Bootstrap */
+.bg-success {
+    background-color: #D45483!important;
+}
+
 .arrow-primary {
     border-bottom-color: #007bff !important;
 }
@@ -309,7 +313,7 @@ input[name='q']::placeholder {
 }
 
 .arrow-success {
-    border-bottom-color: #28a745 !important;
+    border-bottom-color: #D45483!important;
 }
 
 .arrow-danger {

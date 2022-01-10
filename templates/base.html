@@ -41,11 +41,7 @@
   <body>
     <!----- Navbar -------------------------------------->
     <header class="container-fluid fixed-top nav-bar">
-        <div id="delivery-banner" class="row text-center">
-            <div class="col bg-pink text-black">
-                <h6 class="my-1">Free delivery on orders over ${{ free_delivery_threshold }}</h6>
-            </div>
-        </div>
+        
         <!----- Logo -------------------------------------->
         <div>
         <div id="topnav" class="row bg-white pt-lg-2 d-none d-lg-flex">
@@ -135,12 +131,18 @@
                 {% include 'includes/main-nav.html' %}
             </nav>
         </div>
+        <div id="delivery-banner" class="row text-center topnav">
+            <div class="col bg-pink text-black">
+                <h6 class="my-1">Free delivery on orders over ${{ free_delivery_threshold }}</h6>
+            </div>
+        </div>
         <!-- <div id="delivery-banner" class="row text-center">
             <div class="col bg-black text-white">
                 <h4 class="logo-font my-1">Free delivery on orders over ${{ free_delivery_threshold }}!</h4>
             </div>
         </div> -->
     </header>
+   
 
     {% if messages %}
         <div class="message-container">
