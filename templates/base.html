@@ -38,12 +38,18 @@
 
     <title>Jiira {% block extra_title %}{% endblock %}</title>
   </head>
+
   <body>
+    <!----- Delivery Banner -------------------------------------->
+    <div id="delivery-banner" class="row text-center">
+        <div class="col bg-pink text-black padding-none">
+            <h6 class="my-1">Free delivery on orders over ${{ free_delivery_threshold }}</h6>
+        </div>
+    </div>
     <!----- Navbar -------------------------------------->
-    <header class="container-fluid fixed-top nav-bar">
+    <header class="container-fluid nav-bar">
         
         <!----- Logo -------------------------------------->
-        <div>
         <div id="topnav" class="row bg-white pt-lg-2 d-none d-lg-flex">
             <div class="col-12 col-lg-4 my-auto py-1 py-lg-0 text-center text-lg-left">
                 <a href="{% url 'home' %}" class="navbar-brand nav-link main-logo-link">
@@ -131,16 +137,6 @@
                 {% include 'includes/main-nav.html' %}
             </nav>
         </div>
-        <div id="delivery-banner" class="row text-center topnav">
-            <div class="col bg-pink text-black">
-                <h6 class="my-1">Free delivery on orders over ${{ free_delivery_threshold }}</h6>
-            </div>
-        </div>
-        <!-- <div id="delivery-banner" class="row text-center">
-            <div class="col bg-black text-white">
-                <h4 class="logo-font my-1">Free delivery on orders over ${{ free_delivery_threshold }}!</h4>
-            </div>
-        </div> -->
     </header>
    
 
@@ -205,7 +201,7 @@
             </div>
         </div>
     </footer>
-    <!-- <script src="{% static 'js/base.js' %}"></script> -->
+    <script src="{% static 'js/base.js' %}"></script>
 
     {% block postloadjs %}
     <script type="text/javascript">

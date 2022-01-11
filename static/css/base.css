@@ -26,6 +26,7 @@ body {
 
 #delivery-banner {
     height: 30px;
+    position: relative;
 }
 
 #homepage-section {
@@ -96,7 +97,7 @@ body {
     background: white !important;;
     color: black !important; /* use important to override link colors for <a> elements */
     border: 1px solid black !important;;
-    font-size: smaller !important;; 
+    font-size: smaller !important;;
 }
 
 .btn-outline-black:hover,
@@ -169,97 +170,40 @@ input[name='q']::placeholder {
     color: #aab7c4;
 }
 
-/* .nav-link:hover,
-.nav-link:active,
-.nav-link:focus {
-    border-bottom: 2px solid #ffcad4 !important;
-} */
-
-.nav-link {
-    /* font-weight: bold;
-    font-size: 14px; */
-    text-transform: uppercase;
-    text-decoration: none;
-    /* color: #031D44; */
-    padding: 10px 0px;
-    margin: 0px 10px;
-    display: inline-block;
-    position: relative;
-    /* opacity: 0.75; */
-}
-
-
-/* --------- How to create a sticky navigation bar that becomes fixed to the top after scrolling credit: Stackoverflow.com */
+/* --------- Sticky Nav after scroll credit: Julio Codes YouTube */
 .navbar-fixed-top {
     top: 0;
     z-index: 100;
-    position: fixed;
+    position: sticky;
     width: 100%;
 }
 
 /* --------- nav link fade-in effects: credit: codepen.io Animated Nav Link Hover Underline */
-.nav-link:hover {
-    opacity: 1;
+.nav-link {
+    position: relative;
+    text-transform: uppercase;
+    text-decoration: none;
+    /* padding: 10px 0px;
+    margin: 0px 10px; */
+    display: inline-block;
 }
-  
-/* .nav-link::before {
-    transition: 300ms;
-    height: 3px;
+
+
+.nav-link::before {
+    transition: 400ms;
+    height: 2px;
     content: "";
     position: absolute;
     background-color: #ffcad4;
-} */
-
-.nav-item::before {
-    transition: 300ms;
-    height: 3px;
-    content: "";
-    position: absolute;
-    background-color: #ffcad4;
-    left: 0;
-	width: 100%;
+	width: 90%;
     opacity: 0;
-
-    
-}
-  
-/* .nav-link-ltr::before {
-    width: 0%;
-    bottom: 10px;
-}
-  
-.nav-link-ltr:hover::before {
-    width: 90%;
-} */
-
-/* .nav-link-fade-up::before {
-    width: 90%;
-    bottom: 2px;
-    opacity: 0;
-} */
-  
-.nav-item::before {
-    width: 90%;
-    bottom: 2px;
-    opacity: 0;
+    bottom: 0px;
 }
 
-.nav-item:hover::before {
-    bottom: 8px;
+.nav-link:hover::before {
+    bottom: 7px;
     opacity: 1;
 }
-
-.nav-item{
-	position: relative;
-    transition: all 200ms linear;
-}
-
-/* .nav-link-fade-up:hover::before {
-    bottom: 8px;
-    opacity: 1;
-} */
-  
-  
 
 /* --------- homepage fade-in effects: credit: Kevin Powell's YouTube channel */
 .fade-in {
@@ -450,17 +394,19 @@ input[name='q']::placeholder {
     }
 
     .header-container {
-        padding-top: 164px;
+        position: fixed;
+        padding-top: 110px;
     }
 }
 
 /* add top padding when navbar collapsed on mobile */
 @media (max-width: 991px) {
     .header-container {
-        padding-top: 116px;
+        position: fixed;
+        padding-top: 80px;
     }
 
     body {
-        height: calc(100vh - 116px);
+        height: calc(100vh - 80px);
     }
 }
