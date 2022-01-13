@@ -68,7 +68,9 @@ def product_detail(request, product_id):
     product = get_object_or_404(Product, pk=product_id)
 
     reviews = Review.objects.filter(product=product)
-    review_form = ReviewForm()
+    form = ReviewForm()
+    
+    print(form)
     # avg_rating = reviews.aggregate(Avg('rating'))['rating__avg']
 
     product.save()
@@ -76,7 +78,7 @@ def product_detail(request, product_id):
     context = {
         'product': product,
         'reviews': reviews,
-        'review_form': review_form,
+        'form': form,
         # 'avg_rating': avg_rating
     }
 
