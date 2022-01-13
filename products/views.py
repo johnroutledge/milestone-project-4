@@ -7,6 +7,9 @@ from django.db.models.functions import Lower
 from .models import Product, Category
 from .forms import ProductForm
 
+from reviews.models import Review
+from reviews.forms import ReviewForm
+
 # Create your views here.
 
 def all_products(request):
@@ -64,8 +67,17 @@ def product_detail(request, product_id):
 
     product = get_object_or_404(Product, pk=product_id)
 
+    reviews = Review.objects.filter(product=product)
+    review_form = ReviewForm()
+    # avg_rating = reviews.aggregate(Avg('rating'))['rating__avg']
+
+    product.save()
+
     context = {
         'product': product,
+        'reviews': reviews,
+        'review_form': review_form,
+        # 'avg_rating': avg_rating
     }
 
     return render(request, 'products/product_details.html', context)
