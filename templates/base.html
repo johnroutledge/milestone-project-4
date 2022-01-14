@@ -31,7 +31,7 @@
         <!----- Stripe -------------------------------------->
         <script src="https://js.stripe.com/v3/"></script>
         
-        {% endblock %}
+    {% endblock %}
 
     {% block extra_js %}
     {% endblock %}
@@ -43,7 +43,7 @@
     <!----- Delivery Banner -------------------------------------->
     <div id="delivery-banner" class="row text-center">
         <div class="col bg-pink text-black padding-none">
-            <h6 class="my-1">Free delivery on orders over ${{ free_delivery_threshold }}</h6>
+            <h6 id="changing-text" class="my-1">Free delivery on orders over ${{ free_delivery_threshold }}</h6>
         </div>
     </div>
     <!----- Navbar -------------------------------------->
@@ -207,6 +207,22 @@
     <script type="text/javascript">
         $('.toast').toast('show');
     </script>
+
+
+    <!----- Credit: Haritha Computers & Technology YouTube Channel ----->
+    <script type="text/javascript">
+        var i=0;
+
+        function textChange()
+        {
+        var banner=document.getElementById("changing-text");
+        var displayText=["Free delivery on orders over ${{ free_delivery_threshold }}","Get 10% Off Your First Order"];
+        banner.innerHTML=displayText[i];
+        i=(i+1)%displayText.length;
+        }
+        setInterval(textChange,3000);
+    </script>
+
     {% endblock %}
 
 

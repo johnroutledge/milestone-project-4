@@ -35,6 +35,7 @@ body {
 
 .section-heading {
     margin-top: 3rem;
+    font-size: x-large;
 }
 
 .footer-copyright {
@@ -186,6 +187,7 @@ input[name='q']::placeholder {
     /* padding: 10px 0px;
     margin: 0px 10px; */
     display: inline-block;
+    padding: 0.5rem 0rem;
 }
 
 
@@ -394,7 +396,7 @@ input[name='q']::placeholder {
     }
 
     .header-container {
-        position: fixed;
+        /* position: fixed; */
         padding-top: 110px;
     }
 }
