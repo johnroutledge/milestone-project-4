@@ -3,10 +3,18 @@ from django.conf import settings
 from django.shortcuts import get_object_or_404
 from products.models import Product
 
+from profiles.models import UserProfile
+
 def basket_contents(request):
+
+
+    profile = get_object_or_404(UserProfile, user=request.user)
+    orders = profile.orders.all()
 
     basket_items = []
     total = 0
+    discount = 0
+    discounted_total = 0
     product_count = 0
     basket = request.session.get('basket', {})
 
@@ -32,6 +40,11 @@ def basket_contents(request):
                     'size': size,
                 })
 
+    if orders:
+        discount = total * Decimal(settings.FIRST_ORDER_DISCOUNT / 100)
+        discounted_total = total - discount
+  
+
     if total < settings.FREE_DELIVERY_THRESHOLD:
         delivery = total * Decimal(settings.STANDARD_DELIVERY_PERCENTAGE / 100)
         free_delivery_delta = settings.FREE_DELIVERY_THRESHOLD - total
@@ -44,6 +57,8 @@ def basket_contents(request):
     context = {
         'basket_items': basket_items,
         'total': total,
+        'discount': discount,
+        'discounted_total': discounted_total,
         'product_count': product_count,
         'delivery': delivery,
         'free_delivery_delta': free_delivery_delta,
