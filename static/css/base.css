@@ -62,6 +62,11 @@ body {
     
 }
 
+.navbar {
+    color:gray;
+    box-shadow: 0px 1em 2em -1em;
+}
+
 /* from Bulma */
 .icon {
     align-items: center;
