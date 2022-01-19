@@ -9,9 +9,9 @@ from profiles.models import UserProfile
 
 def basket_contents(request):
 
-
-    # profile = get_object_or_404(UserProfile, user=request.user)
-    # orders = profile.orders.all()
+    if request.user.is_authenticated:
+        profile = get_object_or_404(UserProfile, user=request.user)
+        orders = profile.orders.all()
 
     basket_items = []
     total = 0
@@ -20,6 +20,7 @@ def basket_contents(request):
     product_count = 0
     basket = request.session.get('basket', {})
 
+    
     for item_id, item_data in basket.items():
         if isinstance(item_data, int):
             product = get_object_or_404(Product, pk=item_id)
@@ -42,9 +43,13 @@ def basket_contents(request):
                     'size': size,
                 })
 
-    # if not orders:
-    #     discount = total * Decimal(settings.FIRST_ORDER_DISCOUNT / 100)
-    #     discounted_total = total - discount
+    if request.user.is_authenticated:
+        profile = get_object_or_404(UserProfile, user=request.user)
+        orders = profile.orders.all()
+    
+        if not orders:
+            discount = total * Decimal(settings.FIRST_ORDER_DISCOUNT / 100)
+            discounted_total = total - discount
   
 
     if total < settings.FREE_DELIVERY_THRESHOLD:
@@ -54,12 +59,14 @@ def basket_contents(request):
         delivery = 0
         free_delivery_delta = 0
     
-    # if orders:
-    #     grand_total = delivery + total
-    # else:
-        # grand_total = delivery + discounted_total
-
-    grand_total = delivery + total
+    
+    if request.user.is_authenticated:
+        if orders:
+            grand_total = delivery + total
+        else:
+            grand_total = delivery + discounted_total
+    else:
+        grand_total = delivery + total
 
     context = {
         'basket_items': basket_items,

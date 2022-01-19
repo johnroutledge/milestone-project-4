@@ -49,10 +49,10 @@ def contact(request):
                 return HttpResponse('Invalid header found.')
             return redirect(reverse('home'),
                             messages.success(request, f'Thank you for \
-                                            contacting us. A copy of your \
-                                            message has been send to your \
-                                            email. We will be in touch \
-                                            sortly.'))
+                                            your message, a copy of which\
+                                            has been emailed to you. We will\
+                                            get in touch with you as soon\
+                                            as possible.'))
 
     template = 'contact/contact.html'
     context = {
