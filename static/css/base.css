@@ -52,6 +52,11 @@ body {
     /* background-color: #ffcad4; */
 }
 
+
+.qty_input{
+    width: 80px !important;
+}
+
 .product-image {
     /* border-style: solid;
     border-color: #ced4da;
@@ -209,7 +214,6 @@ input[name='q']::placeholder {
     padding-left: 0 !important;
     padding-right: 0 !important;
 }
-
 
 .fade-up::before {
     transition: 400ms;

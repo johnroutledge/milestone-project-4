@@ -216,7 +216,7 @@
         function textChange()
         {
         var banner=document.getElementById("changing-text");
-        var displayText=["Free delivery on orders over ${{ free_delivery_threshold }}","Get 10% Off Your First Order"];
+        var displayText=["Free delivery on orders over ${{ free_delivery_threshold }}","Get {{ first_order_discount }}% Off Your First Order"];
         banner.innerHTML=displayText[i];
         i=(i+1)%displayText.length;
         }

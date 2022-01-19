@@ -2,14 +2,16 @@ from decimal import Decimal
 from django.conf import settings
 from django.shortcuts import get_object_or_404
 from products.models import Product
+from django.contrib.auth.decorators import login_required
 
 from profiles.models import UserProfile
+
 
 def basket_contents(request):
 
 
-    profile = get_object_or_404(UserProfile, user=request.user)
-    orders = profile.orders.all()
+    # profile = get_object_or_404(UserProfile, user=request.user)
+    # orders = profile.orders.all()
 
     basket_items = []
     total = 0
@@ -40,9 +42,9 @@ def basket_contents(request):
                     'size': size,
                 })
 
-    if orders:
-        discount = total * Decimal(settings.FIRST_ORDER_DISCOUNT / 100)
-        discounted_total = total - discount
+    # if not orders:
+    #     discount = total * Decimal(settings.FIRST_ORDER_DISCOUNT / 100)
+    #     discounted_total = total - discount
   
 
     if total < settings.FREE_DELIVERY_THRESHOLD:
@@ -52,8 +54,13 @@ def basket_contents(request):
         delivery = 0
         free_delivery_delta = 0
     
+    # if orders:
+    #     grand_total = delivery + total
+    # else:
+        # grand_total = delivery + discounted_total
+
     grand_total = delivery + total
-    
+
     context = {
         'basket_items': basket_items,
         'total': total,
@@ -63,6 +70,7 @@ def basket_contents(request):
         'delivery': delivery,
         'free_delivery_delta': free_delivery_delta,
         'free_delivery_threshold': settings.FREE_DELIVERY_THRESHOLD,
+        'first_order_discount': settings.FIRST_ORDER_DISCOUNT,
         'grand_total': grand_total,
     }
 
