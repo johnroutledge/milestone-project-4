@@ -45,10 +45,10 @@
         <div class="col bg-pink text-black padding-none">
             <h6 id="changing-text" class="my-1">Free delivery on orders over ${{ free_delivery_threshold }}</h6>
         </div>
-    </div>
+    </div>  
     <!----- Navbar -------------------------------------->
     <header class="container-fluid nav-bar">
-        
+          
         <!----- Logo -------------------------------------->
         <div id="topnav" class="row bg-white pt-lg-2 d-none d-lg-flex">
             <div class="col-12 col-lg-4 my-auto py-1 py-lg-0 text-center text-lg-left">
@@ -84,7 +84,7 @@
                                 <!-- <p class="my-0">My Account</p> -->
                             </div>
                         </a>
-                        <div class="dropdown-menu border-0" aria-labelledby="user-options">
+                        <div class="dropdown-menu dropdown-menu-right border-0" aria-labelledby="user-options">
                             {% if request.user.is_authenticated %}
                                 {% if request.user.is_superuser %}
                                     <a href="{% url 'add_product' %}" class="dropdown-item">Product Management</a>

@@ -4,6 +4,7 @@ html {
 
 body {
     background: url('/media/homepage_lg.jpg') no-repeat top left fixed;
+    overflow-x: hidden;
     background-size: cover;
     height: calc(100vh - 164px);
     color: #555;
@@ -155,6 +156,8 @@ body {
 }
 
 .overlay {
+    padding: 0;
+    margin: 0;
 	height: 100%;
 	width: 100%;
 	top: 0;
@@ -196,29 +199,30 @@ input[name='q']::placeholder {
 }
 
 /* --------- nav link fade-in effects: credit: codepen.io Animated Nav Link Hover Underline */
-.nav-link {
+.fade-up {
     position: relative;
     text-transform: uppercase;
     text-decoration: none;
     /* padding: 10px 0px;
     margin: 0px 10px; */
     display: inline-block;
-    padding: 0.5rem 0rem;
+    padding-left: 0 !important;
+    padding-right: 0 !important;
 }
 
 
-.nav-link::before {
+.fade-up::before {
     transition: 400ms;
     height: 2px;
     content: "";
     position: absolute;
     background-color: #ffcad4;
-	width: 90%;
+	width: 100%;
     opacity: 0;
     bottom: 0px;
 }
 
-.nav-link:hover::before {
+.fade-up:hover::before {
     bottom: 7px;
     opacity: 1;
 }
@@ -426,5 +430,9 @@ input[name='q']::placeholder {
 
     body {
         height: calc(100vh - 80px);
+    }
+
+    ul {
+        margin-bottom: 0;
     }
 }
