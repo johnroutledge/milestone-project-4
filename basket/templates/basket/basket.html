@@ -16,7 +16,11 @@
         <div class="row">
             <div class="col">
                 <hr>
-                    <h4 class="logo-font mb-4 text-center">Your Basket ({{ product_count }} items)</h4>
+                    {% if product_count == 1 %}
+                        <h4 class="logo-font mb-4 text-center">Your Basket ({{ product_count }} item)</h4>
+                    {% else %}
+                        <h4 class="logo-font mb-4 text-center">Your Basket ({{ product_count }} items)</h4>
+                    {% endif %}
                 <hr>
             </div>
         </div>
@@ -99,13 +103,23 @@
                                         <h6>{{ first_order_discount }}% first order discount: -${{ discount|floatformat:2 }}</h6>
                                         <h6>Total: ${{ discounted_total|floatformat:2 }}</h6>
                                     {% endif %}
-                                    <h6>Delivery: ${{ delivery|floatformat:2 }}</h6>
-                                    <h4 class="mt-4"><strong>Grand Total: ${{ grand_total|floatformat:2 }}</strong></h4>
                                     {% if free_delivery_delta > 0 %}
                                         <p class="mb-1 text-danger">
                                             You could get free delivery by spending just <strong>${{ free_delivery_delta }}</strong> more!
                                         </p>
                                     {% endif %}
+                                    <h6>Delivery: ${{ delivery|floatformat:2 }}</h6>
+                                    <h4 class="mt-4"><strong>Grand Total: ${{ grand_total|floatformat:2 }}</strong></h4>
+                                    {% if not request.user.is_authenticated %}
+                                        <p class="mb-1 text-danger">
+                                            First time here? Register & login to get 20% off!
+                                        </p>
+                                    {% endif %}
+                                    <!-- {% if free_delivery_delta > 0 %}
+                                        <p class="mb-1 text-danger">
+                                            You could get free delivery by spending just <strong>${{ free_delivery_delta }}</strong> more!
+                                        </p>
+                                    {% endif %} -->
                                 </td>
                             </tr>
                             <tr>

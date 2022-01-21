@@ -34,6 +34,11 @@ body {
     background-color: white;
 }
 
+#about-section {
+    color: white;
+    background-color: #C6949D;
+}
+
 .section-heading {
     margin-top: 3rem;
     font-size: x-large;
@@ -160,6 +165,10 @@ body {
     background: #ffcad4;
 }
 
+.jiira-line {
+    border-color: #ffcad4 !important;
+}
+
 .overlay {
     padding: 0;
     margin: 0;
@@ -254,11 +263,11 @@ input[name='q']::placeholder {
 }
 
 .toast-capper {
-    height: 4px;
+    height: 8px;
 }
 
 /* from CSS-tricks.com: https://css-tricks.com/snippets/css/css-triangle/ */
-.arrow-up {
+/* .arrow-up {
     width: 0;
     height: 0;
     border-left: 4px solid transparent;
@@ -267,7 +276,7 @@ input[name='q']::placeholder {
     position: absolute;
     top: -10px;
     right: 36px;
-}
+} */
 
 /* Convenience classes - colors copied from Bootstrap */
 .bg-success {
@@ -420,7 +429,7 @@ input[name='q']::placeholder {
     }
 
     .header-container {
-        /* position: fixed; */
+        position: fixed;
         padding-top: 110px;
     }
 }
