@@ -3,10 +3,12 @@ from django.contrib import messages
 from django.contrib.auth.decorators import login_required
 from django.db.models import Q
 from django.db.models.functions import Lower
+from django.db.models import Avg
 
 from .models import Product, Category
 from .forms import ProductForm
 
+from profiles.models import UserProfile
 from reviews.models import Review
 from reviews.forms import ReviewForm
 
@@ -66,12 +68,11 @@ def product_detail(request, product_id):
     """ A view that shows individual product details """
 
     product = get_object_or_404(Product, pk=product_id)
-
     reviews = Review.objects.filter(product=product)
+    reviews_by_user = Review.objects.filter(product=product, user=get_object_or_404(UserProfile, user=request.user))
     form = ReviewForm()
     
-    print(form)
-    # avg_rating = reviews.aggregate(Avg('rating'))['rating__avg']
+    rating = reviews.aggregate(Avg('rating'))['rating__avg']
 
     product.save()
 
@@ -79,7 +80,8 @@ def product_detail(request, product_id):
         'product': product,
         'reviews': reviews,
         'form': form,
-        # 'avg_rating': avg_rating
+        'rating': rating,
+        'reviews_by_user': reviews_by_user
     }
 
     return render(request, 'products/product_details.html', context)
