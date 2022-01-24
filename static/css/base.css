@@ -1,3 +1,7 @@
+:root {
+    --jiira-pink: #ffcad4;
+}
+
 html {
     height: 100%;
 }
@@ -9,6 +13,33 @@ body {
     height: calc(100vh - 164px);
     color: #555;
     font-family: 'Montserrat';
+}
+
+video {
+    position: fixed;
+    top: -5px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1000;
+}
+
+.video-overlay {
+    position: fixed;
+    top: -5px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+    background: var(--jiira-pink);
+    mix-blend-mode: overlay;
+    z-index: -1000;
+}
+
+.hero-cover {
+    background: #C6949D;
+    color: white;
+    opacity: 0.85;
 }
 
 #topnav {
@@ -35,6 +66,8 @@ body {
 }
 
 #about-section {
+    padding-left: 8%;
+    padding-right: 8%;
     color: white;
     background-color: #C6949D;
 }
@@ -53,8 +86,8 @@ body {
 .border-pink {
     border-style: solid;
     border-width: 0.5px;
-    border-color: #ffcad4;
-    /* background-color: #ffcad4; */
+    border-color: var(--jiira-pink);
+    /* background-color: var(--jiira-pink); */
 }
 
 
@@ -70,7 +103,7 @@ body {
     color:#ced4da;
     /* box-shadow: .25em .25em 1em; */
     filter: drop-shadow(.25em .25em .5em);
-    
+    object-fit: cover;
 }
 
 .navbar {
@@ -88,7 +121,7 @@ body {
 }
 
 /* .logo-font {
-    text-transform: uppercase;
+    font-weight: bolder;
 } */
 
 .main-logo-link {
@@ -145,7 +178,7 @@ body {
 .btn-black:focus {
     /* background: #222;
     color: white; */
-    background: #ffcad4 !important;;
+    background: var(--jiira-pink) !important;;
     color: black !important;;
 }
 
@@ -162,11 +195,11 @@ body {
 }
 
 .bg-pink {
-    background: #ffcad4;
+    background: var(--jiira-pink);
 }
 
 .jiira-line {
-    border-color: #ffcad4 !important;
+    border-color: var(--jiira-pink) !important;
 }
 
 .overlay {
@@ -182,7 +215,7 @@ body {
 }
 
 a.category-badge > span.badge:hover {
-    background: #ffcad4 !important;
+    background: var(--jiira-pink) !important;
     /* color: #fff !important; */
 }
 
@@ -229,7 +262,7 @@ input[name='q']::placeholder {
     height: 2px;
     content: "";
     position: absolute;
-    background-color: #ffcad4;
+    background-color: var(--jiira-pink);
 	width: 100%;
     opacity: 0;
     bottom: 0px;

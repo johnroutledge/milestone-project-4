@@ -11,12 +11,14 @@
 
 {% block content %}
     <!----- Hero Image Section -------------------------------------->
-    <div class="container h-100">
+    <!-- to revert to just background image, add container class to first div and remove video and video-overlay divs -->
+    <div class="h-100">
         <div class="row h-100">
-            <!-- <div class="col-7 col-md-6 my-auto"> -->
-            <div class="col-md-7"></div>
-            <div class="col-md-5 col-md-offset-2 my-auto text-right">
-                <h1 class="display-4 logo-font text-white text-uppercase">
+            <video src="/media/jiira.mov" muted loop autoplay></video>
+            <!-- <div class="video-overlay"></div> -->
+            <!-- <div class="col-md-7"></div> -->
+            <div class="col-md-5 col-md-offset-2 my-auto text-right hero-cover">
+                <h1 class="display-4 logo-font text-uppercase">
                     Handmade Jewellery from Thailand
                 </h1>
                 <div class="my-5">
@@ -27,6 +29,7 @@
             </div>
         </div>
     </div>
+   
 
     <!----- Product Sections -------------------------------------->
     <div class="container-fluid" id="homepage-section">
@@ -37,8 +40,10 @@
                 <div class="col-md-5 order-md-2">
                     <!-- <h2 ref="{% url 'products' %}?category=necklaces" class="section-heading">Earrings</h2> -->
                     <a href="{% url 'products' %}?category=earrings" class="section-heading logo-font text-black">Earrings</a>
-                    <p class="lead">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Cum voluptatem, fugit omnis, 
-                        magni incidunt officiis ut suscipit aliquam autem at, odit quaerat culpa ad ipsum quos natus dolores non veniam.
+                    <p class="lead">Earrings give you an effortless way to add a little glamour to all your outfits. With fabulous designs in pearl
+                        and silver, you will certainly find a pair that match your mood. To put that finshing touch to your outfit, pair your 
+                        new earrings with our necklaces and rings for that complete look. Our collection offers an array of truly unique designs, 
+                        and are the ideal companion to take you from day into night.
                     </p>
                 </div>
                 <div class="col-md-5 order-md-1 offset-md-1 text-center">
@@ -52,8 +57,11 @@
                 <div class="col-md-5 offset-md-1">
                     <!-- <h2 class="section-heading">Necklaces</h2> -->
                     <a href="{% url 'products' %}?category=necklaces" class="section-heading logo-font text-black">Necklaces</a>
-                    <p class="lead">Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus ipsam modi at dignissimos 
-                        quasi doloribus voluptas in! Ipsam maxime dolorum delectus culpa aut earum possimus natus, nesciunt eius expedita sed?</p>
+                    <p class="lead">Jiira's array of unique designs, handcarfted from the finest silver, provide the perfect necklace for
+                        any occassion. Our necklaces can be matched with our rings and bracelets to give you flawless style. Providing 
+                        the finishing touches to any outfit with these matching pieces will make you stand out from the crowd. Our range of 
+                        necklaces, each with their own elegant style will become the first choice in your jewellery collection.
+                    </p>
                 </div>
                 <div class="col-md-5 text-center">
                     <a href="#" id="necklaces-category" aria-label="necklaces category">
@@ -66,8 +74,11 @@
                 <div class="col-md-5 order-md-2">
                     <!-- <h2 class="section-heading">Bracelets</h2> -->
                     <a href="{% url 'products' %}?category=rings" class="section-heading logo-font text-black">Rings</a>
-                    <p class="lead">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Iusto nisi sunt dolore provident suscipit 
-                        aperiam adipisci non asperiores dolorum atque consequuntur velit, veniam labore ex delectus consectetur ipsam dolores ullam?</p>
+                    <p class="lead">Whether your taste is understated or extravagant, you're sure to find a piece you love 
+                        from our stunning range of rings. With exquisite designs in silver and pearl, we have a ring for any 
+                        occasion. From link rings that will fit seamlessly into your daily life, to black pearl rings that set 
+                        you aside from the crowd. You will never go wrong with adding a Jiira ring pieces to your collection.
+                    </p>
                 </div>
                 <div class="col-md-5 order-md-1 offset-md-1 text-center">
                     <a href="#" id="bracelets-category" aria-label="bracelets category">
@@ -88,7 +99,6 @@
             <h2 class="text-center">
                 About JIIRA Jewellery
             </h2>
-            <iframe src="https://www.facebook.com/plugins/video.php?height=314&href=https%3A%2F%2Fwww.facebook.com%2FJIIRAJEWELRY%2Fvideos%2F908189623009663%2F&show_text=false&width=560&t=0" width="560" height="314" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share" allowFullScreen="true"></iframe>
             <p class="lead fade-in">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Iusto nisi sunt dolore provident suscipit 
                 aperiam adipisci non asperiores dolorum atque consequuntur velit, veniam labore ex delectus consectetur ipsam dolores ullam?
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto sunt ullam adipisci ipsum ipsam praesentium, magni modi 
