@@ -69,7 +69,11 @@ def product_detail(request, product_id):
 
     product = get_object_or_404(Product, pk=product_id)
     reviews = Review.objects.filter(product=product)
-    reviews_by_user = Review.objects.filter(product=product, user=get_object_or_404(UserProfile, user=request.user))
+    reviews_by_user = None
+    
+    if request.user.is_authenticated:
+        reviews_by_user = Review.objects.filter(product=product, user=get_object_or_404(UserProfile, user=request.user))
+
     form = ReviewForm()
     
     rating = reviews.aggregate(Avg('rating'))['rating__avg']

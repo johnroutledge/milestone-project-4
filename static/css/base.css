@@ -355,10 +355,22 @@ input[name='q']::placeholder {
 }
 
 /* -------------------------------- Blog */
-.post-img-container {
+/* .post-img-container {
     height: 75vh;
     min-height: 100%;
     width: 100%;
+} */
+
+.blog-post-img {
+    height: 40vh;
+    width: 25vw;
+    object-fit: cover;
+}
+
+.blog-detail-img {
+    height: 100%;
+    width: 100%; 
+    object-fit: cover;
 }
 
 /* -------------------------------- Media Queries */
