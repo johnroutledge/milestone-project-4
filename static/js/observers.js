@@ -1,3 +1,4 @@
+// Fade-in effect on text credit: Kevin Powell YouTube channel
 const faders = document.querySelectorAll(".fade-in");
 
 const appearOptions = {

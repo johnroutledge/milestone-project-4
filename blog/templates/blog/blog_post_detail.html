@@ -91,16 +91,14 @@
                     <form method="post" action=".">
                         {% csrf_token %}
                         {{ form | crispy }}
-                        <input type="submit" class="cta-white cta-comment" value="Add comment">
+                        <div id="post-detail-buttons">
+                            <input type="submit" class="btn btn-black rounded-1 text-uppercase" value="Add comment">
+                            <a href="{% url 'blog' %}" class="btn btn-outline-black rounded-1 text-uppercase">
+                                Back to News
+                            </a>
+                        </div>
                     </form>
                 </div>
-            </div>
-            <!-- Back to blog link --------------------->
-            <div class="col-12 text-center pt-5">
-                <a href="{% url 'blog' %}" class="btn btn-secondary">
-                    <!-- <span class="icon"><i class="fas fa-chevron-left"></i></span> -->
-                    Back to News
-                </a>
             </div>
         </div>
     </section>

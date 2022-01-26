@@ -29,17 +29,20 @@
                 <form method="POST" id="contact-form">
                 {% csrf_token %}
                     <fieldset class="rounded mb-2">
-                      <legend class="fieldset-label small text-black px-2 w-auto"><strong>{% trans 'Your details' %}</strong></legend>
+                      <legend class="fieldset-label small text-black px-2 w-auto"><strong>Your details</strong></legend>
                       {{ contact_form.first_name | as_crispy_field }}
                       {{ contact_form.last_name | as_crispy_field }}
                       {{ contact_form.email | as_crispy_field }}
                       {{ contact_form.subject | as_crispy_field }}
                     </fieldset>
                     <fieldset class="rounded mb-2 mt-4">
-                      <legend class="fieldset-label small text-black px-2 w-auto"><strong>{% trans 'Message' %}</strong></legend>
+                      <legend class="fieldset-label small text-black px-2 w-auto"><strong>Message</strong></legend>
                       {{ contact_form.message | as_crispy_field }}
                     </fieldset>
-                    <button type="submit" class="btn btn-black thick-btn-border rounded-0 text-uppercase mt-5">{% trans 'Send' %}</button>
+                    <div id="reply-message">
+                        <button type="submit" class="btn btn-black thick-btn-border rounded-1 text-uppercase">Send</button>
+                        <span><i class="bi bi-info-square"></i> &nbspWe will try to get back to you within 48 hours</span>
+                    </div>
                 </form>
                 <br>
             </div>
