@@ -400,23 +400,23 @@ input[name='q']::placeholder {
     object-fit: cover;
 }
 
-#post-detail-buttons {
+/* #post-detail-buttons {
     display: inline;
 }
 
 #post-detail-buttons a {
     float: right;
-}
+} */
 
 /* -------------------------------- Contact Page */
 
-#reply-message {
+/* #reply-message {
     display: inline;
 }
 
 #reply-message span {
     float: right;
-}
+} */
 
 /* -------------------------------- Media Queries */
 
@@ -526,6 +526,11 @@ input[name='q']::placeholder {
 
 /* add top padding when navbar collapsed on mobile */
 @media (max-width: 991px) {
+
+    video {
+        display: none;
+    }
+
     .header-container {
         position: fixed;
         padding-top: 80px;
@@ -533,6 +538,7 @@ input[name='q']::placeholder {
 
     body {
         height: calc(100vh - 80px);
+        background-position: right;
     }
 
     ul {

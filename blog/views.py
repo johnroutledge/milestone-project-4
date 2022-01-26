@@ -45,6 +45,7 @@ def blog_post_detail(request, slug):
         'post': post,
         'comments': comments,
         'form': form,
+        'on_blog_page': True,
     }
 
     return render(request, template, context)
@@ -72,6 +73,7 @@ def add_blog_post(request):
     template = 'blog/add_blog_post.html'
     context = {
         'form': form,
+        'on_blog_page': True,
     }
 
     return render(request, template, context)
@@ -102,6 +104,7 @@ def edit_blog_post(request, slug):
     context = {
         'form': form,
         'post': post,
+        'on_blog_page': True,
     }
 
     return render(request, template, context)

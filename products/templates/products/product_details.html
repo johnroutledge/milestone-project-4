@@ -40,9 +40,9 @@
 
                     {% if reviews.count %}
                         {% if reviews.count == 1 %}
-                            <small class="text-muted"><i class="fas fa-star mr-1"></i>{{ rating }}/5 ({{reviews.count}} rating)</small>
+                            <a class="text-muted small" href="#product-reviews"><i class="fas fa-star mr-1"></i>{{ rating }}/5 ({{reviews.count}} review)</a>
                         {% else %}
-                            <small class="text-muted"><i class="fas fa-star mr-1"></i>{{ rating }}/5 ({{reviews.count}} ratings)</small>
+                            <a class="text-muted small" href="#product-reviews"><i class="fas fa-star mr-1"></i>{{ rating }}/5 ({{reviews.count}} reviews)</a>
                         {% endif %}
                     {% else %}
                         <small class="text-muted"><i class="fas fa-star mr-1"></i>(no ratings)</small>
