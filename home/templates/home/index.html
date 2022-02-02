@@ -14,7 +14,8 @@
     <!-- to revert to just background image, add container class to first div and remove video and video-overlay divs -->
     <div class="h-100">
         <div class="row h-100">
-            <video src="/media/jiira.mov" muted loop autoplay></video>
+            <!-- <video src="media/jiira.mov" muted loop autoplay></video> -->
+            <video src="{% static 'images/jiira.mov' %}" muted loop autoplay></video>
             <!-- <div class="video-overlay"></div> -->
             <!-- <div class="col-md-7"></div> -->
             <div class="col-md-5 col-md-offset-2 my-auto text-right hero-cover">
@@ -40,7 +41,7 @@
             <div class="row fade-in">
                 <div class="col-md-5 order-md-2">
                     <!-- <h2 ref="{% url 'products' %}?category=necklaces" class="section-heading">Earrings</h2> -->
-                    <a href="{% url 'products' %}?category=earrings" class="section-heading logo-font text-black fade-ltr">Earrings</a>
+                    <a href="{% url 'products' %}?category=stud_earrings,hoop_earrings" class="section-heading logo-font text-black fade-ltr">Earrings</a>
                     <p class="lead">Earrings give you an effortless way to add a little glamour to all your outfits. With fabulous designs in pearl
                         and silver, you will certainly find a pair that match your mood. To put that finshing touch to your outfit, pair your 
                         new earrings with our necklaces and rings for that complete look. Our collection offers an array of truly unique designs, 
@@ -49,7 +50,7 @@
                 </div>
                 <div class="col-md-5 order-md-1 offset-md-1 text-center">
                     <div class="image-wrapper">
-                        <a href="{% url 'products' %}?category=earrings" id="earrings-category" aria-label="earrings category">
+                        <a href="{% url 'products' %}?category=stud_earrings,hoop_earrings" id="earrings-category" aria-label="earrings category">
                         <img class="product-image" src="/media/earrings.JPG" width="300" height="300" aria-label="" alt="">
                         </a>
                     </div>
@@ -61,7 +62,7 @@
             <div class="row fade-in">
                 <div class="col-md-5 offset-md-1">
                     <!-- <h2 class="section-heading">Necklaces</h2> -->
-                    <a href="{% url 'products' %}?category=necklaces" class="section-heading logo-font text-black fade-ltr">Necklaces</a>
+                    <a href="{% url 'products' %}?category=pendant_necklaces,choker_necklaces" class="section-heading logo-font text-black fade-ltr">Necklaces</a>
                     <p class="lead">Jiira's array of unique designs, handcrafted from the finest silver, provide the perfect necklace for
                         any occassion. Our necklaces can be matched with our rings and bracelets to give you flawless style. Providing 
                         the finishing touches to any outfit with these matching pieces will make you stand out from the crowd. Our range of 
@@ -69,7 +70,7 @@
                     </p>
                 </div>
                 <div class="col-md-5 text-center">
-                    <a href="{% url 'products' %}?category=necklaces" id="necklaces-category" aria-label="necklaces category">
+                    <a href="{% url 'products' %}?category=pendant_necklaces,choker_necklaces" id="necklaces-category" aria-label="necklaces category">
                         <img class="product-image" src="/media/necklaces.JPG" width="300" height="300" aria-label="" alt="">
                     </a>
                 </div>
@@ -80,7 +81,7 @@
             <div class="row fade-in">
                 <div class="col-md-5 order-md-2">
                     <!-- <h2 class="section-heading">Bracelets</h2> -->
-                    <a href="{% url 'products' %}?category=rings" class="section-heading logo-font text-black fade-ltr">Rings</a>
+                    <a href="{% url 'products' %}?category=band_rings,linked_rings" class="section-heading logo-font text-black fade-ltr">Rings</a>
                     <p class="lead">Whether your taste is understated or extravagant, you're sure to find a piece you love 
                         from our stunning range of rings. With exquisite designs in silver and pearl, we have a ring for any 
                         occasion. From link rings that will fit seamlessly into your daily life, to black pearl rings that 
@@ -88,7 +89,7 @@
                     </p>
                 </div>
                 <div class="col-md-5 order-md-1 offset-md-1 text-center">
-                    <a href="{% url 'products' %}?category=rings" id="bracelets-category" aria-label="bracelets category">
+                    <a href="{% url 'products' %}?category=band_rings,linked_rings" id="bracelets-category" aria-label="bracelets category">
                         <img class="product-image" src="/media/rings2.jpg" width="300" height="300" aria-label="" alt="">
                     </a>
                 </div>
