@@ -16,17 +16,6 @@
         </li> -->
 
         <li class="nav-item dropdown">
-            <a class="logo-font font-weight-bold nav-link text-black fade-up mr-5" href="#" id="necklaces-link" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                Necklaces
-            </a>
-            <div class="dropdown-menu border-0" aria-labelledby="necklaces-link">
-                <a href="{% url 'products' %}?category=pendant_necklaces,choker_necklaces" class="dropdown-item">All Necklaces</a>
-                <a href="{% url 'products' %}?category=pendant_necklaces" class="dropdown-item">Pendant Necklaces</a>
-                <a href="{% url 'products' %}?category=choker_necklaces" class="dropdown-item">Chokers</a>
-            </div>
-        </li>
-
-        <li class="nav-item dropdown">
             <a class="logo-font font-weight-bold nav-link text-black fade-up mr-5" href="#" id="earrings-link" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                 Earrings
             </a>
@@ -34,6 +23,17 @@
                 <a href="{% url 'products' %}?category=stud_earrings,hoop_earrings" class="dropdown-item">All Earrings</a>
                 <a href="{% url 'products' %}?category=stud_earrings" class="dropdown-item">Stud Earrings</a>
                 <a href="{% url 'products' %}?category=hoop_earrings" class="dropdown-item">Hoop Earrings</a>
+            </div>
+        </li>
+
+        <li class="nav-item dropdown">
+            <a class="logo-font font-weight-bold nav-link text-black fade-up mr-5" href="#" id="necklaces-link" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Necklaces
+            </a>
+            <div class="dropdown-menu border-0" aria-labelledby="necklaces-link">
+                <a href="{% url 'products' %}?category=pendant_necklaces,choker_necklaces" class="dropdown-item">All Necklaces</a>
+                <a href="{% url 'products' %}?category=pendant_necklaces" class="dropdown-item">Pendant Necklaces</a>
+                <a href="{% url 'products' %}?category=choker_necklaces" class="dropdown-item">Chokers</a>
             </div>
         </li>
 
