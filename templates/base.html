@@ -176,16 +176,15 @@
     <footer class="container-fluid footer-container bg-pink text-black">
         <div class="row">
             <!----- Site Links ----->
-            <div class="col-12 col-md-2 offset-md-3 text-left mt-4">
+            <div class="footer-content col-12 col-md-2 offset-md-3 text-left mt-4">
                 <h5>Explore</h5>
                 <hr>
-                <p><a href="" class="footer-menu-link text-black">Necklaces</a></p>
-                <p><a href="" class="footer-menu-link text-black">Earrings</a></p>
-                <p><a href="" class="footer-menu-link text-black">Bracelets</a></p>
-                <p><a href="" class="footer-menu-link text-black">Rings</a></p>
+                <p><a href="{% url 'products' %}?category=stud_earrings,hoop_earrings" class="footer-menu-link text-black">Earrings</a></p>
+                <p><a href="{% url 'products' %}?category=pendant_necklaces,choker_necklaces" class="footer-menu-link text-black">Necklaces</a></p>
+                <p><a href="{% url 'products' %}?category=band_rings,linked_rings" class="footer-menu-link text-black">Rings</a></p>
             </div>
             <!----- Contact Info ----->
-            <div class="col-12 col-md-3 text-left mt-4">
+            <div class="footer-content col-12 col-md-3 text-left mt-4">
                 <h5>Contact</h5>
                 <hr>
                 <p><i class="fas fa-phone"></i> +6653555333</p>
@@ -193,7 +192,7 @@
                 <p><i class="fas fa-map-marker-alt"></i> Jiira Jewellery, 555 Chang Pheuak Rd, Chiang Mai, Thailand.</p>
             </div>
             <!----- Social Links ----->
-            <div class="col-12 col-md-3 text-left mt-4">
+            <div class="footer-content col-12 col-md-3 text-left mt-4">
                 <h5>Follow</h5>
                 <hr>
                 <p><a href="https://www.facebook.com" target="_blank" rel="noopener" class="text-black"><i class="fab fa-facebook-square text-black"></i> Facebook</a></p>

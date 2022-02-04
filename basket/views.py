@@ -15,7 +15,8 @@ def add_to_basket(request, item_id):
     """ Add a quantity of the specified product to the basket """
 
     product = Product.objects.get(pk=item_id)
-    quantity = int(request.POST.get('quantity'))
+    quantity = 1
+    # quantity = int(request.POST.get('quantity'))
     redirect_url = request.POST.get('redirect_url')
     size = None
     if 'product_size' in request.POST:
