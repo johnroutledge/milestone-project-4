@@ -392,12 +392,23 @@ input[name='q']::placeholder {
     height: 40vh;
     width: 25vw;
     object-fit: cover;
+    color:#ced4da;
+    filter: drop-shadow(.25em .25em .5em);
+    transition: 0.5s ease;
+}
+
+.blog-post-img:hover {
+    color: var(--jiira-pink); 
+    /* opacity: 0.85; */
+    filter: drop-shadow(.5em .5em .25em);
 }
 
 .blog-detail-img {
     height: 100%;
     width: 100%;
     object-fit: cover;
+    color:#ced4da;
+    filter: drop-shadow(.25em .25em .5em);
 }
 
 /* #post-detail-buttons {
