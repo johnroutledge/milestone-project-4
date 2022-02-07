@@ -1,5 +1,19 @@
 
-## Testing
+# Testing
+
+## Index – Table of Contents
+
+* [Manual Testing](#manual-testing) 
+* [User Stories Testing](#user-stories-testing)
+* [Responsiveness Testing](#responsiveness-testing)
+* [HTML Testing](#html-testing)
+* [CSS Testing](#css-testing)
+* [JavaScript Testing](#javascript-testing)
+* [Python Testing](#python-testing)
+* [Lighthouse Testing](#lighthouse-testing)
+
+
+## Manual Testing
 
 |  Test Label                                   | Action         | Expected Outcome                                          | Test Outcome  |
 |-----------------------------------------------|----------------|-----------------------------------------------------------|---------------|
@@ -26,6 +40,20 @@
 |  About section on homepage                    | First scroll   |  Text should fade in                                      | PASS          |
 |  Site navigation links in footer              | Click          |  Navigate to the correct pages                            | PASS          |
 |  Social Media links in footer                 | Click          |  Navigate to the correct social media homepages           | PASS          |
+|  Register page                                | Page Load      |  Should correctly display input fields to register        | PASS          |
+|  Register page back to log in button          | Hover          |  Background and font colors should invert                 | PASS          |
+|  Register page back to log in button          | Click          |  Should navigate back to log in page                      | PASS          |
+|  Register page sign up button                 | Hover          |  Background color change to pink and font to black        | PASS          |
+|  Register page sign up button                 | Click          |  Should correctly validate all input fields               | PASS          |
+|  Register page sign up button                 | Click          |  Once validated, should register and log the user in      | PASS          |
+|  Register page sign up button                 | Click          |  Once validated, should display success toast             | PASS          |
+|  Sign In page                                 | Page Load      |  Should correctly display input fields to sign in         | PASS          |
+|  Sign In page home button                     | Hover          |  Background and font colors should invert                 | PASS          |
+|  Sign In page home button                     | Click          |  Should navigate back to homepage                         | PASS          |
+|  Sign In page page sign in button             | Hover          |  Background color change to pink and font to black        | PASS          |
+|  Sign In page page sign in button             | Click          |  Should correctly validate all input fields               | PASS          |
+|  Sign In page page sign in button             | Click          |  Once validated, should log the user in                   | PASS          |
+|  Sign In page page sign in button             | Click          |  Once validated, should display success toast             | PASS          |
 |  Products page category buttons               | Page load      |  Should display correct category                          | PASS          |
 |  Products page category buttons               | Click          |  Should reload page and display items in that category    | PASS          |
 |  Products page products home link             | Click          |  Should reload page and display all jewellery             | PASS          |
@@ -53,7 +81,9 @@
 |  Basket page                                  | Page load      |  Should show all products in basket                       | PASS          |
 |  Basket page                                  | Page load      |  Should show correct quantities and subtotals             | PASS          |
 |  Basket page update link                      | Click          |  Should update product quantity, subtotal and total       | PASS          |
+|  Basket page update link                      | Click          |  Should display success toast                             | PASS          |
 |  Basket page remove link                      | Click          |  Should remove product from basket                        | PASS          |
+|  Basket page remove link                      | Click          |  Should display success toast                             | PASS          |
 |  Basket page basket total                     | Page load      |  Should show correct basket total price                   | PASS          |
 |  Basket page first order discount CTA         | Page load      |  Should show first order discount CTA if not logged in    | PASS          |
 |  Basket page first order discount             | Page load      |  Should show correct discount if customer's first order   | PASS          |
@@ -117,16 +147,63 @@
 |  News Management page save news post button   | Click          |  Success toast should be displayed                        | PASS          |
 |  News Management page cancel button           | Hover          |  Background and font colors should invert                 | PASS          |
 |  News Management page cancel button           | Click          |  Should return to news page                               | PASS          |
-
 |  Logout confirmation page                     | Page load      |  Should display confirmation question                     | PASS          |
 |  Logout confirmation page cancel button       | Hover          |  Background and font colors should invert                 | PASS          |
 |  Logout confirmation page cancel button       | Click          |  Remain logged in and navigate to homepage                | PASS          |
 |  Logout confirmation page sign out button     | Hover          |  Background color change to pink and font to black        | PASS          |
 |  Logout confirmation page sign out button     | Click          |  Log user out and navigate to homepage                    | PASS          |
 |  Logout confirmation page sign out button     | Click          |  Display success toast stating user signed out            | PASS          |
-
-
 |  Media Query mobile screen size               | Resize screen  |  Page should render correctly on mobile screen            | PASS          |
 |  Media Query tablet screen size               | Resize screen  |  Page should render correctly on tablet screen            | PASS          |
 |  Media Query desktop screen size              | Resize screen  |  Page should render correctly on 14 inch screen           | PASS          |
 |  Media Query 5k screen size                   | Resize screen  |  Page should render correctly on 5k screen                | PASS          |
+
+
+
+## User Stories Testing
+
+| # | As a/an       | I want to be able to...                          | So that I can...                            | Test Outcome  |
+|---|---------------|--------------------------------------------------|---------------------------------------------|---------------|
+| 1 | Shopper       | easily see what the page is about                | decide if it's relevant to my needs         | PASS          |
+| 2 | Shopper       | view the products                                | choose what I want to buy                   | PASS          |
+| 3 | Shopper       | view each product's details                      | learn more about its price/features/size    | PASS          |
+| 4 | Shopper       | see the total of my shopping basket              | stay within my budget                       | PASS          |
+| 5 | Shopper       | sort products                                    | locate them quicker by price, name, type    | PASS          |
+| 6 | Shopper       | search for products                              | find what I'm looking for                   | PASS          |
+| 7 | Shopper       | see my search results                            | decide if it's what I want                  | PASS          |
+| 8 | Shopper       | choose qunatity and size of jewellery            | purchase exactly what I want                | PASS          |
+| 9 | Shopper       | see what's in my shopping basket                 | make sure I have what I want and the cost   | PASS          |
+|10 | Shopper       | adjust my basket                                 | make easy udates before the checkout        | PASS          |
+|11 | Shopper       | easily enter my payment information              | pay quickly and confidently                 | PASS          |
+|12 | Shopper       | see an order confirmation                        | be sure I've made the correct purchase      | PASS          |
+|13 | Shopper       | receive an email copy of my order                | have physical proof of my purchase          | PASS          |
+|14 | Site User     | easily register for an account                   | make subsequent purchase quicker            | PASS          |
+|15 | Site User     | have email confirmation of registering           | be sure it was done correctly               | PASS          |
+|16 | Site User     | have my own Jiira profile                        | store my details and view purchase history  | PASS          |
+|17 | Site User     | easily login/logout                              | make subsequent purchases quicker           | PASS          |
+|18 | Store Owner   | add a product                                    | increase my offerings and make more money   | PASS          |
+|19 | Store Owner   | edit a product                                   | be sure details and prices are correct      | PASS          |
+|20 | Store Owner   | delete a product                                 | remove any out of trend/stock products      | PASS          |
+|21 | Store Owner   | add a news post                                  | inform users of Jiira's news and events     | PASS          |
+|22 | Store Owner   | edit a news post                                 | change the text/image                       | PASS          |
+|23 | Store Owner   | delete a news post                               | remove posts no longer relevant/suitable    | PASS          |
+
+
+## Responsiveness Testing
+
+
+## HTML Testing
+
+
+## CSS Testing
+
+
+## JavaScript Testing
+
+
+## Python Testing
+
+
+## Lighthouse Testing
+
+

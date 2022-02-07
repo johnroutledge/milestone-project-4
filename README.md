@@ -135,54 +135,61 @@ The Jiira logo used in the nav bar was used to maintain consistency.
 
 *Generic*
 * Responsive design on the vast majority of devices
+* Delivery banner which displays the purchase requirement for free delivery and also the first order discount.
 * Navigation bar, including logo and link to the home page, a search box, an account icon and shopping basket icon which also displays the number of items currently in the basket.
 * Links in the navigation bar collapse to a hamburger button on smaller devices such as smartphones and tablets.
-* Delivery banner which displays the purchase requirement for free delivery.
-* Toast messages giving users meaningful feedback to their actions on the website
+* Toast messages giving users meaningful feedback to their actions on the website.
 * Footer with with navigation links to all pages, Jiira's contact details, social media links and copyright information.
 * 'Back to top' button where applicable.
 
-*Home*
-* Hero image with call to action button
-* Sections with fade-in images and text for the various categories of jewellery Jiira has to offer
+*Homepage*
+* Hero image with call to action button to encourage people to make a purchase.
+* On larger screens, a video with models showing some of the jewellery Jiira has to offer.
+* Product and about sections with fade-in images and text for the various jewellery Jiira has to offer and some background on the company.
 
-*Blog*
-* Images along with truncated version of each blog post and links to the full posts
-* Details of the author and date published
+*Product Pages*
+* Clear pictures of the products.
+* Ability to sort products by name and price.
 
-*Blog Detail*
-* Each full blog post along with any comments left by visitors to the site
-* A from where people can leave comments on a post (this includes a call to action to be the first to comment)
-* The ability to edit or delete a blog post (admin logins only)
+*Product Details Page*
+* The product detail page gives a larger image.
+* Also gives users the ability to select a quantity to add to the basket.
 
-*Product*
-* Clear pictures of the products
-* Ability to sort products by name and price
+*Basket Page*
+* Shows all the products in the basket.
+* The ability to ammend items in the basket.
+* Also shows the total amount due, delivery costs and any applicable discount.
 
-*Product Detail*
-* The product detail page gives a larger image
-* Also gives users the ability to select a quantity to add to the basket
+*Checkout Page*
+* Users can enter delivery and payment information for their purchase.
+* This information is pre-filled if the user already has logged in to their saved profile.
+* Webhooks were employed to ensure smooth and secure transactions.
 
-*Basket*
-* Shows all the products in the basket
-* Also shows the total amount due
-*
+*News (Blog) Page*
+* Images along with truncated version of each news post and links to the full posts.
+* Details of the author and date published.
 
-*Checkout*
-* Users can enter delivery and payment information for their purchase
-* This information is pre-filled if the user already has logged in to their saved profile
-* Webhooks were employed to ensure smooth and secure transactions
+*News (Blog) Detail*
+* Each full news post along with any comments left by visitors to the site.
+* A form where people can leave comments on a post (this includes a call to action to be the first to comment).
+* The ability to edit or delete a news post (admin logins only).
+
+*Contact Jiira Page*
+* Gives a user to contact Jiira directly via email.
+
+*User Profile Page*
+* User can edit their contact and delivery information held on the system.
+* User can also see their order history.
 
 **Future Features to Implement**
-* A Thai version of the website
-* The abillity to login using a social media account
-* A wishlist feature
-* Inventory tracking so stock availability can be shown on website
-* 'Track my order' functionality so that customers can see the status of their order
-* 'User Reviews' section
-* Confirmation when editing or deleting products for admin logins
-* Skip navigation links for visitors to the site with certain disablities to enhance their UX
-* The ability to accept or edit cookies
+* A Thai version of the website.
+* The ability to login using a social media account.
+* A wishlist feature.
+* Inventory tracking so stock availability can be shown on website.
+* 'Track my order' functionality so that customers can see the status of their order.
+* Confirmation when editing or deleting products for admin logins.
+* Skip navigation links for visitors to the site with certain disablities to enhance their UX.
+* The ability to accept or edit cookies.
 
 
 
@@ -236,9 +243,16 @@ The Jiira logo used in the nav bar was used to maintain consistency.
 ***
 
 
-## Testing file
+## Testing
 
 Due to the amount of information regarding testing, it has been detailed in the following separate [file](readme/testing/TESTING.md).
+
+
+***
+
+## Deployment
+
+As with testing, due to the amount of information regarding deployment, it has been detailed in the following separate [file](readme/deployment/DEPLOYMENT.md).
 
 
 ***

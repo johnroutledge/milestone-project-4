@@ -1,3 +1,5 @@
+/* -------------------- General Styling */
+
 :root {
     --jiira-pink: #ffcad4;
 }
@@ -6,148 +8,14 @@ html {
     height: 100%;
 }
 
-body {
-    background: url('/media/homepage_lg.jpg') no-repeat top left fixed;
-    overflow-x: hidden;
-    background-size: cover;
-    height: calc(100vh - 164px);
-    color: #555;
-    font-family: 'Montserrat';
-}
-
-video {
-    position: fixed;
-    top: -5px;
-    left: 0px;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    z-index: -1000;
-}
-
-.video-overlay {
-    position: fixed;
-    top: -5px;
-    left: 0px;
-    width: 100%;
-    height: 100%;
-    background: var(--jiira-pink);
-    mix-blend-mode: overlay;
-    z-index: -1000;
-}
-
-.hero-cover {
-    background: #C6949D;
-    color: white;
-    opacity: 0.85;
-}
-
-#topnav {
-    height: 70px;
-}
-
-#basket-icon {
-    color: black !important;
-}
-
-#basket-count {
-    color: #000 !important;
-    font-style: normal;
-    font-size: small;
-}
-
-#delivery-banner {
-    height: 30px;
-    position: relative;
-}
-
-#homepage-section {
-    background-color: white;
-}
-
-#about-section {
-    padding-left: 8%;
-    padding-right: 8%;
-    color: white;
-    background-color: #C6949D;
-}
-
-.section-heading {
-    margin-top: 3rem;
-    font-size: x-large;
-}
-
-.footer-copyright {
-    padding-top: 1rem;
-    padding-bottom: 1rem;
-    text-align: right;
-}
-
 .border-pink {
     border-style: solid;
     border-width: 0.5px;
     border-color: var(--jiira-pink);
-    /* background-color: var(--jiira-pink); */
-}
-
-
-.qty_input{
-    width: 20px !important;
-}
-
-.product-image {
-    /* border-style: solid;
-    border-color: #ced4da;
-    border-width: 1px;
-    border-radius: 0%; */
-    color:#ced4da;
-    /* box-shadow: .25em .25em 1em; */
-    filter: drop-shadow(.25em .25em .5em);
-    object-fit: cover;
-    opacity: 1;
-    transition: 0.5s ease;
-}
-
-.product-image:hover {
-    color: var(--jiira-pink); 
-    /* opacity: 0.85; */
-    filter: drop-shadow(.5em .5em .25em);
-}
-
-.navbar {
-    color:gray;
-    box-shadow: 0px 1em 2em -1em;
-}
-
-/* from Bulma */
-.icon {
-    align-items: center;
-    display: inline-flex;
-    justify-content: center;
-    height: 1.5rem;
-    width: 1.5rem;
-}
-
-/* .logo-font {
-    font-weight: bolder;
-} */
-
-.main-logo-link {
-    width: fit-content;
-}
-
-#nav-logo {
-    max-height: 4rem;
 }
 
 .inline-div {
     display: inline-block;
-}
-
-.shop-now-button {
-    background: black;
-    color: white;
-    min-width: 260px;
 }
 
 .btn-black {
@@ -161,7 +29,6 @@ video {
     border-width: 3px;
 }
 
-
 .btn-outline-black {
     background: white !important;;
     color: black !important; /* use important to override link colors for <a> elements */
@@ -172,8 +39,6 @@ video {
 .btn-outline-black:hover,
 .btn-outline-black:active,
 .btn-outline-black:focus {
-    /* background: black;
-    color: white !important; */
     background: black!important;
     color: white !important;
 }
@@ -184,8 +49,6 @@ video {
 .btn-black:hover,
 .btn-black:active,
 .btn-black:focus {
-    /* background: #222;
-    color: white; */
     background: var(--jiira-pink) !important;;
     color: black !important;;
 }
@@ -210,21 +73,8 @@ video {
     border-color: var(--jiira-pink) !important;
 }
 
-.overlay {
-    padding: 0;
-    margin: 0;
-	height: 100%;
-	width: 100%;
-	top: 0;
-	left: 0;
-	position: fixed;
-	background: white;
-	z-index: -1;
-}
-
 a.category-badge > span.badge:hover {
     background: var(--jiira-pink) !important;
-    /* color: #fff !important; */
 }
 
 .btt-button {
@@ -245,6 +95,49 @@ input[name='q']::placeholder {
     color: #aab7c4;
 }
 
+/* from Bulma */
+.icon {
+    align-items: center;
+    display: inline-flex;
+    justify-content: center;
+    height: 1.5rem;
+    width: 1.5rem;
+}
+
+/* -------------------- Navbar */
+
+#topnav {
+    height: 70px;
+}
+
+#basket-icon {
+    color: black !important;
+}
+
+#basket-count {
+    color: #000 !important;
+    font-style: normal;
+    font-size: small;
+}
+
+#delivery-banner {
+    height: 30px;
+    position: relative;
+}
+
+.navbar {
+    color:gray;
+    box-shadow: 0px 1em 2em -1em;
+}
+
+.main-logo-link {
+    width: fit-content;
+}
+
+#nav-logo {
+    max-height: 4rem;
+}
+
 /* --------- Sticky Nav after scroll credit: Julio Codes YouTube */
 .navbar-fixed-top {
     top: 0;
@@ -258,8 +151,6 @@ input[name='q']::placeholder {
     position: relative;
     text-transform: uppercase;
     text-decoration: none;
-    /* padding: 10px 0px;
-    margin: 0px 10px; */
     display: inline-block;
     padding-left: 0 !important;
     padding-right: 0 !important;
@@ -300,6 +191,86 @@ input[name='q']::placeholder {
     width: 100%;
 }
 
+/* -------------------- Footer */
+
+.footer-copyright {
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    text-align: right;
+}
+
+/* -------------------- Homepage */
+
+body {
+    background: url('/media/homepage_lg.jpg') no-repeat top left fixed;
+    overflow-x: hidden;
+    background-size: cover;
+    height: calc(100vh - 164px);
+    color: #555;
+    font-family: 'Montserrat';
+}
+
+video {
+    position: fixed;
+    top: -5px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1000;
+}
+
+.video-overlay {
+    position: fixed;
+    top: -5px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+    background: var(--jiira-pink);
+    mix-blend-mode: overlay;
+    z-index: -1000;
+}
+
+.hero-cover {
+    background: #C6949D;
+    color: white;
+    opacity: 0.85;
+}
+
+#homepage-section {
+    background-color: white;
+}
+
+#about-section {
+    padding-left: 8%;
+    padding-right: 8%;
+    color: white;
+    background-color: #C6949D;
+}
+
+.section-heading {
+    margin-top: 3rem;
+    font-size: x-large;
+}
+
+.shop-now-button {
+    background: black;
+    color: white;
+    min-width: 260px;
+}
+
+.overlay {
+    padding: 0;
+    margin: 0;
+	height: 100%;
+	width: 100%;
+	top: 0;
+	left: 0;
+	position: fixed;
+	background: white;
+	z-index: -1;
+}
+
 /* --------- homepage fade-in effects: credit: Kevin Powell's YouTube channel */
 .fade-in {
     opacity: 0;
@@ -309,6 +280,94 @@ input[name='q']::placeholder {
 .fade-in.appear {
     opacity: 1;
 }
+
+/* -------------------- Product Pages */
+
+.qty_input{
+    width: 20px !important;
+}
+
+.product-image {
+    color:#ced4da;
+    filter: drop-shadow(.25em .25em .5em);
+    object-fit: cover;
+    opacity: 1;
+    transition: 0.5s ease;
+}
+
+.product-image:hover {
+    color: var(--jiira-pink); 
+    filter: drop-shadow(.5em .5em .25em);
+}
+
+/* Product Form */
+
+.btn-file {
+    position: relative;
+    overflow: hidden;
+}
+
+.btn-file input[type="file"] {
+    position: absolute;
+    top: 0;
+    right: 0;
+    min-width: 100%;
+    min-height: 100%;
+    opacity: 0;
+    cursor: pointer;
+}
+
+.custom-checkbox .custom-control-label::before {
+    border-radius: 0;
+    border-color: #dc3545;
+}
+
+.custom-checkbox .custom-control-input:checked~.custom-control-label::before {
+    background-color: #dc3545;
+    border-color: #dc3545;
+    border-radius: 0;
+}
+
+
+/* -------------------------------- News Page (Blog) */
+/* .post-img-container {
+    height: 75vh;
+    min-height: 100%;
+    width: 100%;
+} */
+
+.blog-post-img {
+    height: 40vh;
+    width: 25vw;
+    object-fit: cover;
+    color:#ced4da;
+    filter: drop-shadow(.25em .25em .5em);
+    transition: 0.5s ease;
+}
+
+.blog-post-img:hover {
+    color: var(--jiira-pink); 
+    /* opacity: 0.85; */
+    filter: drop-shadow(.5em .5em .25em);
+}
+
+.blog-detail-img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    color:#ced4da;
+    filter: drop-shadow(.25em .25em .5em);
+}
+
+/* -------------------------------- Contact Page */
+
+/* #reply-message {
+    display: inline;
+}
+
+#reply-message span {
+    float: right;
+} */
 
 /* --------- bootstrap toasts */
 .message-container {
@@ -381,54 +440,6 @@ input[name='q']::placeholder {
     overflow-y: auto;
 }
 
-/* -------------------------------- Blog */
-/* .post-img-container {
-    height: 75vh;
-    min-height: 100%;
-    width: 100%;
-} */
-
-.blog-post-img {
-    height: 40vh;
-    width: 25vw;
-    object-fit: cover;
-    color:#ced4da;
-    filter: drop-shadow(.25em .25em .5em);
-    transition: 0.5s ease;
-}
-
-.blog-post-img:hover {
-    color: var(--jiira-pink); 
-    /* opacity: 0.85; */
-    filter: drop-shadow(.5em .5em .25em);
-}
-
-.blog-detail-img {
-    height: 100%;
-    width: 100%;
-    object-fit: cover;
-    color:#ced4da;
-    filter: drop-shadow(.25em .25em .5em);
-}
-
-/* #post-detail-buttons {
-    display: inline;
-}
-
-#post-detail-buttons a {
-    float: right;
-} */
-
-/* -------------------------------- Contact Page */
-
-/* #reply-message {
-    display: inline;
-}
-
-#reply-message span {
-    float: right;
-} */
-
 /* -------------------------------- Media Queries */
 
 /* Slightly larger container on xl screens */
@@ -489,34 +500,6 @@ input[name='q']::placeholder {
 
 .allauth-form-inner-content a {
 	color: #17a2b8; /* text-info */
-}
-
-/* Product Form */
-
-.btn-file {
-    position: relative;
-    overflow: hidden;
-}
-
-.btn-file input[type="file"] {
-    position: absolute;
-    top: 0;
-    right: 0;
-    min-width: 100%;
-    min-height: 100%;
-    opacity: 0;
-    cursor: pointer;
-}
-
-.custom-checkbox .custom-control-label::before {
-    border-radius: 0;
-    border-color: #dc3545;
-}
-
-.custom-checkbox .custom-control-input:checked~.custom-control-label::before {
-    background-color: #dc3545;
-    border-color: #dc3545;
-    border-radius: 0;
 }
 
 /* fixed top navbar on medium sized screen and larger */
