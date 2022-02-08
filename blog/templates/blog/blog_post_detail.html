@@ -45,7 +45,7 @@
                         {% if request.user.is_superuser %}
                             <span>
                                 <small class="ml-3">
-                                    <a href="{% url 'edit_blog_post' post.slug %}">| Edit</a> |
+                                    <a href="{% url 'edit_blog_post' post.slug %}">Edit</a> |
                                     <a class="text-danger" href="{% url 'delete_blog_post' post.slug %}">Delete</a>
                                 </small>
                             </span>

@@ -106,15 +106,29 @@ To make sure the app is intuitive to navigate and use, I decided to ADD CONTENT 
 
 Wireframes
 
-* [Homepage wireframes](https://johnroutledge.github.io/milestone-project-3/readme-assets/wireframes_homepage.png)
-* [Register page wireframes](https://johnroutledge.github.io/milestone-project-3/readme-assets/wireframes_register.png)
-* [Login page wireframes](https://johnroutledge.github.io/milestone-project-3/readme-assets/wireframes_login.png)
-* [Portfolio page wireframes](https://johnroutledge.github.io/milestone-project-3/readme-assets/wireframes_portfolio.png)
-* [Prices page wireframes](https://johnroutledge.github.io/milestone-project-3/readme-assets/wireframes_prices.png)
-* [Trade page wireframes](https://johnroutledge.github.io/milestone-project-3/readme-assets/wireframes_trade.png)
-* [Transactions page wireframes](https://johnroutledge.github.io/milestone-project-3/readme-assets/wireframes_transactions.png)
-* [Settings page wireframes](https://johnroutledge.github.io/milestone-project-3/readme-assets/wireframes_settings.png)
-* [Edit Settings Wireframes](https://johnroutledge.github.io/milestone-project-3/readme-assets/wireframes_edit_settings.png)
+Mobile
+
+* [Homepage](https://johnroutledge.github.io/milestone-project-4/readme/images/wireframes/mobile_home.png)
+* [Products](https://johnroutledge.github.io/milestone-project-4/readme/images/wireframes/mobile_products.png)
+* [Product Details](https://johnroutledge.github.io/milestone-project-4/readme/images/wireframes/mobile_product_details.png)
+* [Basket](https://johnroutledge.github.io/milestone-project-4/readme/images/wireframes/mobile_basket.png)
+* [Checkout](https://johnroutledge.github.io/milestone-project-4/readme/images/wireframes/mobile_checkout.png)
+* [News](https://johnroutledge.github.io/milestone-project-4/readme/images/wireframes/mobile_news.png)
+* [News Item](https://johnroutledge.github.io/milestone-project-4/readme/images/wireframes/mobile_news_item.png)
+* [Contact](https://johnroutledge.github.io/milestone-project-4/readme/images/wireframes/mobile_contact.png)
+* [Profile](https://johnroutledge.github.io/milestone-project-4/readme/images/wireframes/mobile_profile.png)
+
+Desktop
+
+* [Homepage](https://johnroutledge.github.io/milestone-project-4/readme/images/wireframes/desktop_home.png)
+* [Products](https://johnroutledge.github.io/milestone-project-4/readme/images/wireframes/desktop_products.png)
+* [Product Details](https://johnroutledge.github.io/milestone-project-4/readme/images/wireframes/desktop_product_details.png)
+* [Basket](https://johnroutledge.github.io/milestone-project-4/readme/images/wireframes/desktop_basket.png)
+* [Checkout](https://johnroutledge.github.io/milestone-project-4/readme/images/wireframes/desktop_checkout.png)
+* [News](https://johnroutledge.github.io/milestone-project-4/readme/images/wireframes/desktop_news.png)
+* [News Item](https://johnroutledge.github.io/milestone-project-4/readme/images/wireframes/desktop_news_item.png)
+* [Contact](https://johnroutledge.github.io/milestone-project-4/readme/images/wireframes/desktop_contact.png)
+* [Profile](https://johnroutledge.github.io/milestone-project-4/readme/images/wireframes/desktop_profile.png)
 
 
 **Surface**
@@ -175,7 +189,7 @@ The Jiira logo used in the nav bar was used to maintain consistency.
 * The ability to edit or delete a news post (admin logins only).
 
 *Contact Jiira Page*
-* Gives a user to contact Jiira directly via email.
+* Gives a user the ability to contact Jiira directly via email.
 
 *User Profile Page*
 * User can edit their contact and delivery information held on the system.

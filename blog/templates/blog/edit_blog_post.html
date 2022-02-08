@@ -16,19 +16,19 @@
     <div class="container-fluid">
 
     <!-- Edit post header -------------->
-    <div class="container-fluid">
-        <div class="row-products">
-            <div class="col text-center mt-3 mb-3 pb-1">
-                <h2>Edit News Post</h2>
-            </div>
+    <div class="row">
+        <div class="col text-center mt-3">
+            <h4 class="logo-font">Edit News Post</h4>
+            <hr class="w-50 mb-1">
         </div>
     </div>
+
     <!-- Edit post form ----------------->
     <div class="container">
         <div class="row mb-5">
             <div class="col-sm-10 offset-sm-1 col-md-8 offset-md-2 p-5 form-bg">
                 <div class="div-add-product-form">
-                    <form class="mt-3" action="{% url 'edit_blog_post' post.slug %}" method="POST" enctype="multipart/form-data"
+                    <form class="mt-1" action="{% url 'edit_blog_post' post.slug %}" method="POST" enctype="multipart/form-data"
                         id="add-blog-form">
                         {% csrf_token %}
                         {% for field in form %}

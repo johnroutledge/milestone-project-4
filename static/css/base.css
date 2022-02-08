@@ -338,7 +338,8 @@ video {
 
 .blog-post-img {
     height: 40vh;
-    width: 25vw;
+    /* width: 25vw; */
+    right: 10px;
     object-fit: cover;
     color:#ced4da;
     filter: drop-shadow(.25em .25em .5em);
