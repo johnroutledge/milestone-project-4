@@ -45,11 +45,13 @@
 
   <body>
     <!----- Delivery Banner -------------------------------------->
-    <div id="delivery-banner" class="row text-center">
-        <div class="col bg-pink text-black padding-none">
-            <h6 id="changing-text" class="my-1">Free delivery on orders over ${{ free_delivery_threshold }}</h6>
+    <section>
+        <div id="delivery-banner" class="row text-center">
+            <div class="col bg-pink text-black padding-none">
+                <h6 id="changing-text" class="my-1">Free delivery on orders over ${{ free_delivery_threshold }}</h6>
+            </div>
         </div>
-    </div>  
+    </section>
     <!----- Navbar -------------------------------------->
     <header class="container-fluid nav-bar">
           
@@ -140,6 +142,7 @@
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#main-nav" aria-controls="main-nav" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
+                <h4 class="d-lg-none text-black jiira-align">JIIRA</h4>
                 {% include 'includes/mobile-top-header.html' %}
                 {% include 'includes/main-nav.html' %}
             </nav>

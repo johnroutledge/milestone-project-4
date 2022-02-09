@@ -8,10 +8,18 @@ html {
     height: 100%;
 }
 
+section {
+    overflow-x: hidden !important;
+}
+
 .border-pink {
     border-style: solid;
     border-width: 0.5px;
     border-color: var(--jiira-pink);
+}
+
+.container {
+    overflow-x: hidden !important;
 }
 
 .inline-div {
@@ -131,11 +139,18 @@ input[name='q']::placeholder {
 }
 
 .nav-link {
-    padding: 0 !important;
+    padding-right: 0 !important;
+    padding-left: 0 !important;
 }
 
 .main-logo-link {
     width: fit-content;
+}
+
+.jiira-align {
+    margin-bottom: 0;
+    text-align: center;
+    vertical-align: middle;
 }
 
 #nav-logo {
@@ -206,7 +221,7 @@ input[name='q']::placeholder {
 /* -------------------- Homepage */
 
 body {
-    background: url('/media/homepage_lg.jpg') no-repeat top left fixed;
+    background: url('/media/homepage_lg.jpg') no-repeat top left;
     overflow-x: hidden;
     background-size: cover;
     height: calc(100vh - 164px);
@@ -260,7 +275,8 @@ video {
 .shop-now-button {
     background: black;
     color: white;
-    min-width: 260px;
+    opacity: 1 !important;
+    /* min-width: 260px; */
 }
 
 .overlay {
@@ -535,6 +551,18 @@ video {
         margin-bottom: 0;
     }
 
+    .hero-cover {
+        background: none;
+        color: white;
+        opacity: 1;
+        font-size: small;
+    }
+
+    .hero-text {
+        font-size: 2rem;
+        font-weight: lighter;
+    }
+
     video {
         display: none;
     }
@@ -544,6 +572,9 @@ video {
     }
 
     .section-lead {
+        margin-left: 16px;
+    }
+    .section-extended {
         display: none;
     }
 
@@ -560,4 +591,15 @@ video {
         margin-left: 10px;
     }
 
+}
+
+@media (max-width: 500px) {
+    .section-lead {
+        display: none;
+    }
+
+    .shop-now-button {
+        opacity: 1 !important;
+        font-size: x-small;
+    }
 }

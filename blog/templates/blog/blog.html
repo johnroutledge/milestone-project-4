@@ -42,7 +42,7 @@
                     </div>
                     <!-- Blog Post Info --------------->
                     <div class="col-lg-6 col-md-12">
-                        <div class="py-5" >
+                        <div class="py-1 mt-4" >
                             <p>
                                 <span><i class="fas fa-user"></i> {{ post.author|upper }}</span> 
                                 <span><i class="fas fa-calendar-alt"></i> {{ post.date_created }}</span>
@@ -51,8 +51,8 @@
                             <a class="text-reset" href="{% url 'blog_post_detail' post.slug %}">
                                 <h4>{{ post.title }}</h4>
                             </a>
-                            <p>{{ post.content|truncatechars:180 }}</p>
-                            <div class="py-5">
+                            <p>{{ post.content|truncatechars:80 }}</p>
+                            <div class="py-1">
                                 <a href="{% url 'blog_post_detail' post.slug %}">Read more...</a>
                             </div> 
                         </div>
