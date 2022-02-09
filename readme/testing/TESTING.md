@@ -167,42 +167,68 @@
 | 1 | Shopper       | easily see what the page is about                | decide if it's relevant to my needs         | PASS          |
 | 2 | Shopper       | view the products                                | choose what I want to buy                   | PASS          |
 | 3 | Shopper       | view each product's details                      | learn more about its price/features/size    | PASS          |
-| 4 | Shopper       | see the total of my shopping basket              | stay within my budget                       | PASS          |
-| 5 | Shopper       | sort products                                    | locate them quicker by price, name, type    | PASS          |
-| 6 | Shopper       | search for products                              | find what I'm looking for                   | PASS          |
-| 7 | Shopper       | see my search results                            | decide if it's what I want                  | PASS          |
-| 8 | Shopper       | choose qunatity and size of jewellery            | purchase exactly what I want                | PASS          |
-| 9 | Shopper       | see what's in my shopping basket                 | make sure I have what I want and the cost   | PASS          |
-|10 | Shopper       | adjust my basket                                 | make easy udates before the checkout        | PASS          |
-|11 | Shopper       | easily enter my payment information              | pay quickly and confidently                 | PASS          |
-|12 | Shopper       | see an order confirmation                        | be sure I've made the correct purchase      | PASS          |
-|13 | Shopper       | receive an email copy of my order                | have physical proof of my purchase          | PASS          |
-|14 | Site User     | easily register for an account                   | make subsequent purchase quicker            | PASS          |
-|15 | Site User     | have email confirmation of registering           | be sure it was done correctly               | PASS          |
-|16 | Site User     | have my own Jiira profile                        | store my details and view purchase history  | PASS          |
-|17 | Site User     | easily login/logout                              | make subsequent purchases quicker           | PASS          |
-|18 | Store Owner   | add a product                                    | increase my offerings and make more money   | PASS          |
-|19 | Store Owner   | edit a product                                   | be sure details and prices are correct      | PASS          |
-|20 | Store Owner   | delete a product                                 | remove any out of trend/stock products      | PASS          |
-|21 | Store Owner   | add a news post                                  | inform users of Jiira's news and events     | PASS          |
-|22 | Store Owner   | edit a news post                                 | change the text/image                       | PASS          |
-|23 | Store Owner   | delete a news post                               | remove posts no longer relevant/suitable    | PASS          |
+| 4 | Shopper       | see product reviews left by other shoppers       | so that I can make an informed purchase     | PASS          |
+| 5 | Shopper       | see the total of my shopping basket              | stay within my budget                       | PASS          |
+| 6 | Shopper       | sort products                                    | locate them quicker by price, name, type    | PASS          |
+| 7 | Shopper       | search for products                              | find what I'm looking for                   | PASS          |
+| 8 | Shopper       | see my search results                            | decide if it's what I want                  | PASS          |
+| 9 | Shopper       | choose qunatity and size of jewellery            | purchase exactly what I want                | PASS          |
+|10 | Shopper       | see what's in my shopping basket                 | make sure I have what I want and the cost   | PASS          |
+|11 | Shopper       | adjust my basket                                 | make easy udates before the checkout        | PASS          |
+|12 | Shopper       | easily enter my payment information              | pay quickly and confidently                 | PASS          |
+|13 | Shopper       | leave a review of a product                      | help other shoppers with their purchase     | PASS          |
+|14 | Shopper       | see an order confirmation                        | be sure I've made the correct purchase      | PASS          |
+|15 | Shopper       | receive an email copy of my order                | have physical proof of my purchase          | PASS          |
+|16 | Site User     | easily register for an account                   | make subsequent purchase quicker            | PASS          |
+|17 | Site User     | have email confirmation of registering           | be sure it was done correctly               | PASS          |
+|18 | Site User     | have my own Jiira profile                        | store my details and view purchase history  | PASS          |
+|19 | Site User     | easily login/logout                              | make subsequent purchases quicker           | PASS          |
+|20 | Site User     | contact Jiira directly                           | get an answer to my query                   | PASS          |
+|21 | Site User     | see the latest news about the company            | keep up to date with the brand              | PASS          |
+|22 | Site User     | comment on news items                            | share my views and show support             | PASS          |
+|23 | Store Owner   | add a product                                    | increase my offerings and make more money   | PASS          |
+|24 | Store Owner   | edit a product                                   | be sure details and prices are correct      | PASS          |
+|25 | Store Owner   | delete a product                                 | remove any out of trend/stock products      | PASS          |
+|26 | Store Owner   | add a news post                                  | inform users of Jiira's news and events     | PASS          |
+|27 | Store Owner   | edit a news post                                 | change the text/image                       | PASS          |
+|28 | Store Owner   | delete a news post                               | remove posts no longer relevant/suitable    | PASS          |
 
 
 ## Responsiveness Testing
+The website was tested on various screen sizes using Chrome DevTools, from iPhone5 up to 5k screen.
+
+It was also tested using [Am I Responsive](http://ami.responsivedesign.is/) and the results were as per the following image:
+
+(INSERT IMAGE)
+
+## Testing Browser Compatibility
+
+The website was successfully opened and rendered correctly in Chrome (both desktop and mobile versions), Edge and Safari.
 
 
 ## HTML Testing
+HTML was validated using the W3C Markup Validation Service. This was done using the 'Validate by Direct Input' option.
 
+Results of the test are shown in the image below:
+
+(INSERT IMAGE)
 
 ## CSS Testing
+CSS was validated using the W3C Markup Validation Service. This was done using the 'Validate by Direct Input' option.
 
+Results of the test are shown in the image below:
+
+(INSERT IMAGE)
 
 ## JavaScript Testing
 
 
 ## Python Testing
+Python code from the app.py file was checked using [Pep8online](https://www.pep8online.com)
 
+The first check brought back numerous errors which were all rectified and resulted with a clear check as per the screenshot below:
+
+(INSERT IMAGE)
 
 ## Lighthouse Testing
 
