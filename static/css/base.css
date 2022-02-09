@@ -130,6 +130,10 @@ input[name='q']::placeholder {
     box-shadow: 0px 1em 2em -1em;
 }
 
+.nav-link {
+    padding: 0 !important;
+}
+
 .main-logo-link {
     width: fit-content;
 }

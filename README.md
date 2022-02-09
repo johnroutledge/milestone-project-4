@@ -106,7 +106,7 @@ To make sure the app is intuitive to navigate and use, I decided to ADD CONTENT 
 
 Wireframes
 
-Mobile
+*Mobile*
 
 * [Homepage](https://johnroutledge.github.io/milestone-project-4/readme/images/wireframes/mobile_home.png)
 * [Products](https://johnroutledge.github.io/milestone-project-4/readme/images/wireframes/mobile_products.png)
@@ -118,7 +118,19 @@ Mobile
 * [Contact](https://johnroutledge.github.io/milestone-project-4/readme/images/wireframes/mobile_contact.png)
 * [Profile](https://johnroutledge.github.io/milestone-project-4/readme/images/wireframes/mobile_profile.png)
 
-Desktop
+*Tablet*
+
+* [Homepage](https://johnroutledge.github.io/milestone-project-4/readme/images/wireframes/tablet_home.png)
+* [Products](https://johnroutledge.github.io/milestone-project-4/readme/images/wireframes/tablet_products.png)
+* [Product Details](https://johnroutledge.github.io/milestone-project-4/readme/images/wireframes/tablet_product_details.png)
+* [Basket](https://johnroutledge.github.io/milestone-project-4/readme/images/wireframes/tablet_basket.png)
+* [Checkout](https://johnroutledge.github.io/milestone-project-4/readme/images/wireframes/tablet_checkout.png)
+* [News](https://johnroutledge.github.io/milestone-project-4/readme/images/wireframes/tablet_news.png)
+* [News Item](https://johnroutledge.github.io/milestone-project-4/readme/images/wireframes/tablet_news_item.png)
+* [Contact](https://johnroutledge.github.io/milestone-project-4/readme/images/wireframes/tablet_contact.png)
+* [Profile](https://johnroutledge.github.io/milestone-project-4/readme/images/wireframes/tablet_profile.png)
+
+*Desktop*
 
 * [Homepage](https://johnroutledge.github.io/milestone-project-4/readme/images/wireframes/desktop_home.png)
 * [Products](https://johnroutledge.github.io/milestone-project-4/readme/images/wireframes/desktop_products.png)
