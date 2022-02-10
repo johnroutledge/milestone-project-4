@@ -5,67 +5,75 @@ Although deployed from its GitHub repository, the project is hosted by Heroku. I
 1. Create an account at [Heroku](https://heroku.com/) and log in.
 2. Choose 'create new app' from the drop down menu labelled 'new'.
 3. Give the app an appropriate name and choose the closest region from the dropdown list, then click 'create app'.
-4. From the dashboard, navigate to the 'resources' tab. Add Heroku Postgres to the app by searching and then selecting it. 
-5. Choose 'Hobby Dev – Free plan'.
-6. Create json files within GitPod in order to populate the Postgres database in Heroku:
-    * `python3 manage.py dumpdata products.Category > categories.json`
-    * `python3 manage.py dumpdata products.Product > products.json`
-7. Install dj_database_url and psycopg2-binary using `pip3 install`.
-8. In `settings.py`, import the dj_database_url and replace the default `DATABASE` setting with the 'database_url' found in the app's config vars in Heroku:
+4. From the 'resources' tab, search for and select Heroku Postgres from the add-ons. Also choose 'Hobby Dev – Free plan'.
+5. From the Heroku dashboard, navigate to the 'deploy' tab, 'deployment method' section and select 'connect to GitHub'. 
+6. Search for your GitHub repository and click 'connect'.
+7. Select 'Automatic Deploys'.
+8.	In order for a Django project to be deployed on Heroku, use `pip3 install' to install the following packages from your IDE:
+•	gnicorn
+•	psycopg2-binary
+•	dj-database-url
+9.	To make sure the app has all the required modules, run `pip3 freeze > requirements.txt` in your IDE terminal.
+10.	Still in the terminal, create a Procfile by typing `web: gunicorn jiira.wsgi:application`.
+11.	As I didn’t use a fixtures file to populate the database, run the following to create a json file for populating the Heroku Postgres database:
+    `python3 manage.py dumpdata --exclude auth.permission --exclude contenttypes > db.json`
+12. In `settings.py`, comment out the existing Sqlite DATABASES and replace the default `DATABASE` setting with the 'database_url' (found in the app's config vars in Heroku) using the following code:
 ```
 DATABASES = {
         'default': dj_database_url.parse(<DATABASE_URL>)
     }
 ```
-9. In GitPod, enter `python3 manage.py migrate` to run migrations and create the models in the Postgres database.
-10. Populate the new database by loading the data from the json files. Be sure to load categories first:
-    * `python3 manage.py loaddata categories.json`
-    * `python3 manage.py loaddata products.json`
-11. Create a new superuser, this was done by using `python3 manage.py createsuperuser` and then following the instructions shown in the terminal.
-12. Install gunicorn using `pip3 install`.
-13. Run `pip3 freeze > requirements.txt` to make sure the app has all the necessary requirements.
-14. Create a Procfile and populate it by typing in the GitPod terminal:
-```
-web: gunicorn <app_name>.wsgi:application
-```
+13.	Now connected to the Postgres database, it can be populated by running the following:
+python3 manage.py showmigrations
+python3 manage.py migrate
+python3 manage.py loaddata db.json
+14. To be able to login to the Postgres database, create a new superuser (and then follow the instructions in the terminal):
+`python3 manage.py createsuperuser`
 15. Log into Heroku via your IDE terminal using 'heroku login -i'.
-16. To ensure no static files are transferred, type `heroku config:set COLLECTSTATIC=1 --app <app_name>`
-17. In `settings.py` add the hostname of the Heroku app:
+16. SO that no static files are transferred, type `heroku config:set COLLECTSTATIC=1 --app <app_name>`
+17. In 'settings.py' add the Heroku app's host name:
+`ALLOWED_HOSTS = ['<hostname>', 'localhost']`
+18. Still in 'settings.py', change the 'DATABASE' section in order that it retrieves the correct value (Heroku Postgres for live, Django SQLite for testing):
 ```
-ALLOWED_HOSTS = ['<hostname>', 'localhost']
-```
-18. From the Heroku dashboard, navigate to the 'deploy' tab, 'Deployment method' section and select 'connect to GitHub'. 
-20. Search for your GitHub repository and click 'connect'.
-21. Select 'Automatic Deploys'.
-22. In dashboard, navigate to the 'settings' tab, 'config vars' section and enter the following key value pairs:
-    * AWS_ACCESS_KEY_ID - I get this when I set up AWS.
-    * AWS_SECRET_ACCESS_KEY - I get this when I set up AWS.
-    * DATABASE_URL - Prepopulated.
-    * DISABLE_COLLECTSTATIC - Created this during step 17.
-    * SECRET_KEY
-    * STRIPE_PUBLIC_KEY
-    * STRIPE_SECRET_KEY
-    * STRIPE_WH_SECRET
-    * USE_AWS - True
-23. Back in 'settings.py', chanage the default 'DATABASE' in order that it retrieves the value held in Heroku:
-```
-DATABASES = {
-        'default': dj_database_url.parse(os.environ.get('DATABASE_URL'))
+if 'DATABASE_URL' in os.environ:
+    DATABASES = {
+        'default': dj_database_url.parse(os.environ.get('<DATABASE_URL>'))
+    }
+else:
+    DATABASES = {
+        'default': {
+            'ENGINE': 'django.db.backends.sqlite3',
+            'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+        }
     }
 ```
-24. Add, committ and push all changes via the terminal.
-25. The app can now be launched directly from Heroku (or at https://ENTER-APP-NAME.herokuapp.com) and will automatically update to the latest version each time commits are pushed to Github.
+19.	In Stripe, add Heroku app URL a new webhook endpoint.
+20.	Update 'settings.py' with the new Stripe environment variables and email settings.
+21.	Git add, commit and push all changes to GitHub.
+22. In the Heroku dashboard, navigate to the 'settings' tab, 'config vars' section and enter the following key value pairs:
+    * AWS_ACCESS_KEY_ID - AWS access key.
+    * AWS_SECRET_ACCESS_KEY - AWS secret key.
+    * DATABASE_URL - Your Postgres database URL 
+    * EMAIL_HOST_PASS - Your Email Password (generated by Gmail)
+    * EMAIL_HOST_USER - Your Email Address
+    * DISABLE_COLLECTSTATIC - Created this during step 17.
+    * SECRET_KEY - Your Django secret key (I used Djecrety to generate mine)
+    * STRIPE_PUBLIC_KEY - Stripe public key
+    * STRIPE_SECRET_KEY - Stripe secret key
+    * STRIPE_WH_SECRET - Stripe webhook key
+    * USE_AWS - True
+23. The app can now be launched directly from Heroku (or at https://ENTER-APP-NAME.herokuapp.com) and will automatically update to the latest version each time commits are pushed to Github.
+
 
 ### AWS and S3 Bucket Setup
-1. Create an [AWS](https://aws.amazon.com/) account.
+1. Create an [AWS](https://aws.amazon.com/) account (choose the free tier) and login.
 2. Navigate to the management console, search for "S3" to be taken to the S3 dashboard.
-3. Click **create bucket** button.
-    * Give it a name and select the region closest to you.
-    * Allow public access.
-4. In the bucket's properties select **static website hosting**.
+3. Click 'create bucket' button
+4. Give it a name (same as app name on Heroku), select the region closest to you, allow public access and then click on 'create'.
+4. From the dashboard, go to the bucket's properties tabe and select 'static website hosting'.
     * Select "use this bucket to host a website".
-    * Give it the default values of `index.html` and `error.html` then save.
-5. For the buckets permissions CORS configuration use:
+5. Set the home/default page to  `index.html` and error link as `error.html`, then save.
+5. On the permissions tab, edit the 'CORS configuration' as follows and save when done:
 ```
 [
   {
@@ -82,16 +90,98 @@ DATABASES = {
   }
 ]
 ```
-6. For the buckets permissions policy:
-    * Copy the Amazon resource name (ARN) from the top of the page.
-    * Click "policy generator".
-    * Select type of policy as "S3 Bucket Policy".
+6. Go to the bucket policy section and click 'edit' and then 'policy generator'.
+7. In the newly opened window, selct 'S3 Bucket Policy'
+8. Next, set the following options:
     * Allow all principals by using `*`.
     * Set action to "GetObject".
-    * Paste in the ARN.
-    * Click **Add statement**. Then **Generate policy** and copy the json file shown.
-    * Paste this json file to bucket policy.
-        * Add `/*` at the end of the 'Resource' key.
-    * Save.
-7. For the access control list:
-    * Set list objects to everyone.
+    * Amazon Resource Name (ARN) – Copy and paste in the value found on the previous page, under 'Bucket ARN'.
+    * Click 'Add statement' and then 'Generate policy' 
+    * Copy and paste the json file shown into to bucket policy.
+    * Make sure to add `/*` at the end of the 'Resource' key to allow access to all resources.
+    * Click 'save'.
+7. Navigate to the Access Control List (ACL) tab and set the list objects to 'everyone' under the Public Access section and click 'save'
+
+
+### IAM (Identity and Access Management) Setup
+1. Navigate to the AWS management console, search for 'IAM' and open it.
+2. Select 'Groups' from the menu, click 'create new group' giving it a relevant name.
+3. Select 'Policies'from the menu and then 'create policy'.
+4. Select the JSON tab and click the 'import managed policy'.
+5. Search for and import 'Amazon S3 Full Access'.
+8. Copy your ARN and place it in the code so that it looks like the below;
+```
+{
+    "Version": "2012-10-17",
+    "Statement": [
+        {
+            "Effect": "Allow",
+            "Action": [
+                "s3:*",
+                "s3-object-lambda:*"
+            ],
+            "Resource": [
+                "arn:aws:s3:::<YOUR-ARN>",
+                "arn:aws:s3:::<YOUR-ARN>/*"
+            ]
+        }
+    ]
+}
+```
+8. Click on next until you get to 'review the policy', give it a name and a description and click 'create'.
+9. Back on the policy page, navigate to 'user groups' and click 'manage group name'
+10. Click 'Attach policies'm then search for and select the policy you created in step 8 above.
+11. Then click 'users" from the menu, then 'add user' and give it a relevant name.
+12. Give this user 'programatic access' and add it to the newly created group.
+13. Click through 'next' and then 'create user'.
+14. Finally, make sure to download the .csv file you see there and save it. This file contains essential secret keys.
+
+
+### Setting for static/media files in settings.py
+1. Install boto3 and django-storages via the terminal in your IDE to connect AWS S3 bucket to Django.
+pip3 install boto3
+pip3 install django-storages
+2. Run pip3 freeze > requirements.txt.
+3. Add 'storages' to INSTALLED_APPS in settings.py.
+4. Open the .csv file you save from the previous section and copy the AWS_ACCESS_KEY_ID and AWS_SECRET_ACCESS_KEY values to the Config Vars in Heroku.
+5. Remove the DISABLE_COLLECTSTATIC variable.
+6. Back in your terminal, create a new file called 'custom_storages.py' and enter the following code:
+```
+from django.conf import settings
+from storages.backends.s3boto3 import S3Boto3Storage
+
+
+class StaticStorage(S3Boto3Storage):
+    location = settings.STATICFILES_LOCATION
+
+
+class MediaStorage(S3Boto3Storage):
+    location = settings.MEDIAFILES_LOCATION
+```
+7. Go to 'settings.py' and add the following:
+```
+if 'USE_AWS' in os.environ:
+    # Cache control
+    AWS_S3_OBJECT_PARAMETERS = {
+        'Expires': 'Thu, 31 Dec 2099 20:00:00 GMT',
+        'CacheControl': 'max-age=94608000',
+    }
+    
+    # Bucket Config
+    AWS_STORAGE_BUCKET_NAME = 'jiira'
+    AWS_S3_REGION_NAME = 'eu-west-2'
+    AWS_ACCESS_KEY_ID = os.environ.get('AWS_ACCESS_KEY_ID')
+    AWS_SECRET_ACCESS_KEY = os.environ.get('AWS_SECRET_ACCESS_KEY')
+    AWS_S3_CUSTOM_DOMAIN = f'{AWS_STORAGE_BUCKET_NAME}.s3.amazonaws.com'
+
+    # Static and media files
+    STATICFILES_STORAGE = 'custom_storages.StaticStorage'
+    STATICFILES_LOCATION = 'static'
+    DEFAULT_FILE_STORAGE = 'custom_storages.MediaStorage'
+    MEDIAFILES_LOCATION = 'media'
+
+    # Override static and media URLs in production
+    STATIC_URL = f'https://{AWS_S3_CUSTOM_DOMAIN}/{STATICFILES_LOCATION}/'
+    MEDIA_URL = f'https://{AWS_S3_CUSTOM_DOMAIN}/{MEDIAFILES_LOCATION}/'
+```
+8. Finally, Git add, commit and push all changes to GitHub.
