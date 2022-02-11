@@ -27,6 +27,7 @@
         <div class="row">
             <div class="col">
                 {% if basket_items %}
+                    <!----- Mobile View -------------------------------------->
                     <div class="d-block d-md-none">
                         <div class="row">
                             <div class="col">
@@ -63,6 +64,7 @@
                             </a>	
                         </div>
                     </div>
+                    <!----- Desktop View -------------------------------------->
                     <div class="table-responsive rounded d-none d-md-block">
                         <table class="table table-sm table-borderless">
                             <thead class="text-black">
@@ -122,6 +124,11 @@
 
 {% block postloadjs %}
 {{ block.super }}
+<script type="text/javascript">
+    $('.btt-link').click(function(e) {
+        window.scrollTo(0,0)
+    })
+</script>
 {% include 'products/includes/quantity_input_script.html' %}
 
 <script type="text/javascript">

@@ -253,6 +253,11 @@ video {
     opacity: 0.85;
 }
 
+.hero-text {
+    font-size: 3rem;
+    font-weight: 100;
+}
+
 #homepage-section {
     background-color: white;
 }
@@ -549,9 +554,9 @@ video {
     }
 
     .hero-cover {
-        background: none;
+        /* background: none; */
         color: white;
-        opacity: 1;
+        /* opacity: 0.8; */
         font-size: small;
     }
 
@@ -605,8 +610,26 @@ video {
 }
 
 @media (max-width: 500px) {
+    .container {
+        padding-left: 2;
+    }
+
+    .hero-text {
+        font-size: 1.5rem;
+    }
+
+    .section-heading {
+        margin-top: 0.5rem;
+        font-size: large;
+    }
+
     .section-lead {
         display: none;
+    }
+
+    .mb-4, .mt-4 {
+        margin-top: 0.75rem !important;
+        margin-bottom: 0.75rem !important;
     }
 
     .shop-now-button {
