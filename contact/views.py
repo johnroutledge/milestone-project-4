@@ -38,7 +38,8 @@ def contact(request):
                     'first_name': first_name,
                     'last_name': last_name,
                     'subject': subject,
-                    'message': message
+                    'message': message,
+                    'email': email
                 })
             try:
                 send_mail(subject, message, settings.EMAIL_HOST_USER, [
