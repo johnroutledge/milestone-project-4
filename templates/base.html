@@ -59,9 +59,7 @@
             <!----- Logo -------------------------------------->
             <div class="col-12 col-lg-4 my-auto py-1 py-lg-0 text-center text-lg-left">
                 <a href="{% url 'home' %}" class="navbar-brand nav-link main-logo-link">
-                    <!-- <img src="media/logo_jiira.png" class="image-responsive"> -->
                     <img src="{% static 'images/logo_jiira.png' %}" class="image-responsive" id="nav-logo">
-                    <!-- <h2 class="logo-font text-black my-0"><strong>Jiira</strong></h2> -->
                 </a>
             </div>
             <div class="col-12 col-lg-4 my-auto py-1 py-lg-0 text-center text-lg-center">
@@ -88,9 +86,7 @@
                     <li class="list-inline-item dropdown">
                         <a class="text-black nav-link nav-link-fade-up" href="#" id="user-options" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                             <div class="text-center">
-                                <!-- <div><i class="far fa-user fa-lg"></i></div> -->
                                 <div><i class="bi bi-person fa-lg"></i></div>
-                                <!-- <p class="my-0">My Account</p> -->
                             </div>
                         </a>
                         <div class="dropdown-menu dropdown-menu-right border-0" aria-labelledby="user-options">
@@ -112,7 +108,6 @@
                         <a class="{% if grand_total %}text-info font-weight-bold{% else %}text-black{% endif %} nav-link nav-link-fade-up" href="{% url 'view_basket' %}">
                             <div class="text-center">
                                 <div id="basket-icon">
-                                    <!-- <i class="fas fa-shopping-bag fa-lg"> -->
                                     <i class="bi bi-bag fa-lg">
                                         <span id="basket-count">
                                         {% if basket_items %}
@@ -123,13 +118,6 @@
                                         </span>
                                     </i>
                                 </div>
-                                <!-- <p class="my-0">
-                                    {% if grand_total %}
-                                        ${{ grand_total|floatformat:2 }}
-                                    {% else %}
-                                        $0.00
-                                    {% endif %}
-                                </p> -->
                             </div>
                         </a>
                     </li>
@@ -179,7 +167,6 @@
     <footer class="container-fluid footer-container bg-pink text-black">
         <div class="row">
             <!----- Site Links ----->
-            <!-- <div class="footer-content col-12 col-md-2 offset-md-3 text-left mt-4"> -->
             <div class="footer-content col-12 col-md-4 text-center mt-4">
                 <h5>Explore</h5>
                 <hr>
@@ -191,7 +178,6 @@
                 <p><a href="{% url 'contact' %}?category=stud_earrings,hoop_earrings" class="footer-menu-link text-black">Contact</a></p>
             </div>
             <!----- Contact Info ----->
-            <!-- <div class="footer-content col-12 col-md-3 text-left mt-4"> -->
             <div class="footer-content col-12 col-md text-center mt-4">
                 <h5>Contact</h5>
                 <hr>
@@ -200,7 +186,6 @@
                 <p><i class="fas fa-map-marker-alt"></i> Jiira Jewellery, 555 Chang Pheuak Rd, Chiang Mai, Thailand.</p>
             </div>
             <!----- Social Links ----->
-            <!-- <div class="footer-content col-12 col-md-3 text-left mt-4"> -->
             <div class="footer-content col-12 col-md-4 text-center mt-4">
                 <h5>Follow</h5>
                 <hr>

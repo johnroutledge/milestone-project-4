@@ -26,10 +26,53 @@ section {
     display: inline-block;
 }
 
+.text-black {
+    color: #000 !important;
+}
+
+.border-black {
+    border: 1px solid black !important;
+}
+
+.bg-black {
+    background: #000 !important;
+}
+
+.bg-pink {
+    background: var(--jiira-pink);
+}
+
+.jiira-line {
+    border-color: var(--jiira-pink) !important;
+}
+
+a.category-badge > span.badge:hover {
+    background: var(--jiira-pink) !important;
+}
+
+input[name='q']::placeholder {
+    color: #aab7c4;
+}
+
+/* from Bulma */
+.icon {
+    align-items: center;
+    display: inline-flex;
+    justify-content: center;
+    height: 1.5rem;
+    width: 1.5rem;
+}
+
+/* -------------------- Buttons */
+
 .btn-black {
     background: black !important;;
     color: white !important;;
     font-size: smaller !important;;
+}
+
+.btn-search {
+    font-size: 1rem !important;
 }
 
 .thick-btn-border {
@@ -61,30 +104,6 @@ section {
     color: black !important;;
 }
 
-.text-black {
-    color: #000 !important;
-}
-
-.border-black {
-    border: 1px solid black !important;
-}
-
-.bg-black {
-    background: #000 !important;
-}
-
-.bg-pink {
-    background: var(--jiira-pink);
-}
-
-.jiira-line {
-    border-color: var(--jiira-pink) !important;
-}
-
-a.category-badge > span.badge:hover {
-    background: var(--jiira-pink) !important;
-}
-
 .btt-button {
     height: 42px;
     width: 42px;
@@ -97,19 +116,6 @@ a.category-badge > span.badge:hover {
 .update-link,
 .remove-item {
     cursor: pointer;
-}
-
-input[name='q']::placeholder {
-    color: #aab7c4;
-}
-
-/* from Bulma */
-.icon {
-    align-items: center;
-    display: inline-flex;
-    justify-content: center;
-    height: 1.5rem;
-    width: 1.5rem;
 }
 
 /* -------------------- Navbar */
@@ -352,15 +358,9 @@ video {
 
 
 /* -------------------------------- News Page (Blog) */
-/* .post-img-container {
-    height: 75vh;
-    min-height: 100%;
-    width: 100%;
-} */
 
 .blog-post-img {
     height: 40vh;
-    /* width: 25vw; */
     right: 10px;
     object-fit: cover;
     color:#ced4da;
@@ -370,7 +370,6 @@ video {
 
 .blog-post-img:hover {
     color: var(--jiira-pink); 
-    /* opacity: 0.85; */
     filter: drop-shadow(.5em .5em .25em);
 }
 
@@ -407,18 +406,6 @@ video {
 .toast-capper {
     height: 8px;
 }
-
-/* from CSS-tricks.com: https://css-tricks.com/snippets/css/css-triangle/ */
-/* .arrow-up {
-    width: 0;
-    height: 0;
-    border-left: 4px solid transparent;
-    border-right: 4px solid transparent;
-    border-bottom: 10px solid black;
-    position: absolute;
-    top: -10px;
-    right: 36px;
-} */
 
 /* Convenience classes - colors copied from Bootstrap */
 .bg-success {
@@ -647,12 +634,14 @@ video {
 
     .btn.btn-outline-black.rounded-1,
     .btn.btn-black.rounded-1 {
-        padding: .3rem .3rem;
+        padding-left: .1rem !important;
+        padding-right: 1rem !important;
     }
 
     .btn.btn-outline-black.rounded-1.btn-lg,
     .btn.btn-black.rounded-1.btn-lg {
-        padding: .3rem .3rem;
+        padding-left: .1rem !important;
+        padding-right: 1rem !important;
         font-size: .7rem;
     }
 

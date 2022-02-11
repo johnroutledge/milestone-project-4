@@ -14,12 +14,7 @@
     <!-- to revert to just background image, add container class to first div and remove video and video-overlay divs -->
     <div class="container h-100">
         <div class="row h-100">
-            <!-- <video src="media/jiira.mov" muted loop autoplay></video> -->
             <video src="{% static 'images/jiira.mov' %}" muted loop autoplay></video>
-            <!-- <div class="video-overlay"></div> -->
-            <!-- <div class="col-md-7"></div> -->
-            
-
             <!----- Hero Image Text Overlay -------------------------------------->
             <!-- <div class="d-none d-md-block col-md-5 col-md-offset-7 my-auto text-right hero-cover display-4"> -->
             <div class="ml-auto my-auto w-50 hero-cover">
@@ -33,14 +28,12 @@
         </div>
     </div>
    
-
     <!----- Product Sections -------------------------------------->
     <div class="container-fluid" id="homepage-section">
         <div class="container">
             <hr class="mb-4 mt-4">
             <div class="row fade-in">
                 <div class="col-md-5 order-md-2">
-                    <!-- <h2 ref="{% url 'products' %}?category=necklaces" class="section-heading">Earrings</h2> -->
                     <a href="{% url 'products' %}?category=stud_earrings,hoop_earrings" class="section-heading logo-font text-black fade-ltr">Earrings</a>
                     <p class="lead section-lead">Earrings give you an effortless way to add glamour to all your outfits. With fabulous designs in pearl
                         and silver, you will find a pair to match your look.</p>
@@ -59,7 +52,6 @@
             <hr class="mb-4 mt-4">
             <div class="row fade-in">
                 <div class="col-md-5 offset-md-1">
-                    <!-- <h2 class="section-heading">Necklaces</h2> -->
                     <a href="{% url 'products' %}?category=pendant_necklaces,choker_necklaces" class="section-heading logo-font text-black fade-ltr">Necklaces</a>
                     <p class="lead section-lead">Jiira's array of unique designs handcrafted from the finest silver, provide the perfect necklace for
                         any occassion. Our necklaces can be matched with our rings and earrings for flawless style. 
@@ -76,7 +68,6 @@
             <hr class="mb-4 mt-4">
             <div class="row fade-in">
                 <div class="col-md-5 order-md-2">
-                    <!-- <h2 class="section-heading">Bracelets</h2> -->
                     <a href="{% url 'products' %}?category=band_rings,linked_rings" class="section-heading logo-font text-black fade-ltr">Rings</a>
                     <p class="lead section-lead">Whether your taste is understated or extravagant, you're sure to find a ring that you love 
                         in stunning range. 
