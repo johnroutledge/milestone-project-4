@@ -634,14 +634,14 @@ video {
 
     .btn.btn-outline-black.rounded-1,
     .btn.btn-black.rounded-1 {
-        padding-left: .1rem !important;
-        padding-right: 1rem !important;
+        padding-left: .4rem !important;
+        padding-right: .4rem !important;
     }
 
     .btn.btn-outline-black.rounded-1.btn-lg,
     .btn.btn-black.rounded-1.btn-lg {
-        padding-left: .1rem !important;
-        padding-right: 1rem !important;
+        padding-left: .4rem !important;
+        padding-right: .4rem !important;
         font-size: .7rem;
     }
 

@@ -12,16 +12,15 @@
   border: 1px solid #ffcad4;
   border-radius: 5px;
   padding: 1rem; height: auto;">
-  <!-- Message -->
+  <!--- Email Template ----------------------------->
   <p>
-    <span>Jiira: you have received a message from a customer.</span>
+    <span>Jiira: you have received a message from {{ first_name|title }} {{ last_name|title }}.</span>
   </p>
   <div>
     <p>
         <span><strong>Subject:</strong></span> {{ subject }}<br><br>
         <span><strong>Message:</strong></span> {{ message }}<br><br>
-        <span><strong>Sender:</strong></span> {{ first_name|title }} {{ last_name|title }}<br><br>
-        <span><strong>Email:</strong></span> {{ email }}<br><br>
+        <span><strong>Sender's email:</strong></span> {{ email }}<br><br>
     </p>
   </div>
 </body>
