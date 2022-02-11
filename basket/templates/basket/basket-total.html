@@ -4,8 +4,8 @@
     <h6>Total: ${{ discounted_total|floatformat:2 }}</h6>
 {% endif %}
 {% if free_delivery_delta > 0 %}
-    <p class="mb-1 text-danger">
-        You could get free delivery by spending just <strong>${{ free_delivery_delta }}</strong> more!
+    <p class="mb-1 text-info">
+        <i class="bi bi-info-square"></i> spend another <strong>${{ free_delivery_delta }}</strong> for free delivery
     </p>
 {% endif %}
 <h6>Delivery: ${{ delivery|floatformat:2 }}</h6>

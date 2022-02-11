@@ -6,26 +6,24 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 
-<body style="font-size: 1rem; color:#000;font-family: monsterrat;
-  background-color: #f2f2f2;
-  border: 1px solid gray;
-  border-radius: 25px;
+<body style="font-size: 1rem;
+  font-family: monsterrat;
+  color:#000;
+  border: 1px solid #ffcad4;
+  border-radius: 5px;
   padding: 1rem; height: auto;">
   <!-- Message -->
-  <p>Hi
-    <span><strong>JIIRA</strong></span>
+  <p>
+    <span>Jiira: you have received a message from a customer.</span>
   </p>
   <div>
     <p>
-      <i>
         <span><strong>Subject:</strong></span> {{ subject }}<br><br>
-        <span><strong>Message:</strong></span> {{ message }}
-      </i>
+        <span><strong>Message:</strong></span> {{ message }}<br><br>
+        <span><strong>Sender:</strong></span> {{ first_name|title }} {{ last_name|title }}<br><br>
+        <span><strong>Email:</strong></span> {{ email }}<br><br>
     </p>
   </div>
-  <p>Regards,<br>
-    <span><strong>{{ first_name|title }} {{ last_name|title }}</strong></span>
-  </p>
 </body>
 
 </html>
