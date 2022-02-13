@@ -7,10 +7,8 @@ from profiles.models import UserProfile
 
 from .forms import CommentForm, PostForm
 
-   
 
 # Create your views here.
-
 
 def blog(request):
     """ Display all blog posts """
@@ -66,7 +64,8 @@ def add_blog_post(request):
             return redirect(reverse('blog_post_detail', args=[post.slug]))
         else:
             messages.error(
-                request, 'Unable to add blog post. Please check form validity.')
+                request, 'Unable to add blog post. \
+                Please check form validity.')
     else:
         form = PostForm()
 
@@ -95,7 +94,8 @@ def edit_blog_post(request, slug):
             return redirect(reverse('blog_post_detail', args=[post.slug]))
         else:
             messages.error(
-                request, 'Unable to update blog post. Please check form validity.')
+                request, 'Unable to update blog post. \
+                Please check form validity.')
     else:
         form = PostForm(instance=post)
         messages.info(request, f'Now editing {post.title}')

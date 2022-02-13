@@ -3,6 +3,7 @@ from profiles.models import UserProfile
 
 # Create your models here.
 
+
 # Blog Post
 class Post(models.Model):
     title = models.CharField(max_length=150, unique=True)
@@ -12,7 +13,7 @@ class Post(models.Model):
     image_url = models.URLField(max_length=1024, null=True, blank=True)
     content = models.TextField()
     date_created = models.DateTimeField(auto_now_add=True)
-    date_updated = models.DateTimeField(auto_now= True)
+    date_updated = models.DateTimeField(auto_now=True)
 
     class Meta:
         ordering = ['-date_created']
@@ -33,4 +34,5 @@ class Comment(models.Model):
         ordering = ['date_created']
 
     def __str__(self):
-        return 'Comment {} by {}'.format(self.comment_body, self.name, date_created)
+        return 'Comment {} by {}'.format(
+            self.comment_body, self.name, date_created)

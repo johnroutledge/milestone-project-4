@@ -1,7 +1,7 @@
-// Sticky Nav after scroll credit: Julio Codes YouTube channel
+// Sticky Nav after scroll credit Julio Codes YouTube channel
 var height = $('#delivery-banner').height();
 
-$(window).scroll(function () { 
+$(window).scroll(function() { 
   if ($(window).scrollTop() > 30) {
     $('.nav-bar').addClass('navbar-fixed-top');
   }else {

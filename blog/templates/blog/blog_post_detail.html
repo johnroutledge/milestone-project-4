@@ -26,7 +26,7 @@
                                 {% if post.image %}
                                     <img  class="blog-detail-img" src="{{ MEDIA_URL }}{{ post.image }}" alt="{{ post.title }}">
                                 {% else %}
-                                    <img  class="blog-detail-img" alt="{{ post.title }}"/>
+                                    <img  class="blog-detail-img" src="{{ MEDIA_URL }}noimage.png" alt="{{ post.title }}"/>
                                 {% endif %}
                             </div>
                         </div>

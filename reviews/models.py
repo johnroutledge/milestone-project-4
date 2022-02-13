@@ -5,7 +5,7 @@ from products.models import Product
 
 
 class Review(models.Model):
-    
+
     RATING = [
         (1, '1'),
         (2, '2'),

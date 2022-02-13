@@ -144,8 +144,6 @@ input[name='q']::placeholder {
     box-shadow: 0px 1em 2em -1em;
 }
 
-
-
 .main-logo-link {
     width: fit-content;
 }
@@ -284,7 +282,6 @@ video {
     background: black;
     color: white;
     opacity: 1 !important;
-    /* min-width: 260px; */
 }
 
 .overlay {
@@ -329,7 +326,6 @@ video {
 }
 
 /* Product Form */
-
 .btn-file {
     position: relative;
     overflow: hidden;
@@ -358,7 +354,6 @@ video {
 
 
 /* -------------------------------- News Page (Blog) */
-
 .blog-post-img {
     height: 40vh;
     right: 10px;
@@ -380,16 +375,6 @@ video {
     color:#ced4da;
     filter: drop-shadow(.25em .25em .5em);
 }
-
-/* -------------------------------- Contact Page */
-
-/* #reply-message {
-    display: inline;
-}
-
-#reply-message span {
-    float: right;
-} */
 
 /* --------- bootstrap toasts */
 .message-container {
@@ -451,7 +436,6 @@ video {
 }
 
 /* -------------------------------- Media Queries */
-
 /* Slightly larger container on xl screens */
 @media (min-width: 1200px) {
   .container {
@@ -530,7 +514,6 @@ video {
 
 /* add top padding when navbar collapsed on mobile */
 @media (max-width: 991px) {
-
     body {
         height: calc(100vh - 80px);
         background-position: right;
@@ -541,9 +524,7 @@ video {
     }
 
     .hero-cover {
-        /* background: none; */
         color: white;
-        /* opacity: 0.8; */
         font-size: small;
     }
 
@@ -593,12 +574,11 @@ video {
         padding: .6rem .6rem;
         font-size: 1rem;
     }
-
 }
 
 @media (max-width: 500px) {
     .container {
-        padding-left: 2;
+        padding-left: 2px;
     }
 
     .hero-text {
