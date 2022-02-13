@@ -59,7 +59,7 @@
             <!----- Logo -------------------------------------->
             <div class="col-12 col-lg-4 my-auto py-1 py-lg-0 text-center text-lg-left">
                 <a href="{% url 'home' %}" class="navbar-brand nav-link main-logo-link">
-                    <img src="{% static 'images/logo_jiira.png' %}" class="image-responsive" id="nav-logo">
+                    <img src="{% static 'images/logo_jiira.png' %}" class="image-responsive" id="nav-logo" alt="Jiira Logo">
                 </a>
             </div>
             <div class="col-12 col-lg-4 my-auto py-1 py-lg-0 text-center text-lg-center">
@@ -73,7 +73,7 @@
                             <div class="input-group w-80">
                                 <input class="form-control border border-grey rounded-0" type="text" name="q" placeholder="Search site">
                                 <div class="input-group-append">
-                                    <button class="form-control btn btn-white border border-grey rounded-0" type="submit">
+                                    <button class="form-control btn btn-white border border-grey rounded-0" type="submit" aria-label="Search">
                                         <span class="icon">
                                             <i class="bi bi-search"></i>
                                         </span>
