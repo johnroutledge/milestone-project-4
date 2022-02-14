@@ -113,39 +113,39 @@ Wireframes
 
 *Mobile*
 
-* [Homepage](https://johnroutledge.github.io/milestone-project-4/readme/images/wireframes/mobile_home.png)
-* [Products](https://johnroutledge.github.io/milestone-project-4/readme/images/wireframes/mobile_products.png)
-* [Product Details](https://johnroutledge.github.io/milestone-project-4/readme/images/wireframes/mobile_product_details.png)
-* [Basket](https://johnroutledge.github.io/milestone-project-4/readme/images/wireframes/mobile_basket.png)
-* [Checkout](https://johnroutledge.github.io/milestone-project-4/readme/images/wireframes/mobile_checkout.png)
-* [News](https://johnroutledge.github.io/milestone-project-4/readme/images/wireframes/mobile_news.png)
-* [News Item](https://johnroutledge.github.io/milestone-project-4/readme/images/wireframes/mobile_news_item.png)
-* [Contact](https://johnroutledge.github.io/milestone-project-4/readme/images/wireframes/mobile_contact.png)
-* [Profile](https://johnroutledge.github.io/milestone-project-4/readme/images/wireframes/mobile_profile.png)
+* [Homepage](/readme/images/wireframes/mobile_home.png)
+* [Products](/readme/images/wireframes/mobile_products.png)
+* [Product Details](/readme/images/wireframes/mobile_product_details.png)
+* [Basket](/readme/images/wireframes/mobile_basket.png)
+* [Checkout](/readme/images/wireframes/mobile_checkout.png)
+* [News](/readme/images/wireframes/mobile_news.png)
+* [News Item](/readme/images/wireframes/mobile_news_item.png)
+* [Contact](/readme/images/wireframes/mobile_contact.png)
+* [Profile](/readme/images/wireframes/mobile_profile.png)
 
 *Tablet*
 
-* [Homepage](https://johnroutledge.github.io/milestone-project-4/readme/images/wireframes/tablet_home.png)
-* [Products](https://johnroutledge.github.io/milestone-project-4/readme/images/wireframes/tablet_products.png)
-* [Product Details](https://johnroutledge.github.io/milestone-project-4/readme/images/wireframes/tablet_product_details.png)
-* [Basket](https://johnroutledge.github.io/milestone-project-4/readme/images/wireframes/tablet_basket.png)
-* [Checkout](https://johnroutledge.github.io/milestone-project-4/readme/images/wireframes/tablet_checkout.png)
-* [News](https://johnroutledge.github.io/milestone-project-4/readme/images/wireframes/tablet_news.png)
-* [News Item](https://johnroutledge.github.io/milestone-project-4/readme/images/wireframes/tablet_news_item.png)
-* [Contact](https://johnroutledge.github.io/milestone-project-4/readme/images/wireframes/tablet_contact.png)
-* [Profile](https://johnroutledge.github.io/milestone-project-4/readme/images/wireframes/tablet_profile.png)
+* [Homepage](/readme/images/wireframes/tablet_home.png)
+* [Products](/readme/images/wireframes/tablet_products.png)
+* [Product Details](/readme/images/wireframes/tablet_product_details.png)
+* [Basket](/readme/images/wireframes/tablet_basket.png)
+* [Checkout](/readme/images/wireframes/tablet_checkout.png)
+* [News](/readme/images/wireframes/tablet_news.png)
+* [News Item](/readme/images/wireframes/tablet_news_item.png)
+* [Contact](/readme/images/wireframes/tablet_contact.png)
+* [Profile](/readme/images/wireframes/tablet_profile.png)
 
 *Desktop*
 
-* [Homepage](https://johnroutledge.github.io/milestone-project-4/readme/images/wireframes/desktop_home.png)
-* [Products](https://johnroutledge.github.io/milestone-project-4/readme/images/wireframes/desktop_products.png)
-* [Product Details](https://johnroutledge.github.io/milestone-project-4/readme/images/wireframes/desktop_product_details.png)
-* [Basket](https://johnroutledge.github.io/milestone-project-4/readme/images/wireframes/desktop_basket.png)
-* [Checkout](https://johnroutledge.github.io/milestone-project-4/readme/images/wireframes/desktop_checkout.png)
-* [News](https://johnroutledge.github.io/milestone-project-4/readme/images/wireframes/desktop_news.png)
-* [News Item](https://johnroutledge.github.io/milestone-project-4/readme/images/wireframes/desktop_news_item.png)
-* [Contact](https://johnroutledge.github.io/milestone-project-4/readme/images/wireframes/desktop_contact.png)
-* [Profile](https://johnroutledge.github.io/milestone-project-4/readme/images/wireframes/desktop_profile.png)
+* [Homepage](/readme/images/wireframes/desktop_home.png)
+* [Products](/readme/images/wireframes/desktop_products.png)
+* [Product Details](/readme/images/wireframes/desktop_product_details.png)
+* [Basket](/readme/images/wireframes/desktop_basket.png)
+* [Checkout](/readme/images/wireframes/desktop_checkout.png)
+* [News](/readme/images/wireframes/desktop_news.png)
+* [News Item](/readme/images/wireframes/desktop_news_item.png)
+* [Contact](/readme/images/wireframes/desktop_contact.png)
+* [Profile](/readme/images/wireframes/desktop_profile.png)
 
 
 **Surface**
@@ -278,8 +278,8 @@ As it was changed towards the end of development, all 'blog' references were lef
 
 The data was allocated across the following tables:
 
-* Users - stores a user's personal information and undergoes CREATE, READ and UPDATE operations.
-* Transactions - stores a user's transaction history has a many-to-one relation with the users table on the email address field. It undergoes CREATE, READ and DELETE operations.
+* User Profile - stores a user's personal information.
+* Order - stores all order history has a many-to-one relation with the user profile table
 * Categories - stores a user's current balances for each currency has a one-to-one relation with the users table on the email address field. It undergoes CREATE, READ and UPDATE operations.  
 * Products - stores additional information about all of the cryptocurrencies and undergoes READ operations.
 * Reviews - stores additional information about all of the cryptocurrencies and undergoes READ operations.
@@ -288,7 +288,7 @@ The data was allocated across the following tables:
 
 **Schema**
 
-![ERD](https://johnroutledge.github.io/milestone-project-4/readme/images/jiira_erd.png "ERD")
+![ERD](/readme/images/jiira_erd.png "ERD")
 
 
 ***

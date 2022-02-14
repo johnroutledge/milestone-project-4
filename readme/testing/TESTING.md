@@ -218,7 +218,7 @@ CSS was validated using the W3C Markup Validation Service. This was done using t
 
 Results of all tests came back with the same 'no errors found' message, as per the image below:
 
-![CSS Test Results](https://johnroutledge.github.io/milestone-project-4/readme/images/code/css_test_results.png "CSS Test Results")
+![CSS Test Results](/readme/images/code/css_test_results.png "CSS Test Results")
 
 
 ## JavaScript Testing
@@ -229,7 +229,7 @@ Python code from all .py files was checked using [Pep8online](https://www.pep8on
 
 The first check on each file brought back numerous errors which were all rectified, so subsequent tests all passed. A small selection of results are shown in the screenshot below:
 
-![Python Test Results](https://johnroutledge.github.io/milestone-project-4/readme/images/code/python_test_results.png "Python Test Results")
+![Python Test Results](/readme/images/code/python_test_results.png "Python Test Results")
 
 
 (INSERT IMAGE)
@@ -239,17 +239,17 @@ The results shown are for the home, products, basket, checkout, news item and co
 
 * All improvements were made to the accessibilty scores as these were the lowest on all tests. To improve the scores, an 'alt' value was given to the Jiira logo and 'aria-label' values were given to the search icon in the navbar (both mobile and desktop) and quantity controls in the basket page.
 
-![Homepage Results](https://johnroutledge.github.io/milestone-project-4/readme/images/lighthouse/lighthouse_home_page.png "Homepage Results")
+![Homepage Results](/readme/images/lighthouse/lighthouse_home_page.png "Homepage Results")
 
-![Products Page Results](https://johnroutledge.github.io/milestone-project-4/readme/images/lighthouse/lighthouse_products_page.png "Products Page Results")
+![Products Page Results](/readme/images/lighthouse/lighthouse_products_page.png "Products Page Results")
 
-![Basket Page Results](https://johnroutledge.github.io/milestone-project-4/readme/images/lighthouse/lighthouse_basket_page.png "Basket Page Results")
+![Basket Page Results](/readme/images/lighthouse/lighthouse_basket_page.png "Basket Page Results")
 
-![Checkout Page Results](https://johnroutledge.github.io/milestone-project-4/readme/images/lighthouse/lighthouse_checkout_page.png "Checkout Page Results")
+![Checkout Page Results](/readme/images/lighthouse/lighthouse_checkout_page.png "Checkout Page Results")
 
-![News Item Page Results](https://johnroutledge.github.io/milestone-project-4/readme/images/lighthouse/lighthouse_news_item_page.png "News Item Page Results")
+![News Item Page Results](/readme/images/lighthouse/lighthouse_news_item_page.png "News Item Page Results")
 
-![Contact Page Results](https://johnroutledge.github.io/milestone-project-4/readme/images/lighthouse/lighthouse_contact_page.png "Contact Page Results")
+![Contact Page Results](/readme/images/lighthouse/lighthouse_contact_page.png "Contact Page Results")
 
 
 
