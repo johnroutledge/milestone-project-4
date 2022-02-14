@@ -1,10 +1,7 @@
-<img src="static/images/logo_jiira.png" alt="Logo" width="15%" height="15%">
-
-
 # Jiira
 **Full Stack Frameworks with Django Milestone Project**
 
-![Main Mockup](https://johnroutledge.github.io/milestone-project-4/readme/jiira_mockup.png "Main Mockup")
+![Main Mockup](/readme/images/jiira_mockup.png "Main Mockup")
  
 [Link to Live Website](https://jiira.herokuapp.com)
 
@@ -266,7 +263,6 @@ As it was changed towards the end of development, all 'blog' references were lef
 * Google Dev Tools (including Lighthouse)
 * Pep8online.com (to check Python code for PEP 8 requirements)
 * W3C Validator (to check validity of HTML and CSS)
-* Code Beautify (to beautify JavaScript)
 * dbdiagram.io (to produce the MongoDB ERD)
 
 
@@ -274,17 +270,18 @@ As it was changed towards the end of development, all 'blog' references were lef
 
 ## Database
 
-(NOT COMPLETE!!!)
-
 The data was allocated across the following tables:
 
-* User Profile - stores a user's personal information.
-* Order - stores all order history has a many-to-one relation with the user profile table
-* Categories - stores a user's current balances for each currency has a one-to-one relation with the users table on the email address field. It undergoes CREATE, READ and UPDATE operations.  
-* Products - stores additional information about all of the cryptocurrencies and undergoes READ operations.
-* Reviews - stores additional information about all of the cryptocurrencies and undergoes READ operations.
-* News (Blog) - stores additional information about all of the cryptocurrencies and undergoes READ operations.
+* UserProfile - stores a user's personal information.
+* Order - stores all users' order history.
+* OrderLineItem - stores each order's line item information.
+* Category - stores category information for Jiira's products.  
+* Product - stores each product's information.
+* Review - stores the reviews given bu users to each product.
+* Post - stores news (blog) posts.
+* Comment - stores comments left by users for each of the news posts.
 
+The following schema section illustrates the relationships between each of the above tables.
 
 **Schema**
 
@@ -312,21 +309,20 @@ As with testing, due to the amount of information regarding deployment, it has b
 
 **Content**
 
+- All product information was taken from Jiira's Thai Facebook and Lazada pages.
 - Product descriptions and blog posts were translated from Thai to English by my wife, Chonchanok Routledge.
-- Cryptocurrency coin descriptions taken from wikipedia.com and investopedia.com
 
 **Media**
 
-- All images were taken by Jiratchaya Chaiyasak
-- The Jiira logo was designed by Jiratchaya Chaiyasak
-- All other icons used in the site are from FontAwesome.com and Bootstrap
+- All images were taken by Jiratchaya Chaiyasak.
+- The Jiira logo was designed by Jiratchaya Chaiyasak.
+- All other icons used in the site are from FontAwesome.com and Bootstrap.
 
 **Code**
 
-- Core setup, use of Django, linking to Stripe, Heroku, PostgresSQL and Amazon Web Services were all taken from the Code Institute's Full Stack Frameworks with Django Boutique Ado walkthrough project
-- 
-- Kevin Powell's YouTube channel video 'INSERT CREDIT'
-
+- Core setup, use of Django, linking to Stripe, Heroku, PostgresSQL and Amazon Web Services were all taken from the Code Institute's Full Stack Frameworks with Django Boutique Ado walkthrough project.
+- Codepen.io  for the animated nav link hover underline.
+- Kevin Powell's YouTube channel for the about section's fade-in text effect.
 
 **Acknowledgements**
 

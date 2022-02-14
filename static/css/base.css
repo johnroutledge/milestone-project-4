@@ -1,5 +1,4 @@
-/* -------------------- General Styling */
-
+/* -------------------- GENERAL STYLING */
 :root {
     --jiira-pink: #ffcad4;
 }
@@ -63,7 +62,7 @@ input[name='q']::placeholder {
     width: 1.5rem;
 }
 
-/* -------------------- Buttons */
+/* -------------------- BUTTONS */
 
 .btn-black {
     background: black !important;;
@@ -118,7 +117,7 @@ input[name='q']::placeholder {
     cursor: pointer;
 }
 
-/* -------------------- Navbar */
+/* -------------------- NAVIGATION */
 
 #topnav {
     height: 70px;
@@ -211,7 +210,7 @@ input[name='q']::placeholder {
     width: 100%;
 }
 
-/* -------------------- Footer */
+/* -------------------- FOOTER */
 
 .footer-copyright {
     padding-top: 1rem;
@@ -219,7 +218,7 @@ input[name='q']::placeholder {
     text-align: right;
 }
 
-/* -------------------- Homepage */
+/* -------------------- HOMEPAGE */
 
 body {
     background: url('/media/homepage_lg.jpg') no-repeat top left;
@@ -306,7 +305,7 @@ video {
     opacity: 1;
 }
 
-/* -------------------- Product Pages */
+/* -------------------- PRODUCT PAGES */
 
 .qty_input{
     width: 20px !important;
@@ -352,8 +351,7 @@ video {
     border-radius: 0;
 }
 
-
-/* -------------------------------- News Page (Blog) */
+/* -------------------------------- NEWS PAGE (BLOG) */
 .blog-post-img {
     height: 40vh;
     right: 10px;
@@ -376,7 +374,7 @@ video {
     filter: drop-shadow(.25em .25em .5em);
 }
 
-/* --------- bootstrap toasts */
+/* --------- BOOTSTRAP TOASTS */
 .message-container {
     position: fixed;
     top: 72px;
@@ -435,7 +433,7 @@ video {
     overflow-y: auto;
 }
 
-/* -------------------------------- Media Queries */
+/* ---------------------- Media Queries */
 /* Slightly larger container on xl screens */
 @media (min-width: 1200px) {
   .container {

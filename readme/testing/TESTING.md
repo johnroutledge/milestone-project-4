@@ -199,7 +199,7 @@ The website was tested on various screen sizes using Chrome DevTools, from iPhon
 
 It was also tested using [Am I Responsive](http://ami.responsivedesign.is/) and the results were as per the following image:
 
-(INSERT IMAGE)
+![Main Mockup](/readme/images/jiira_mockup.png "Main Mockup")
 
 ## Testing Browser Compatibility
 
@@ -235,19 +235,25 @@ The first check on each file brought back numerous errors which were all rectifi
 (INSERT IMAGE)
 
 ## Lighthouse Testing
-The results shown are for the home, products, basket, checkout, news item and contact pages on both mobile and desktop. These were chosen as they produced the lowest figures and best illustrate the gains made by implementing Lighthouse's recommended changes.
+The results shown in the images below are for the home, products, basket, checkout, news item and contact pages on both mobile and desktop. These were chosen as they produced the lowest figures and best illustrate the gains made by implementing Lighthouse's recommended changes.
 
-* All improvements were made to the accessibilty scores as these were the lowest on all tests. To improve the scores, an 'alt' value was given to the Jiira logo and 'aria-label' values were given to the search icon in the navbar (both mobile and desktop) and quantity controls in the basket page.
+All improvements were made to the accessibilty scores as these were the lowest on all tests. To improve the scores, an 'alt' value was given to the Jiira logo and 'aria-label' values were given to the search icon in the navbar (both mobile and desktop) and quantity controls in the basket page.
+
 
 ![Homepage Results](/readme/images/lighthouse/lighthouse_home_page.png "Homepage Results")
 
+
 ![Products Page Results](/readme/images/lighthouse/lighthouse_products_page.png "Products Page Results")
+
 
 ![Basket Page Results](/readme/images/lighthouse/lighthouse_basket_page.png "Basket Page Results")
 
+
 ![Checkout Page Results](/readme/images/lighthouse/lighthouse_checkout_page.png "Checkout Page Results")
 
+
 ![News Item Page Results](/readme/images/lighthouse/lighthouse_news_item_page.png "News Item Page Results")
+
 
 ![Contact Page Results](/readme/images/lighthouse/lighthouse_contact_page.png "Contact Page Results")
 
