@@ -11,8 +11,7 @@ from .forms import CommentForm, PostForm
 # Create your views here.
 
 def blog(request):
-    """ Display all blog posts """
-
+    """ Displays all news (blog) posts """
     posts = Post.objects.all()
     post_count = len(posts)
     template = 'blog/blog.html'
@@ -24,7 +23,7 @@ def blog(request):
 
 
 def blog_post_detail(request, slug):
-    """ Display full blog post plus any comments """
+    """ Displays full news post plus any comments """
     post = Post.objects.get(slug=slug)
     comments = post.comments
 
@@ -51,7 +50,7 @@ def blog_post_detail(request, slug):
 
 @login_required
 def add_blog_post(request):
-    """ Add blog post """
+    """ View to add a news (blog) post """
     if not request.user.is_superuser:
         messages.error(request, 'Jiira admin access only.')
         return redirect(reverse('homepage'))
@@ -64,7 +63,7 @@ def add_blog_post(request):
             return redirect(reverse('blog_post_detail', args=[post.slug]))
         else:
             messages.error(
-                request, 'Unable to add blog post. \
+                request, 'Unable to add news post. \
                 Please check form validity.')
     else:
         form = PostForm()
@@ -80,7 +79,7 @@ def add_blog_post(request):
 
 @login_required
 def edit_blog_post(request, slug):
-    """ Edit blog post """
+    """ A view to edit a edit a news (blog) post """
     if not request.user.is_superuser:
         messages.error(request, 'Jiira admin access only.')
         return redirect(reverse('homepage'))
@@ -94,7 +93,7 @@ def edit_blog_post(request, slug):
             return redirect(reverse('blog_post_detail', args=[post.slug]))
         else:
             messages.error(
-                request, 'Unable to update blog post. \
+                request, 'Unable to update news post. \
                 Please check form validity.')
     else:
         form = PostForm(instance=post)
@@ -112,7 +111,7 @@ def edit_blog_post(request, slug):
 
 @login_required
 def delete_blog_post(request, slug):
-    """ Delete blog post """
+    """ A view to delete a news (blog) post """
     if not request.user.is_superuser:
         messages.error(request, 'Jiira admin access only.')
         return redirect(reverse('home'))

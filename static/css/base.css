@@ -123,11 +123,11 @@ input[name='q']::placeholder {
     height: 70px;
 }
 
-#basket-icon {
+.basket-icon {
     color: black !important;
 }
 
-#basket-count {
+.basket-count {
     color: #000 !important;
     font-style: normal;
     font-size: small;

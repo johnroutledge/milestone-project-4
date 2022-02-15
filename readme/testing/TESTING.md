@@ -209,9 +209,17 @@ The website was successfully opened and rendered correctly in Chrome (both deskt
 ## HTML Testing
 HTML was validated using the W3C Markup Validation Service. This was done using the 'Validate by Direct Input' option.
 
-Results of the test are shown in the image below:
+The main errors which had to be fixed were all within the basket app and related to duplicate IDs on the quantity-form.html, one of which is shown
+in the following image:
 
-(INSERT IMAGE)
+![HTML Test Errors](/readme/images/code/html_test_errors.png "HTML Test Errors")
+
+These occured because
+basket.html references the quantity-form twice, and hides one depending on the device size (mobile or desktop). To fix the errors, the IDs in question were changed to classes and the javascript was also changed to look for the class rather than ID.
+
+Having remedied the above errors, all HTML checks resulted in warnings as per the image below. These were non-critical issues and therefore not fixed following advice from my tutor.
+
+![HTML Test Warnings](/readme/images/code/html_test_warnings.png "HTML Test Warnings")
 
 ## CSS Testing
 CSS was validated using the W3C Markup Validation Service. This was done using the 'Validate by Direct Input' option.
@@ -223,14 +231,16 @@ Results of all tests came back with the same 'no errors found' message, as per t
 
 ## JavaScript Testing
 
+(INSERT TESTING)
 
 ## Python Testing
 Python code from all .py files was checked using [Pep8online](https://www.pep8online.com)
 
-The first check on each file brought back numerous errors which were all rectified, so subsequent tests all passed. A small selection of results are shown in the screenshot below:
+The first check on each file brought back numerous errors which were all rectified (see note below), so subsequent tests all passed. A small selection of results are shown in the screenshot below:
 
 ![Python Test Results](/readme/images/code/python_test_results.png "Python Test Results")
 
+Note: There was one 'line too long' error (see bottom-right screenshot in above image) in settings.py which wasn't fixed after consulting with my mentor. I also checked on Slack and several other students' MS4 projects (which had passed grading), all of which left the same error alone.
 
 (INSERT IMAGE)
 

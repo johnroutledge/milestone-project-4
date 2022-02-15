@@ -1,0 +1,38 @@
+<!----- Footer -------------------------------------->
+<footer class="container-fluid footer-container bg-pink text-black">
+    <div class="row">
+        <!----- Site Links ----->
+        <div class="footer-content col-12 col-md-4 text-center mt-4">
+            <h5>Explore</h5>
+            <hr>
+            <p><a href="{% url 'home' %}" class="footer-menu-link text-black">Home</a></p>
+            <p><a href="{% url 'products' %}?category=stud_earrings,hoop_earrings" class="footer-menu-link text-black">Earrings</a></p>
+            <p><a href="{% url 'products' %}?category=pendant_necklaces,choker_necklaces" class="footer-menu-link text-black">Necklaces</a></p>
+            <p><a href="{% url 'products' %}?category=band_rings,linked_rings" class="footer-menu-link text-black">Rings</a></p>
+            <p><a href="{% url 'blog' %}?category=stud_earrings,hoop_earrings" class="footer-menu-link text-black">News</a></p>
+            <p><a href="{% url 'contact' %}?category=stud_earrings,hoop_earrings" class="footer-menu-link text-black">Contact</a></p>
+        </div>
+        <!----- Contact Info ----->
+        <div class="footer-content col-12 col-md text-center mt-4">
+            <h5>Contact</h5>
+            <hr>
+            <p><i class="fas fa-phone"></i> +6653555333</p>
+            <p><i class="fas fa-envelope-open"></i> info@jiira.com</p>
+            <p><i class="fas fa-map-marker-alt"></i> Jiira Jewellery, 555 Chang Pheuak Rd, Chiang Mai, Thailand.</p>
+        </div>
+        <!----- Social Links ----->
+        <div class="footer-content col-12 col-md-4 text-center mt-4">
+            <h5>Follow</h5>
+            <hr>
+            <p><a href="https://www.facebook.com" target="_blank" rel="noopener" class="text-black"><i class="fab fa-facebook-square text-black"></i> Facebook</a></p>
+            <p><a href="https://www.twitter.com/" target="_blank" rel="noopener" class="text-black"><i class="fab fa-twitter-square"></i> Twitter</a></p>
+            <p><a href="https://www.instagram.com" target="_blank" rel="noopener" class="text-black"><i class="fab fa-instagram-square"></i> Instagram</a></p>
+            <p><a href="https://www.pinterest.com" target="_blank" rel="noopener" class="text-black"><i class="fab fa-pinterest"></i> Pinterest</a></p>
+        </div>
+    </div>
+    <div class="footer-copyright">
+        <div class="container text-black" id="copyright">
+            © 2021 John Routledge
+        </div>
+    </div>
+</footer>

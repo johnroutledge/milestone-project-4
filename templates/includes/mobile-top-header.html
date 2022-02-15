@@ -21,12 +21,12 @@
       </div>
   </li>
   <li class="list-inline-item dropdown">
-      <a class="text-black nav-link d-block d-lg-none" href="#" id="user-options" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+      <a class="text-black nav-link d-block d-lg-none" href="#" id="user-options-mob" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
           <div class="text-center">
               <div><i class="bi bi-person"></i></div>
           </div>
       </a>
-      <div class="dropdown-menu dropdown-menu-right border-0" aria-labelledby="user-options">
+      <div class="dropdown-menu dropdown-menu-right border-0" aria-labelledby="user-options-mob">
           {% if request.user.is_authenticated %}
               {% if request.user.is_superuser %}
                   <a href="{% url 'add_product' %}" class="dropdown-item">Product Management</a>
@@ -43,9 +43,9 @@
   <li class="list-inline-item">
       <a class="{% if grand_total %}text-primary font-weight-bold{% else %}text-black{% endif %} nav-link d-block d-lg-none" href="{% url 'view_basket' %}">
           <div class="text-center">
-            <div id="basket-icon">
+            <div class="basket-icon">
                 <i class="bi bi-bag fa-lg">
-                    <span id="basket-count">
+                    <span class="basket-count">
                     {% if basket_items %}
                         {{ product_count }}
                     {% else %}

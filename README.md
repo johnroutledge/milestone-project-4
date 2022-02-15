@@ -295,6 +295,17 @@ The following schema section illustrates the relationships between each of the a
 
 Due to the amount of information regarding testing, it has been detailed in the following separate [file](readme/testing/TESTING.md).
 
+NOTES: 
+To login to the live version with all priveleges, the following details should be used:
+* User Name: admin
+* Password: jiira123
+
+To test the card payment (hosted by Stripe) on the checkout page, the following should be used:
+* Card number: 4242 4242 4242 4242
+* Exp date: 04/24
+* CVC: 242
+* ZIP: 42424 
+
 
 ***
 
@@ -323,6 +334,7 @@ As with testing, due to the amount of information regarding deployment, it has b
 - Core setup, use of Django, linking to Stripe, Heroku, PostgresSQL and Amazon Web Services were all taken from the Code Institute's Full Stack Frameworks with Django Boutique Ado walkthrough project.
 - Codepen.io  for the animated nav link hover underline.
 - Kevin Powell's YouTube channel for the about section's fade-in text effect.
+- Haritha Computers & Technology YouTube Channel for the changing banner text effect.
 
 **Acknowledgements**
 

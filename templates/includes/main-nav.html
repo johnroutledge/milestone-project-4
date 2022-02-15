@@ -3,18 +3,6 @@
         <li class="nav-item">
             <a class="logo-font font-weight-bold nav-link text-black fade-up mr-5"  href="{% url 'home' %}">Home</a>
         </li>
-
-        <!-- <li class="nav-item dropdown">
-            <a class="logo-font font-weight-bold nav-link fade-up text-black mr-5" href="#" id="all-products-link" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                All Jewellery
-            </a>
-            <div class="dropdown-menu border-0" aria-labelledby="all-products-link">
-                <a href="{% url 'products' %}?category=earrings,necklaces,rings,necklaces" class="dropdown-item">All Jewellery</a>
-                <a href="{% url 'products' %}?sort=price&direction=asc" class="dropdown-item">By Price</a>
-                <a href="{% url 'products' %}?sort=category&direction=asc" class="dropdown-item ">By Category</a>
-            </div>
-        </li> -->
-
         <li class="nav-item dropdown">
             <a class="logo-font font-weight-bold nav-link text-black fade-up mr-5" href="#" id="earrings-link" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                 Earrings
@@ -25,7 +13,6 @@
                 <a href="{% url 'products' %}?category=hoop_earrings" class="dropdown-item">Hoop Earrings</a>
             </div>
         </li>
-
         <li class="nav-item dropdown">
             <a class="logo-font font-weight-bold nav-link text-black fade-up mr-5" href="#" id="necklaces-link" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                 Necklaces
@@ -36,9 +23,8 @@
                 <a href="{% url 'products' %}?category=choker_necklaces" class="dropdown-item">Chokers</a>
             </div>
         </li>
-
         <li class="nav-item dropdown">
-            <a class="logo-font font-weight-bold nav-link text-black fade-up mr-5" href="#" id="specials-link" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <a class="logo-font font-weight-bold nav-link text-black fade-up mr-5" href="#" id="rings-link" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                 Rings
             </a>
             <div class="dropdown-menu border-0" aria-labelledby="rings-link">
@@ -47,14 +33,11 @@
                 <a href="{% url 'products' %}?category=linked_rings" class="dropdown-item">Linked Rings</a>
             </div>
         </li>
-
         <li class="nav-item">
             <a class="logo-font font-weight-bold nav-link text-black fade-up mr-5"  href="{% url 'blog' %}">News</a>
         </li>
-
         <li class="nav-item">
             <a class="logo-font font-weight-bold nav-link text-black fade-up"  href="{% url 'contact' %}">Contact</a>
         </li>
-
     </ul>
 </div>
