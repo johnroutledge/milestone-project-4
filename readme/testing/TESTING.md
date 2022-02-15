@@ -221,6 +221,7 @@ Having remedied the above errors, all HTML checks resulted in warnings as per th
 
 ![HTML Test Warnings](/readme/images/code/html_test_warnings.png "HTML Test Warnings")
 
+
 ## CSS Testing
 CSS was validated using the W3C Markup Validation Service. This was done using the 'Validate by Direct Input' option.
 
@@ -231,10 +232,23 @@ Results of all tests came back with the same 'no errors found' message, as per t
 
 ## JavaScript Testing
 
-(INSERT TESTING)
+JavaScript was tested with [JSHint](https://jshint.com/) JavaScript linter. Warnings were thrown up (as per the images below), but no errors or anything which required a code change.  Some examples of the JavaScript test results are as follows:
+
+#### base.js<br>
+![Base.js Test Results](/readme/images/code/base_js.png "Base.js Test Results")
+
+#### observers.js<br>
+![Observers.js Test Results](/readme/images/code/observers_js.png "Observers.js Test Results")
+
+#### basket.html javascript<br>
+![Basket.html JavaScript Test Results](/readme/images/code/basket_html_js.png "Basket.html JavaScript Test Results")
+
+#### banner text javascript<br>
+![Changing Banner Text JavaScript Test Results](/readme/images/code/changing_banner_text_js.png "Changning Banner Text JavaScript Test Results")
+
 
 ## Python Testing
-Python code from all .py files was checked using [Pep8online](https://www.pep8online.com)
+Python code from all .py files was checked using [Pep8online](https://www.pep8online.com).
 
 The first check on each file brought back numerous errors which were all rectified (see note below), so subsequent tests all passed. A small selection of results are shown in the screenshot below:
 
@@ -242,7 +256,6 @@ The first check on each file brought back numerous errors which were all rectifi
 
 Note: There was one 'line too long' error (see bottom-right screenshot in above image) in settings.py which wasn't fixed after consulting with my mentor. I also checked on Slack and several other students' MS4 projects (which had passed grading), all of which left the same error alone.
 
-(INSERT IMAGE)
 
 ## Lighthouse Testing
 The results shown in the images below are for the home, products, basket, checkout, news item and contact pages on both mobile and desktop. These were chosen as they produced the lowest figures and best illustrate the gains made by implementing Lighthouse's recommended changes.

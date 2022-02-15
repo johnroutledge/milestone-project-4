@@ -263,6 +263,7 @@ As it was changed towards the end of development, all 'blog' references were lef
 * Google Dev Tools (including Lighthouse)
 * Pep8online.com (to check Python code for PEP 8 requirements)
 * W3C Validator (to check validity of HTML and CSS)
+* JSHint.com (to check JavaScript)
 * dbdiagram.io (to produce the MongoDB ERD)
 
 
@@ -335,6 +336,9 @@ As with testing, due to the amount of information regarding deployment, it has b
 - Codepen.io  for the animated nav link hover underline.
 - Kevin Powell's YouTube channel for the about section's fade-in text effect.
 - Haritha Computers & Technology YouTube Channel for the changing banner text effect.
+- Julio Codes YouTube channel for Sticky Nav after scroll.
+- Jenny Malone's Boho Living MS4 project for the basics of the blog app.
+- Gomathi Shankar's Bubbles MS4 project for the basics of the contact app.
 
 **Acknowledgements**
 
