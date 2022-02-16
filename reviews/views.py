@@ -11,7 +11,7 @@ from profiles.models import UserProfile
 
 @login_required
 def add_review(request, product_id):
-    """ Allows a user to add a news post review """
+    """ Allows a user to add a review """
 
     product = get_object_or_404(Product, pk=product_id)
     user = get_object_or_404(UserProfile, user=request.user)

@@ -11,6 +11,7 @@
 * [JavaScript Testing](#javascript-testing)
 * [Python Testing](#python-testing)
 * [Lighthouse Testing](#lighthouse-testing)
+* [Notable Bug Fixes](#notable-bug-fixes)
 
 
 ## Manual Testing
@@ -281,4 +282,17 @@ All improvements were made to the accessibilty scores as these were the lowest o
 ![Contact Page Results](/readme/images/lighthouse/lighthouse_contact_page.png "Contact Page Results")
 
 
+## Notable Bug Fixes
 
+1. User Profile Drop-Down Menu
+
+In an early version of the website, when clicking on the user profile icon in the navbar, the resulting drop-down menu appeared partially off screen (see screenshots below). This occured on both mobile and desktop versions. To fix the issue, the class 'dropdown-menu-right' was added to the offending div in both 'base.html' and 'mobile-top-header-html'. 
+
+![User Profile Menu Bug](/readme/images/code/user-profile-menu-bug.png "User Profile Menu Bug")
+
+
+2. Review Form Bug
+
+Towards the end of the development of the website, I decided to add the 'reviews' app in order to give users the ability to add product reviews. Once the initial code was in place, the review form wasn't appearing on the product details page. Having read and re-read my code for over an hour, I finally realised that it was a simple naming mistake in the view which was causing the problem. While a was passing a 'form' in, I had called it 'review_form' instead of 'form'. Once I changed the name to just 'form', the reivew form then rendered correctly on the page product details page. Below are screenshots of the code before and after the changes.
+
+![Review Form Bug](/readme/images/code/review-form-bug.png "Review Form Bug")

@@ -63,7 +63,6 @@ input[name='q']::placeholder {
 }
 
 /* -------------------- BUTTONS */
-
 .btn-black {
     background: black !important;;
     color: white !important;;
@@ -118,7 +117,6 @@ input[name='q']::placeholder {
 }
 
 /* -------------------- NAVIGATION */
-
 #topnav {
     height: 70px;
 }
@@ -129,7 +127,7 @@ input[name='q']::placeholder {
 
 .basket-count {
     color: #000 !important;
-    font-style: normal;
+    font-style: normal !important;
     font-size: small;
 }
 
@@ -211,7 +209,6 @@ input[name='q']::placeholder {
 }
 
 /* -------------------- FOOTER */
-
 .footer-copyright {
     padding-top: 1rem;
     padding-bottom: 1rem;
@@ -219,7 +216,6 @@ input[name='q']::placeholder {
 }
 
 /* -------------------- HOMEPAGE */
-
 body {
     background: url('/media/homepage_lg.jpg') no-repeat top left;
     overflow-x: hidden;
@@ -306,7 +302,6 @@ video {
 }
 
 /* -------------------- PRODUCT PAGES */
-
 .qty_input{
     width: 20px !important;
 }
@@ -590,6 +585,10 @@ video {
 
     .section-lead {
         display: none;
+    }
+
+    .footer-content  {
+        margin-left: 0px;
     }
 
     .mb-4, .mt-4 {

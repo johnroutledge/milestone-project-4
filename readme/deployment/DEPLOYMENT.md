@@ -87,7 +87,7 @@ else:
 3. Click 'create bucket' button
 4. Give it a name (same as app name on Heroku), select the region closest to you, allow public access and then click on 'create'.
 5. From the dashboard go to the bucket's properties tab, select 'static website hosting' and 'use this bucket to host a website'.
-6. Set the home/default page to  'index.html' and error link as 'error.html', then save.
+6. Set the home/default page to 'index.html' and error link as 'error.html', then save.
 7. On the permissions tab, edit the 'CORS configuration' as follows and save when done:
 ```
 [
@@ -106,7 +106,7 @@ else:
 ]
 ```
 8. Go to the bucket policy section and click 'edit' and then 'policy generator'.
-9. In the newly opened window, selct 'S3 Bucket Policy'
+9. In the newly opened window, select 'S3 Bucket Policy'
 10. Next, set the following options:
     * Allow all principals by using '*'.
     * Set action to 'GetObject'.
@@ -122,7 +122,7 @@ else:
 
 1. Navigate to the AWS management console, search for 'IAM' and open it.
 2. Select 'Groups' from the menu, click 'create new group' giving it a relevant name.
-3. Select 'Policies'from the menu and then 'create policy'.
+3. Select 'Policies' from the menu and then 'create policy'.
 4. Select the JSON tab and click the 'import managed policy'.
 5. Search for and import 'Amazon S3 Full Access'.
 6. Copy your ARN and place it in the code as shown below;
@@ -146,9 +146,9 @@ else:
 ```
 7. Click on next until you get to 'review the policy', give it a name and a description and click 'create'.
 8. Back on the policy page, navigate to 'user groups' and click 'manage group name'
-9. Click 'Attach policies'm then search for and select the policy you created in step 8 above.
+9. Click 'Attach policies' then search for and select the policy you created in step 8 above.
 10. Next, click 'users' from the menu, then 'add user' and give it a relevant name.
-11. Give this user 'programatic access' and add it to the newly created group.
+11. Give this user 'programmatic access' and add it to the newly created group.
 13. Click through 'next' and then 'create user'.
 13. Finally, make sure to download the .csv file you see there and save it. This file contains essential secret keys.
 

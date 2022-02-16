@@ -11,9 +11,9 @@
 
 Jiira is a fully functional e-commerce website specialising in handmade jewellery from Thailand. Jiira's current online sales channels are through Facebook Marketplace and Lazada, a Thai version of Amazon/eBay. To extend Jiira's market outside of Thailand and to better showcase the product range, a tailor-made website is required.
 
-This website is designed to promote Jiira's products and provide news on the company, while at the same time fulfulling the full stack framework milestone project four requirements of the Code Institue course.
+This website is designed to promote Jiira's products and provide news on the company, while at the same time fulfilling the full stack framework milestone project four requirements of the Code Institute course.
 
-It has e-commerce functionality for customers using Stripe for payments, has an admin area for the business owner to maintain the product range and blog posts which provide updates on Jiira's activity. Visitors to the website also have the ability to leave comments on the blog posts, giving them more interaction with the Jiira brand.
+It has e-commerce functionality for customers using Stripe for payments, has an admin area for the business owner to maintain the product range and news (blog) posts which provide updates on Jiira's activity. Visitors to the website also have the ability to leave comments on the blog posts, giving them more interaction with the Jiira brand.
 
 
 The typical user for the website would be someone who:
@@ -74,9 +74,9 @@ User Stories:
 | 6 | Shopper       | sort products                                    | locate them quicker by price, name, type    |
 | 7 | Shopper       | search for products                              | find what I'm looking for                   |
 | 8 | Shopper       | see my search results                            | decide if it's what I want                  |
-| 9 | Shopper       | choose qunatity and size of jewellery            | purchase exactly what I want                |
+| 9 | Shopper       | choose quantity and size of jewellery            | purchase exactly what I want                |
 |10 | Shopper       | see what's in my shopping basket                 | make sure I have what I want and the cost   |
-|11 | Shopper       | adjust my basket                                 | make easy udates before the checkout        |
+|11 | Shopper       | adjust my basket                                 | make easy updates before the checkout       |
 |12 | Shopper       | easily enter my payment information              | pay quickly and confidently                 |
 |13 | Shopper       | leave a review of a product                      | help other shoppers with their purchase     |
 |14 | Shopper       | see an order confirmation                        | be sure I've made the correct purchase      |
@@ -149,7 +149,7 @@ Wireframes
 
 The 'Monserrat' Google font was chosen to give a clean and modern feel, while the white/grey/pink color scheme added to this style.
 
-The color scheme was chosen as it feels clean and stylish, yet also soft in order to match the style of Jiira's product range. At the same time, it is both visually unintimidating and easy on the eye. The button color is consistent throughout the app to maintain consistency and increase the intuitiveness of the page.
+The color scheme was chosen as it feels clean and stylish, yet also soft in order to match the style of Jiira's product range. At the same time, it is both visually unintimidating and easy on the eye. The button colors are consistent throughout the app to maintain consistency and increase the intuitiveness of the page.
 
 The model hiding her face hero image was chosen for the landing page as it suggests the page is about jewellery, while at the same time evoking a slight feeling of intrigue and mystery often synonymous with Thailand. The large message within the hero image was used to give a clear, unambiguous description of what the website is about.
 
@@ -169,7 +169,7 @@ The Jiira logo used in the nav bar and favicon was to maintain consistency and r
 * Navigation bar, including logo and link to the home page, a search box, an account icon and shopping basket icon which also displays the number of items currently in the basket.
 * Links in the navigation bar collapse to a hamburger button on smaller devices such as smartphones and tablets.
 * Toast messages giving users meaningful feedback to their actions on the website.
-* Footer with with navigation links to all pages, Jiira's contact details, social media links and copyright information.
+* Footer with navigation links to all pages, Jiira's contact details, social media links and copyright information.
 * 'Back to top' button where applicable.
 
 *Homepage*
@@ -187,7 +187,7 @@ The Jiira logo used in the nav bar and favicon was to maintain consistency and r
 
 *Basket Page*
 * Shows all the products in the basket.
-* The ability to ammend items in the basket.
+* The ability to amend items in the basket.
 * Also shows the total amount due, delivery costs and any applicable discount.
 
 *Checkout Page*
@@ -217,11 +217,11 @@ As it was changed towards the end of development, all 'blog' references were lef
 **Future Features to Implement**
 * A Thai version of the website.
 * The ability to login using a social media account.
-* A wishlist feature.
+* A wish list feature.
 * Inventory tracking so stock availability can be shown on website.
 * 'Track my order' functionality so that customers can see the status of their order.
 * Confirmation when editing or deleting products for admin logins.
-* Skip navigation links for visitors to the site with certain disablities to enhance their UX.
+* Skip navigation links for visitors to the site with certain disabilities to enhance their UX.
 * The ability to accept or edit cookies.
 * Marketing opt-in options on the registration page.
 
@@ -278,7 +278,7 @@ The data was allocated across the following tables:
 * OrderLineItem - stores each order's line item information.
 * Category - stores category information for Jiira's products.  
 * Product - stores each product's information.
-* Review - stores the reviews given bu users to each product.
+* Review - stores the reviews given by users to each product.
 * Post - stores news (blog) posts.
 * Comment - stores comments left by users for each of the news posts.
 
@@ -297,7 +297,7 @@ The following schema section illustrates the relationships between each of the a
 Due to the amount of information regarding testing, it has been detailed in the following separate [file](readme/testing/TESTING.md).
 
 NOTES: 
-To login to the live version with all priveleges, the following details should be used:
+To login to the live version with all privileges, the following details should be used:
 * User Name: admin
 * Password: jiira123
 
@@ -333,7 +333,7 @@ As with testing, due to the amount of information regarding deployment, it has b
 **Code**
 
 - Core setup, use of Django, linking to Stripe, Heroku, PostgresSQL and Amazon Web Services were all taken from the Code Institute's Full Stack Frameworks with Django Boutique Ado walkthrough project.
-- Codepen.io  for the animated nav link hover underline.
+- Codepen.io for the animated nav link hover underline.
 - Kevin Powell's YouTube channel for the about section's fade-in text effect.
 - Haritha Computers & Technology YouTube Channel for the changing banner text effect.
 - Julio Codes YouTube channel for Sticky Nav after scroll.

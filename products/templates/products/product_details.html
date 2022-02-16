@@ -37,7 +37,6 @@
                             </a>
                         </p>
                     {% endif %}
-
                     {% if reviews.count %}
                         {% if reviews.count == 1 %}
                             <a class="text-muted small" href="#product-reviews"><i class="fas fa-star mr-1"></i>{{ rating }}/5 ({{reviews.count}} review)</a>
@@ -47,8 +46,6 @@
                     {% else %}
                         <small class="text-muted"><i class="fas fa-star mr-1"></i>(no ratings)</small>
                     {% endif %}
-                   
-
                     {% if request.user.is_superuser %}
                         <small class="ml-3">
                             <a href="{% url 'edit_product' product.id %}">Edit</a> | 
@@ -117,10 +114,8 @@
             </div>
         </div>
     </div>
-   
     <!-- User reviews and review form --------------------->
     {% include 'reviews/includes/reviews.html' %}
-
 {% endblock %}
 
 {% block postloadjs %}
