@@ -180,10 +180,16 @@ The Jiira logo used in the nav bar and favicon was to maintain consistency and r
 *Product Pages*
 * Clear pictures of the products.
 * Ability to sort products by name and price.
+* Gives store admin access to edit/delete options. Delete also has a confirmation modal for enhanced UX.
 
 *Product Details Page*
 * The product detail page gives a larger image.
 * Also gives users the ability to select a quantity to add to the basket.
+* Gives store admin access to edit/delete options. Delete also has a confirmation modal for enhanced UX.
+
+
+*Add & Edit Product Pages*
+* These pages give the store admin the ability to add new products and edit existing ones.
 
 *Basket Page*
 * Shows all the products in the basket.
@@ -221,7 +227,6 @@ As it was changed towards the end of development, all 'blog' references were lef
 * A wish list feature.
 * Inventory tracking so stock availability can be shown on website.
 * 'Track my order' functionality so that customers can see the status of their order.
-* Confirmation when editing or deleting products for admin logins.
 * Skip navigation links for visitors to the site with certain disabilities to enhance their UX.
 * The ability to accept or edit cookies.
 * Marketing opt-in options on the registration page.
@@ -335,6 +340,7 @@ As with testing, due to the amount of information regarding deployment, it has b
 - The foundations of the blog app were laid by [Django Central](https://djangocentral.com/).
 - [Code Institute Alumni Aukje van der Wal](https://gitlab.com/Aukje/Dark-Luna/-/blob/master/contact/forms.py) for the basics of the contact app.
 - Fellow student Code Institute student, [Taylor Brookes](https://github.com/taybro23) for pointers on user reviews.
+- [Bootstrap Documentation](https://getbootstrap.com/docs/4.0/components/modal/) for the 'confirm delete' modals.
 
 **Acknowledgements**
 

@@ -63,11 +63,17 @@
 |  Products page product images                 | Hover          |  Border shadow change to pink                             | PASS          |
 |  Products page product images                 | Click          |  Navigate to product details page for chosen product      | PASS          |
 |  Products page edit/delete links              | Page load      |  Only be visible for admin login                          | PASS          |
-|  Products page edit/delete links              | Click          |  Navigate to edit page or delete item                     | PASS          |
+|  Products page edit link                      | Click          |  Navigate to edit product page                            | PASS          |
+|  Products page delete link                    | Click          |  Display confirm delete modal                             | PASS          |
+|  Confirm Delete Modal cancel button           | Click          |  Return to products page without deleting product         | PASS          |
+|  Confirm Delete Modal delete button           | Click          |  Delete product and return to products page               | PASS          |
 |  Products page edit/delete links              | Click          |  Success toast should be displayed                        | PASS          |
 |  Product details page ratings count           | Page load      |  Show correct score and number of ratings                 | PASS          |
 |  Product details page edit/delete links       | Page load      |  Only be visible for admin login                          | PASS          |
-|  Product details page edit/delete links       | Click          |  Navigate to edit page or delete item                     | PASS          |
+|  Products details page edit link              | Click          |  Navigate to edit product page                            | PASS          |
+|  Products details page delete link            | Click          |  Display confirm delete modal                             | PASS          |
+|  Confirm Delete Modal cancel button           | Click          |  Return to product details page without deleting product  | PASS          |
+|  Confirm Delete Modal delete button           | Click          |  Delete product and return to products details page       | PASS          |
 |  Product details page select size dropdown    | Page load      |  Only be visible for product with sizes                   | PASS          |
 |  Product details page keep shopping button    | Hover          |  Background and font colors should invert                 | PASS          |
 |  Product details page keep shopping button    | Click          |  Navigate to product page with all products               | PASS          |
@@ -160,10 +166,9 @@
 |  Media Query 5k screen size                   | Resize screen  |  Page should render correctly on 5k screen                | PASS          |
 
 
-
 ## User Stories Testing
 
-| # | As a/an     | I want to be able to...                    | So that I can...                            | Acheived on...                     |
+| # | As a/an     | I want to be able to...                    | So that I can...                            | Achieved on...                     |
 |---|-------------|--------------------------------------------|---------------------------------------------|------------------------------------|
 | 1 | Shopper     | easily see what the page is about          | decide if it's relevant to my needs         | Homepage                           |
 | 2 | Shopper     | view the products                          | choose what I want to buy                   | Product page                       |

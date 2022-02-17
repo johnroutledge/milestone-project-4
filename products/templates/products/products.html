@@ -25,7 +25,7 @@
         <div class="row">
             <div class="product-container col-10 offset-1">
                 <div class="row mt-1 mb-2">
-                     <!----- Sort box -------------------------------------->
+                    <!----- Sort box -------------------------------------->
                     <div class="col-12 col-md-6 my-auto order-md-last d-flex justify-content-center justify-content-md-end">
                         <div class="sort-select-wrapper w-50">
                             <select id="sort-selector" class="custom-select custom-select-sm rounded-1 border">
@@ -82,8 +82,8 @@
                                             {% if request.user.is_superuser %}
                                                 <small class="ml-3">
                                                     <a class="product-admin" href="{% url 'edit_product' product.id %}">Edit</a> | 
-                                                    <!-- <a class="text-danger" href="{% url 'delete_product' product.id %}">Delete</a> -->
                                                     <a class="product-admin text-danger" data-toggle="modal" data-target="#deleteModal{{ product.id }}">Delete</a>
+                                                    <!----- Confirm delete modal -------------------------------------->
                                                     <div class="modal fade" id="deleteModal{{ product.id }}" tabindex="-1" aria-labelledby="deleteModalLabel{{ product.id }}" aria-hidden="true">
                                                         <div class="modal-dialog modal-dialog-centered">
                                                             <div class="modal-content">
@@ -104,7 +104,7 @@
                                                                 </div>
                                                                 <div class="pb-3 ml-3">
                                                                     <button type="button" class="btn btn-outline-black rounded-1" data-dismiss="modal">Cancel</button>
-                                                                    <a href="{% url 'delete_product' product.id %}" class="btn btn-black rounded-1">Delete</a>
+                                                                    <a class="btn btn-black rounded-1" href="{% url 'delete_product' product.id %}">Delete</a>
                                                                 </div>
                                                             </div>
                                                         </div>

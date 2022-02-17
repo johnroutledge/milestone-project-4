@@ -3,6 +3,7 @@ from .forms import ContactForm
 
 
 class TestContactForm(TestCase):
+    """ Tests for contact forms """
 
     def test_first_name_is_required(self):
         form = ContactForm({'first_name': ''})
@@ -17,7 +18,10 @@ class TestContactForm(TestCase):
         form = ContactForm({'last_name': ''})
         self.assertFalse(form.is_valid())
         self.assertIn('last_name', form.errors.keys())
-        self.assertEqual(form.errors['last_name'][0], 'This field is required.')
+        self.assertEqual(
+                         form.errors['last_name'][0],
+                         'This field is required.'
+        )
 
     def test_email_is_required(self):
         form = ContactForm({'email': ''})
