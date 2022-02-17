@@ -302,6 +302,12 @@ video {
 }
 
 /* -------------------- PRODUCT PAGES */
+
+a.product-admin{
+    cursor: pointer;
+    text-decoration: none;
+} 
+
 .qty_input{
     width: 20px !important;
 }

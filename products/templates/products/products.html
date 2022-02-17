@@ -81,8 +81,34 @@
                                             {% endif %}
                                             {% if request.user.is_superuser %}
                                                 <small class="ml-3">
-                                                    <a href="{% url 'edit_product' product.id %}">Edit</a> | 
-                                                    <a class="text-danger" href="{% url 'delete_product' product.id %}">Delete</a>
+                                                    <a class="product-admin" href="{% url 'edit_product' product.id %}">Edit</a> | 
+                                                    <!-- <a class="text-danger" href="{% url 'delete_product' product.id %}">Delete</a> -->
+                                                    <a class="product-admin text-danger" data-toggle="modal" data-target="#deleteModal{{ product.id }}">Delete</a>
+                                                    <div class="modal fade" id="deleteModal{{ product.id }}" tabindex="-1" aria-labelledby="deleteModalLabel{{ product.id }}" aria-hidden="true">
+                                                        <div class="modal-dialog modal-dialog-centered">
+                                                            <div class="modal-content">
+                                                                <div class="text-center mt-2">
+                                                                    <h6 class="modal-title" id="deleteModal{{ product.id }}">
+                                                                        Delete Product
+                                                                    </h6>
+                                                                </div>
+                                                                <div class="modal-body">
+                                                                    Remove '{{ product.name }}' from the store?<br>
+                                                                <br>
+                                                                <p class="text-danger">
+                                                                    <span class="icon">
+                                                                        <i class="bi bi-exclamation-square"></i>
+                                                                    </span>
+                                                                    <span> This cannot be undone</span>
+                                                                </p>
+                                                                </div>
+                                                                <div class="pb-3 ml-3">
+                                                                    <button type="button" class="btn btn-outline-black rounded-1" data-dismiss="modal">Cancel</button>
+                                                                    <a href="{% url 'delete_product' product.id %}" class="btn btn-black rounded-1">Delete</a>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
                                                 </small>
                                             {% endif %}
                                         </div>

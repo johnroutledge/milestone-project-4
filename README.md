@@ -292,15 +292,9 @@ The following schema section illustrates the relationships between each of the a
 
 ***
 
-
 ## Testing
 
 Due to the amount of information regarding testing, it has been detailed in the following separate [file](readme/testing/TESTING.md).
-
-NOTES: 
-To login to the live version with all privileges, the following details should be used:
-* User Name: admin
-* Password: jiira123
 
 To test the card payment (hosted by Stripe) on the checkout page, the following should be used:
 * Card number: 4242 4242 4242 4242
@@ -334,12 +328,13 @@ As with testing, due to the amount of information regarding deployment, it has b
 **Code**
 
 - Core setup, use of Django, linking to Stripe, Heroku, PostgresSQL and Amazon Web Services were all taken from the Code Institute's Full Stack Frameworks with Django Boutique Ado walkthrough project.
-- Codepen.io for the animated nav link hover underline.
-- Kevin Powell's YouTube channel for the about section's fade-in text effect.
-- Haritha Computers & Technology YouTube Channel for the changing banner text effect.
-- Julio Codes YouTube channel for Sticky Nav after scroll.
-- Jenny Malone's Boho Living MS4 project for the basics of the blog app.
-- Gomathi Shankar's Bubbles MS4 project for the basics of the contact app.
+- [Codepen.io](https://codepen.io/) for the animated nav link hover underline.
+- [Kevin Powell's YouTube channel](https://www.youtube.com/watch?v=huVJW23JHKQ&t=2s&ab_channel=KevinPowell) for the about section's fade-in text effect.
+- [Haritha Computers & Technology YouTube Channel](https://www.youtube.com/c/HarithaComputersTechnology) for the changing banner text effect.
+- [Julio Codes YouTube channel](https://www.youtube.com/watch?v=sJ1uvHIJKTY&ab_channel=JulioCodes) for Sticky Nav after scroll.
+- The foundations of the blog app were laid by [Django Central](https://djangocentral.com/).
+- [Code Institute Alumni Aukje van der Wal](https://gitlab.com/Aukje/Dark-Luna/-/blob/master/contact/forms.py) for the basics of the contact app.
+- Fellow student Code Institute student, [Taylor Brookes](https://github.com/taybro23) for pointers on user reviews.
 
 **Acknowledgements**
 
