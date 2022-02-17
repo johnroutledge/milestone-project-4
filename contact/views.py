@@ -49,7 +49,7 @@ def contact(request):
             except BadHeaderError:
                 return HttpResponse('Invalid header found.')
             return redirect(reverse('home'),
-                            messages.success(request, f'Thank you for \
+                            messages.success(request, 'Thank you for \
                                             your message, a copy of which\
                                             has been emailed to you. We will\
                                             get in touch with you as soon\

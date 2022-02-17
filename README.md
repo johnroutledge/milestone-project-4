@@ -216,6 +216,7 @@ As it was changed towards the end of development, all 'blog' references were lef
 
 **Future Features to Implement**
 * A Thai version of the website.
+* The option to display prices in different currencies.
 * The ability to login using a social media account.
 * A wish list feature.
 * Inventory tracking so stock availability can be shown on website.
