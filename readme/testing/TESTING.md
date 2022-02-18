@@ -3,6 +3,7 @@
 
 ## Index – Table of Contents
 
+* [Automated Testing](#automated-testing) 
 * [Manual Testing](#manual-testing) 
 * [User Stories Testing](#user-stories-testing)
 * [Responsiveness Testing](#responsiveness-testing)
@@ -13,6 +14,11 @@
 * [Lighthouse Testing](#lighthouse-testing)
 * [Notable Bug Fixes](#notable-bug-fixes)
 
+
+## Automated Testing
+Automated unit testing was done within Django.  Due to time constraints with final submission deadline, there are gaps in the automated testing. However, I felt that it was better to do as much automated unit testing that time allowed, rather than none at all.
+
+ADD DETAILS & IMAGES
 
 ## Manual Testing
 
