@@ -1,20 +1,57 @@
 # Testing code adapted from Code Institute BoutiqueAdo project
 from django.test import TestCase
+from django.shortcuts import reverse
 
+from .models import Post
 
 class TestViews(TestCase):
-    """ Tests for views """
-    def test_get_blog(self):
-        """ Tests blog page is returned """
+    """ Tests for blog views """
+    def test_blog_page_url_exists(self):
+        """
+        Test that the blog page URL exists
+        """
+        response = self.client.get('/blog/')
+        self.assertEqual(response.status_code, 200)
 
-    def test_get_blog_post_detail(self):
-        """ Tests blog post detail page is returned """
+    def test_blog_view_uses_correct_template(self):
+        """
+        Test the correct template loads on page load
+        """
+        response = self.client.get(reverse('blog'))
+        self.assertEqual(response.status_code, 200)
+        self.assertTemplateUsed(
+            response, template_name='blog/blog.html')
 
-    def test_add_blog_post(self):
-        """ Tests add blog post works """
+    def test_blog_page_is_accessible_by_name(self):
+        """
+        test the blog page is accessible by name
+        """
+        response = self.client.get(reverse('blog'))
+        self.assertEqual(response.status_code, 200)
 
-    def test_edit_blog_post(self):
-        """ Tests edit blog post works """
+    def test_blog_posts(self):
+        """
+        Test that a blog post can be retrieved
+        """
+        posts = Post.objects.all()
+        for post in posts:
+            response = self.client.get(reverse('posts'))
+            self.assertEqual(response.status_code, 200)
+            self.assertContains(response, post.id)
 
-    def test_delete_blog_post(self):
-        """ Tests delete blog post works """
+    def test_blog_post_detail_page_url_exists(self):
+        """
+        test blog post detail page loads via url
+        """
+        post = Post.objects.create(slug='testpost')
+        response = self.client.get(f'/blog/{post.slug}/')
+        self.assertEqual(response.status_code, 200)
+
+    def test_blog_post_detail_page_template(self):
+        """
+        test blog post detail page loads via template
+        """
+        post = Post.objects.create(slug='testpost')
+        response = self.client.get(f'/blog/{post.slug}/')
+        self.assertEqual(response.status_code, 200)
+        self.assertTemplateUsed(response, 'blog/blog_post_detail.html')
