@@ -15,7 +15,7 @@ class TestViews(TestCase):
 
     def test_product_view_uses_correct_template(self):
         """
-        Test the correct template loads on page load
+        Test correct template is used
         """
         response = self.client.get(reverse('products'))
         self.assertEqual(response.status_code, 200)
@@ -24,7 +24,7 @@ class TestViews(TestCase):
 
     def test_product_page_is_accessible_by_name(self):
         """
-        test the product page is accessible by name
+        test product page is accessible by name
         """
         response = self.client.get(reverse('products'))
         self.assertEqual(response.status_code, 200)

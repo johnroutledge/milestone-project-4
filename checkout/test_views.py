@@ -7,14 +7,14 @@ class TestViews(TestCase):
     """ Tests for checkout views """
     def test_checkout_url_exists(self):
         """
-        Test that the checkout page URL exists
+        Test that checkout page URL exists
         """
         response = self.client.get('/checkout/')
         self.assertEqual(response.status_code, 302)
 
     def test_checkout_view_uses_correct_template(self):
         """
-        Test the correct template loads on page load
+        Test correct template is used
         """
         response = self.client.get(reverse('checkout'))
         self.assertEqual(response.status_code, 302)
@@ -22,7 +22,7 @@ class TestViews(TestCase):
 
     def test_basket_page_is_accessible_by_name(self):
         """
-        test the checkout page is accessible by name
+        test checkout page is accessible by name
         """
         response = self.client.get(reverse('checkout'))
         self.assertEqual(response.status_code, 302)

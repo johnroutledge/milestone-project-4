@@ -6,7 +6,7 @@ from .forms import ReviewForm
 class TestReviewForm(TestCase):
     """ Tests for review form """
     def test_title_required(self):
-        """ Tests title field is required """
+        """ Test title field is required """
         form = ReviewForm({'title': ''})
         self.assertFalse(form.is_valid())
         self.assertIn('title', form.errors.keys())
@@ -16,7 +16,7 @@ class TestReviewForm(TestCase):
         )
 
     def test_review_content_is_required(self):
-        """ Tests review content field is required """
+        """ Test review content field is required """
         form = ReviewForm({'review_content': ''})
         self.assertFalse(form.is_valid())
         self.assertIn('review_content', form.errors.keys())
@@ -26,7 +26,7 @@ class TestReviewForm(TestCase):
         )
 
     def test_rating_is_required(self):
-        """ Tests rating field is required """
+        """ Test rating field is required """
         form = ReviewForm({'rating': ''})
         self.assertFalse(form.is_valid())
         self.assertIn('rating', form.errors.keys())

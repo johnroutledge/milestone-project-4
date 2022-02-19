@@ -6,13 +6,13 @@ from .forms import ProductForm
 class TestProductForm(TestCase):
     """ Tests for product form """
     def test_sku_is_not_required(self):
-        """ Tests sku field is not required """
+        """ Test sku field is not required """
         form = ProductForm({'sku': ''})
         self.assertFalse(form.is_valid())
         self.assertNotIn('sku', form.errors.keys())
 
     def test_name_is_required(self):
-        """ Tests name field is required """
+        """ Test name field is required """
         form = ProductForm({'name': ''})
         self.assertFalse(form.is_valid())
         self.assertIn('name', form.errors.keys())
@@ -22,7 +22,7 @@ class TestProductForm(TestCase):
         )
 
     def test_description_is_required(self):
-        """ Tests description field is required """
+        """ Test description field is required """
         form = ProductForm({'description': ''})
         self.assertFalse(form.is_valid())
         self.assertIn('description', form.errors.keys())
@@ -32,13 +32,13 @@ class TestProductForm(TestCase):
         )
 
     def test_has_sizes_is_not_required(self):
-        """ Tests has sizes field is not required """
+        """ Test has sizes field is not required """
         form = ProductForm({'has_sizes': ''})
         self.assertFalse(form.is_valid())
         self.assertNotIn('has_sizes', form.errors.keys())
 
     def test_price_is_required(self):
-        """ Tests price field is required """
+        """ Test price field is required """
         form = ProductForm({'price': ''})
         self.assertFalse(form.is_valid())
         self.assertIn('price', form.errors.keys())
@@ -48,7 +48,7 @@ class TestProductForm(TestCase):
         )
 
     def test_image_field_is_not_required(self):
-        """ Tests image field is not required """
+        """ Test image field is not required """
         form = ProductForm({'image_field': ''})
         self.assertFalse(form.is_valid())
         self.assertNotIn('image_field', form.errors.keys())

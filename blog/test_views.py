@@ -8,14 +8,14 @@ class TestViews(TestCase):
     """ Tests for blog views """
     def test_blog_page_url_exists(self):
         """
-        Test that the blog page URL exists
+        Test that blog page URL exists
         """
         response = self.client.get('/blog/')
         self.assertEqual(response.status_code, 200)
 
     def test_blog_view_uses_correct_template(self):
         """
-        Test the correct template loads on page load
+        Test that correct template is used
         """
         response = self.client.get(reverse('blog'))
         self.assertEqual(response.status_code, 200)
@@ -24,14 +24,14 @@ class TestViews(TestCase):
 
     def test_blog_page_is_accessible_by_name(self):
         """
-        test the blog page is accessible by name
+        test blog page is accessible by name
         """
         response = self.client.get(reverse('blog'))
         self.assertEqual(response.status_code, 200)
 
     def test_blog_posts(self):
         """
-        Test that a blog post can be retrieved
+        Test that blog post can be retrieved
         """
         posts = Post.objects.all()
         for post in posts:

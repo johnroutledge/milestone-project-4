@@ -7,14 +7,14 @@ class TestViews(TestCase):
     """ Tests for homepage """
     def test_homepage_url_exists(self):
         """
-        Test that the homepage URL exists
+        Test that homepage URL exists
         """
         response = self.client.get('/')
         self.assertEqual(response.status_code, 200)
 
     def test_homepage_uses_correct_template(self):
         """
-        Test the correct template loads on page load
+        Test the correct template is used
         """
         response = self.client.get(reverse('home'))
         self.assertEqual(response.status_code, 200)
@@ -23,7 +23,7 @@ class TestViews(TestCase):
 
     def test_homepage_is_accessible_by_name(self):
         """
-        test the homepage is accessible by name
+        test homepage is accessible by name
         """
         response = self.client.get(reverse('home'))
         self.assertEqual(response.status_code, 200)

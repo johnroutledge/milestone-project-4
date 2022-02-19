@@ -5,8 +5,10 @@ from .forms import ContactForm
 
 class TestContactForm(TestCase):
     """ Tests for contact forms """
-
     def test_first_name_is_required(self):
+        """
+        test first name field is required
+        """
         form = ContactForm({'first_name': ''})
         self.assertFalse(form.is_valid())
         self.assertIn('first_name', form.errors.keys())
@@ -16,6 +18,9 @@ class TestContactForm(TestCase):
         )
 
     def test_last_name_is_required(self):
+        """
+        test last name field is required
+        """
         form = ContactForm({'last_name': ''})
         self.assertFalse(form.is_valid())
         self.assertIn('last_name', form.errors.keys())
@@ -25,18 +30,27 @@ class TestContactForm(TestCase):
         )
 
     def test_email_is_required(self):
+        """
+        test email field is required
+        """
         form = ContactForm({'email': ''})
         self.assertFalse(form.is_valid())
         self.assertIn('email', form.errors.keys())
         self.assertEqual(form.errors['email'][0], 'This field is required.')
 
     def test_subject_is_required(self):
+        """
+        test subject field is required
+        """
         form = ContactForm({'subject': ''})
         self.assertFalse(form.is_valid())
         self.assertIn('subject', form.errors.keys())
         self.assertEqual(form.errors['subject'][0], 'This field is required.')
 
     def test_message_is_required(self):
+        """
+        test message field is required
+        """
         form = ContactForm({'message': ''})
         self.assertFalse(form.is_valid())
         self.assertIn('message', form.errors.keys())

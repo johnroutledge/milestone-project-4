@@ -28,7 +28,7 @@ class TestCommentForm(TestCase):
 class TestPostForm(TestCase):
     """ Tests for post form """
     def test_title_is_required(self):
-        """ Tests title field is required """
+        """ Test title field is required """
         form = PostForm({'title': ''})
         self.assertFalse(form.is_valid())
         self.assertIn('title', form.errors.keys())
@@ -38,7 +38,7 @@ class TestPostForm(TestCase):
         )
 
     def test_slug_is_required(self):
-        """ Tests slug field is required """
+        """ Test slug field is required """
         form = PostForm({'slug': ''})
         self.assertFalse(form.is_valid())
         self.assertIn('slug', form.errors.keys())
@@ -48,7 +48,7 @@ class TestPostForm(TestCase):
         )
 
     def test_author_is_required(self):
-        """ Tests author field is required """
+        """ Test author field is required """
         form = PostForm({'author': ''})
         self.assertFalse(form.is_valid())
         self.assertIn('author', form.errors.keys())
@@ -58,7 +58,7 @@ class TestPostForm(TestCase):
         )
 
     def test_content_is_required(self):
-        """ Tests content field is required """
+        """ Test content field is required """
         form = PostForm({'content': ''})
         self.assertFalse(form.is_valid())
         self.assertIn('content', form.errors.keys())
