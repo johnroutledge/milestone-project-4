@@ -16,9 +16,60 @@
 
 
 ## Automated Testing
-Automated unit testing was done within Django.  Due to time constraints with final submission deadline, there are gaps in the automated testing. However, I felt that it was better to do as much automated unit testing that time allowed, rather than none at all.
+Automated unit testing was done within Django.  Due to time constraints with the final submission deadline imminenent, there are gaps in the automated testing. However, I felt that it was better to do as much automated unit testing that time allowed, rather than none at all.
 
-ADD DETAILS & IMAGES
+|  App              | Component     | Test                                                | Test Outcome  |
+|-------------------|---------------|-----------------------------------------------------|---------------|
+|  Basket           | Views         | Basket URL works                                    | PASS          |
+|  Basket           | Views         | Basket uses correct template                        | PASS          |
+|  Basket           | Views         | Basket page accessible by name                      | PASS          |
+|  Basket           | Bag Tools     | Calculate Subtotal function works                   | PASS          |
+|  Blog             | Forms         | Name field is required on comment form              | PASS          |
+|  Blog             | Forms         | Comment body field is required on comment form      | PASS          |
+|  Blog             | Forms         | Title field is required on post form                | PASS          |
+|  Blog             | Forms         | Slug field is required on post form                 | PASS          |
+|  Blog             | Forms         | Author field is required on post form               | PASS          |
+|  Blog             | Forms         | Content field is required on post form              | PASS          |
+|  Blog             | Views         | Blog URL works                                      | PASS          |
+|  Blog             | Views         | Blog uses correct template                          | PASS          |
+|  Blog             | Views         | Blog page accessible by name                        | PASS          |
+|  Blog             | Views         | Blog post can be retrieved                          | PASS          |
+|  Blog             | Views         | Blog post detail URL works                          | PASS          |
+|  Blog             | Views         | Blog post detail uses correct template              | PASS          |
+|  Checkout         | Forms         | Full name field is required on order form           | PASS          |
+|  Checkout         | Forms         | Email field is required on order form               | PASS          |
+|  Checkout         | Forms         | Phone number field is required on order form        | PASS          |
+|  Checkout         | Forms         | Street address1 field is required on order form     | PASS          |
+|  Checkout         | Forms         | Street address2 field is not required on order form | PASS          |
+|  Checkout         | Forms         | Town field is required on order form                | PASS          |
+|  Checkout         | Forms         | County field is not required on order form          | PASS          |
+|  Checkout         | Forms         | Postal code field is not required on order form     | PASS          |
+|  Checkout         | Forms         | Country field is required on order form             | PASS          |
+|  Checkout         | Views         | Checkout URL works                                  | PASS          |
+|  Checkout         | Views         | Checkout uses correct template                      | PASS          |
+|  Checkout         | Views         | Checkout page accessible by name                    | PASS          |
+|  Contact          | Forms         | First name field is required on contact form        | PASS          |
+|  Contact          | Forms         | Last name field is required on contact form         | PASS          |
+|  Contact          | Forms         | Email field is required on contact form             | PASS          |
+|  Contact          | Forms         | Subject field is required on contact form           | PASS          |
+|  Contact          | Forms         | Message field is required on contact form           | PASS          |
+|  Contact          | Views         | Contact URL works                                   | PASS          |
+|  Contact          | Views         | Contact uses correct template                       | PASS          |
+|  Contact          | Views         | Contact page accessible by name                     | PASS          |
+|  Home             | Views         | Homepage URL works                                  | PASS          |
+|  Home             | Views         | Homepage uses correct template                      | PASS          |
+|  Home             | Views         | Homepage accessible by name                         | PASS          |
+|  Products         | Forms         | SKU field is not required on product form           | PASS          |
+|  Products         | Forms         | Name field is required on product form              | PASS          |
+|  Products         | Forms         | Description field is required on product form       | PASS          |
+|  Products         | Forms         | Has sizes field is not required on product form     | PASS          |
+|  Products         | Forms         | Price field is required on product form             | PASS          |
+|  Products         | Forms         | Image field is not required on product form         | PASS          |
+|  Reviews          | Forms         | Title field is required on review form              | PASS          |
+|  Reviews          | Forms         | Review content field is required on review form     | PASS          |
+|  Reviews          | Forms         | Rating field is required on review form             | PASS          |
+
+ADD IMAGES
 
 ## Manual Testing
 

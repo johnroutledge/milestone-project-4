@@ -27,7 +27,7 @@ class TestCommentForm(TestCase):
 
 class TestPostForm(TestCase):
     """ Tests for post form """
-    def test_name_is_required(self):
+    def test_title_is_required(self):
         """ Tests title field is required """
         form = PostForm({'title': ''})
         self.assertFalse(form.is_valid())
