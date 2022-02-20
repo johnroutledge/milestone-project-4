@@ -16,7 +16,7 @@
 
 
 ## Automated Testing
-Automated unit testing was done within Django.  Due to time constraints with the final submission deadline imminenent, there are gaps in the automated testing. However, I felt that it was better to do as much automated unit testing that time allowed, rather than none at all.  Subsequent manual testing aimed to cover any ommissions in automated testing.
+Automated unit testing was done within Django.  Due to time constraints with the final submission deadline imminent, there are gaps in the automated testing. However, I felt that it was better to do as much automated unit testing that time allowed, rather than none at all.  Subsequent manual testing aimed to cover any omissions in automated testing.
 
 |  App              | Component     | Test                                                | Test Outcome  |
 |-------------------|---------------|-----------------------------------------------------|---------------|

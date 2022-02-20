@@ -1,4 +1,4 @@
-# Testing code adapted from Code Institute BoutiqueAdo project
+""" Testing code adapted from Code Institute BoutiqueAdo project """
 from django.test import TestCase
 from .forms import CommentForm, PostForm
 
@@ -24,6 +24,7 @@ class TestCommentForm(TestCase):
                          form.errors['comment_body'][0],
                          'This field is required.'
         )
+
 
 class TestPostForm(TestCase):
     """ Tests for post form """

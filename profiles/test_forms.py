@@ -1,4 +1,4 @@
-# Testing code adapted from Code Institute BoutiqueAdo project
+""" Testing code adapted from Code Institute BoutiqueAdo project """
 from django.test import TestCase
 from .forms import UserProfileForm
 
@@ -34,7 +34,7 @@ class TestUserProfileForm(TestCase):
         form = UserProfileForm({'default_county': ''})
         self.assertTrue(form.is_valid())
         self.assertFalse(form.errors)
-  
+
     def test_default_postcode_is_not_required(self):
         """ Test default_postcode field is not required """
         form = UserProfileForm({'default_postcode': ''})

@@ -1,8 +1,9 @@
-# Testing code adapted from Code Institute BoutiqueAdo project
+""" Testing code adapted from Code Institute BoutiqueAdo project """
 from django.test import TestCase
 from django.shortcuts import reverse
 
 from .models import Product
+
 
 class TestViews(TestCase):
     """ Tests for product views """
@@ -43,7 +44,8 @@ class TestViews(TestCase):
         """
         test product detail page loads via url
         """
-        product = Product.objects.create(id='9', name='test', description='test', price='9.99')
+        product = Product.objects.create(id='9', name='test',
+                                         description='test', price='9.99')
         response = self.client.get(f'/products/{product.id}/')
         self.assertEqual(response.status_code, 200)
 
@@ -51,7 +53,8 @@ class TestViews(TestCase):
         """
         test product detail page loads via template
         """
-        product = Product.objects.create(id='9', name='test', description='test', price='9.99')
+        product = Product.objects.create(id='9', name='test',
+                                         description='test', price='9.99')
         response = self.client.get(f'/products/{product.id}/')
         self.assertEqual(response.status_code, 200)
         self.assertTemplateUsed(response, 'products/product_details.html')
@@ -60,6 +63,7 @@ class TestViews(TestCase):
         """
         test product detail page is accessible by name
         """
-        product = Product.objects.create(id='9', name='test', description='test', price='9.99')
+        product = Product.objects.create(id='9', name='test',
+                                         description='test', price='9.99')
         response = self.client.get(reverse('product_detail', args="9"))
         self.assertEqual(response.status_code, 200)

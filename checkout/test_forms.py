@@ -1,4 +1,4 @@
-# Testing code adapted from Code Institute BoutiqueAdo project
+""" Testing code adapted from Code Institute BoutiqueAdo project """
 from django.test import TestCase
 from .forms import OrderForm
 
@@ -50,7 +50,7 @@ class TestOrderForm(TestCase):
         form = OrderForm({'street_address2': ''})
         self.assertFalse(form.is_valid())
         self.assertNotIn('street_address2', form.errors.keys())
-        
+
     def test_town_or_city_is_required(self):
         """ Test town or city field is required """
         form = OrderForm({'town_or_city': ''})

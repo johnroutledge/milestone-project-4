@@ -1,4 +1,4 @@
-# Testing code adapted from Code Institute BoutiqueAdo project
+""" Testing code adapted from Code Institute BoutiqueAdo project """
 from django.test import TestCase
 from django.shortcuts import reverse
 
@@ -16,14 +16,12 @@ class TestViews(TestCase):
         self.assertTemplateUsed(
             response, template_name="contact/contact.html")
 
-
     def test_contact_page_url_exists(self):
         """
         Test that the contact page URL exists
         """
         response = self.client.get('/contact/')
         self.assertEqual(response.status_code, 200)
-
 
     def test_contact_page_is_accessible_by_name(self):
         """

@@ -1,8 +1,9 @@
-# Testing code adapted from Code Institute BoutiqueAdo project
+""" Testing code adapted from Code Institute BoutiqueAdo project """
 from django.test import TestCase
 from django.shortcuts import reverse
 
 from .models import Post
+
 
 class TestViews(TestCase):
     """ Tests for blog views """

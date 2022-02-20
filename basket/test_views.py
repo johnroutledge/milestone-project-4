@@ -1,9 +1,10 @@
-# Testing code adapted from Code Institute BoutiqueAdo project
+""" Testing code adapted from Code Institute BoutiqueAdo project """
 from django.test import TestCase
 from django.shortcuts import reverse
 from django.urls import resolve
 
 from .views import view_basket, add_to_basket
+
 
 class TestViews(TestCase):
     """ Tests for basket views """
