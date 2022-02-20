@@ -301,7 +301,7 @@ The following schema section illustrates the relationships between each of the a
 
 Due to the amount of information regarding testing, it has been detailed in the following separate [file](readme/testing/TESTING.md).
 
-To test the card payment (hosted by Stripe) on the checkout page, the following should be used:
+Note: to test the card payment (hosted by Stripe) on the checkout page, the following should be used:
 * Card number: 4242 4242 4242 4242
 * Exp date: 04/24
 * CVC: 242
@@ -332,7 +332,7 @@ As with testing, due to the amount of information regarding deployment, it has b
 
 **Code**
 
-- Core setup, use of Django, linking to Stripe, Heroku, PostgresSQL and Amazon Web Services were all taken from the Code Institute's Full Stack Frameworks with Django Boutique Ado walkthrough project.
+- Core setup, use of Django (including automated testing), linking to Stripe, Heroku, PostgresSQL and Amazon Web Services were all taken from the Code Institute's Full Stack Frameworks with Django Boutique Ado walkthrough project.
 - [Codepen.io](https://codepen.io/) for the animated nav link hover underline.
 - [Kevin Powell's YouTube channel](https://www.youtube.com/watch?v=huVJW23JHKQ&t=2s&ab_channel=KevinPowell) for the about section's fade-in text effect.
 - [Haritha Computers & Technology YouTube Channel](https://www.youtube.com/c/HarithaComputersTechnology) for the changing banner text effect.
