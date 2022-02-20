@@ -43,7 +43,7 @@ class TestViews(TestCase):
         """
         test product detail page loads via url
         """
-        product = Product.objects.create(id='999', name='test', description='test', price='9.99')
+        product = Product.objects.create(id='9', name='test', description='test', price='9.99')
         response = self.client.get(f'/products/{product.id}/')
         self.assertEqual(response.status_code, 200)
 
@@ -51,9 +51,15 @@ class TestViews(TestCase):
         """
         test product detail page loads via template
         """
-        product = Product.objects.create(id='999', name='test', description='test', price='9.99')
+        product = Product.objects.create(id='9', name='test', description='test', price='9.99')
         response = self.client.get(f'/products/{product.id}/')
         self.assertEqual(response.status_code, 200)
         self.assertTemplateUsed(response, 'products/product_details.html')
 
-     
+    def test_product_detail_page_is_accessible_by_name(self):
+        """
+        test product detail page is accessible by name
+        """
+        product = Product.objects.create(id='9', name='test', description='test', price='9.99')
+        response = self.client.get(reverse('product_detail', args="9"))
+        self.assertEqual(response.status_code, 200)

@@ -16,13 +16,15 @@
 
 
 ## Automated Testing
-Automated unit testing was done within Django.  Due to time constraints with the final submission deadline imminenent, there are gaps in the automated testing. However, I felt that it was better to do as much automated unit testing that time allowed, rather than none at all.
+Automated unit testing was done within Django.  Due to time constraints with the final submission deadline imminenent, there are gaps in the automated testing. However, I felt that it was better to do as much automated unit testing that time allowed, rather than none at all.  Subsequent manual testing aimed to cover any ommissions in automated testing.
 
 |  App              | Component     | Test                                                | Test Outcome  |
 |-------------------|---------------|-----------------------------------------------------|---------------|
 |  Basket           | Views         | Basket URL works                                    | PASS          |
 |  Basket           | Views         | Basket uses correct template                        | PASS          |
 |  Basket           | Views         | Basket page accessible by name                      | PASS          |
+|  Basket           | Views         | view_basket view works correctly                    | PASS          |
+|  Basket           | Views         | add_to_bag view works correctly                     | PASS          |
 |  Basket           | Bag Tools     | Calculate Subtotal function works                   | PASS          |
 |  Blog             | Forms         | Name field is required on comment form              | PASS          |
 |  Blog             | Forms         | Comment body field is required on comment form      | PASS          |
@@ -30,6 +32,7 @@ Automated unit testing was done within Django.  Due to time constraints with the
 |  Blog             | Forms         | Slug field is required on post form                 | PASS          |
 |  Blog             | Forms         | Author field is required on post form               | PASS          |
 |  Blog             | Forms         | Content field is required on post form              | PASS          |
+|  Blog             | Models        | Post string method works                            | PASS          |
 |  Blog             | Views         | Blog URL works                                      | PASS          |
 |  Blog             | Views         | Blog uses correct template                          | PASS          |
 |  Blog             | Views         | Blog page accessible by name                        | PASS          |
@@ -45,6 +48,7 @@ Automated unit testing was done within Django.  Due to time constraints with the
 |  Checkout         | Forms         | County field is not required on order form          | PASS          |
 |  Checkout         | Forms         | Postal code field is not required on order form     | PASS          |
 |  Checkout         | Forms         | Country field is required on order form             | PASS          |
+|  Checkout         | Models        | Order string method works                           | PASS          |
 |  Checkout         | Views         | Checkout URL works                                  | PASS          |
 |  Checkout         | Views         | Checkout uses correct template                      | PASS          |
 |  Checkout         | Views         | Checkout page accessible by name                    | PASS          |
@@ -65,11 +69,30 @@ Automated unit testing was done within Django.  Due to time constraints with the
 |  Products         | Forms         | Has sizes field is not required on product form     | PASS          |
 |  Products         | Forms         | Price field is required on product form             | PASS          |
 |  Products         | Forms         | Image field is not required on product form         | PASS          |
+|  Products         | Models        | Category string method works                        | PASS          |
+|  Products         | Models        | Category friendly name string method works          | PASS          |
+|  Products         | Views         | Product URL works                                   | PASS          |
+|  Products         | Views         | Product uses correct template                       | PASS          |
+|  Products         | Views         | Product page accessible by name                     | PASS          |
+|  Products         | Views         | Product can be retrieved                            | PASS          |
+|  Products         | Views         | Product detail URL works                            | PASS          |
+|  Products         | Views         | Product detail uses correct template                | PASS          |
+|  Products         | Views         | Product detail page accessible by name              | PASS          |
+|  Profiles         | Forms         | Default phone number field is not required          | PASS          |
+|  Profiles         | Forms         | Default street address1 field is not required       | PASS          |
+|  Profiles         | Forms         | Default street address2 field is not required       | PASS          |
+|  Profiles         | Forms         | Default town or city field is not required          | PASS          |
+|  Profiles         | Forms         | Default county field is not required                | PASS          |
+|  Profiles         | Forms         | Default postcode field is not required              | PASS          |
+|  Profiles         | Forms         | Default country field is not required               | PASS          |
 |  Reviews          | Forms         | Title field is required on review form              | PASS          |
 |  Reviews          | Forms         | Review content field is required on review form     | PASS          |
 |  Reviews          | Forms         | Rating field is required on review form             | PASS          |
 
-ADD IMAGES
+Having run the coverage report with all the above tests in place, total coverage was 68% as per screen shot below:
+
+![Coverage report](/readme/images/code/coverage_report.png "Coverage Report")
+
 
 ## Manual Testing
 
@@ -260,7 +283,7 @@ ADD IMAGES
 ## Responsiveness Testing
 The website was tested on various screen sizes using Chrome DevTools, from iPhone5 up to 5k screen.
 
-It was also tested using [Am I Responsive](http://ami.responsivedesign.is/) and the results were as per the following image:
+It was also tested using [Am I Responsive](http://ami.responsivedesign.is/) and the results were as per the following image (note that the homepage video was disabled for the purposes of the test):
 
 ![Main Mockup](/readme/images/jiira_mockup.png "Main Mockup")
 

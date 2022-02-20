@@ -14,8 +14,7 @@ class TestCategoryModel(TestCase):
 
     def test_category_friendly_name_string_method(self):
         """
-        testing category models friendly name string
-        method returns friendly name
+        test category model friendly name string method
         """
         test_case = Category()
         test_case.friendly_name = "test"
