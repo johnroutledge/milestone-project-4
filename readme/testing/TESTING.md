@@ -49,6 +49,7 @@ Automated unit testing was done within Django.  Due to time constraints with the
 |  Checkout         | Forms         | Postal code field is not required on order form     | PASS          |
 |  Checkout         | Forms         | Country field is required on order form             | PASS          |
 |  Checkout         | Models        | Order string method works                           | PASS          |
+|  Checkout         | Models        | Order line item string method works                 | PASS          |
 |  Checkout         | Views         | Checkout URL works                                  | PASS          |
 |  Checkout         | Views         | Checkout uses correct template                      | PASS          |
 |  Checkout         | Views         | Checkout page accessible by name                    | PASS          |
@@ -85,11 +86,15 @@ Automated unit testing was done within Django.  Due to time constraints with the
 |  Profiles         | Forms         | Default county field is not required                | PASS          |
 |  Profiles         | Forms         | Default postcode field is not required              | PASS          |
 |  Profiles         | Forms         | Default country field is not required               | PASS          |
+|  Profiles         | Models        | User profile string method works                    | PASS          |
+|  Profiles         | Views         | Profile URL works                                   | PASS          |
+|  Profiles         | Views         | Profile uses correct template                       | PASS          |
+|  Profiles         | Views         | Profile page accessible by name                     | PASS          |
 |  Reviews          | Forms         | Title field is required on review form              | PASS          |
 |  Reviews          | Forms         | Review content field is required on review form     | PASS          |
 |  Reviews          | Forms         | Rating field is required on review form             | PASS          |
 
-Having run the coverage report with all the above tests in place, total coverage was 68% as per screen shot below:
+Having run the coverage report with all the above tests in place, total coverage was 71% as per screen shot below:
 
 ![Coverage report](/readme/images/code/coverage_report.png "Coverage Report")
 

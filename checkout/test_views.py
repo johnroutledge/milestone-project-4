@@ -26,3 +26,10 @@ class TestViews(TestCase):
         """
         response = self.client.get(reverse('checkout'))
         self.assertEqual(response.status_code, 302)
+
+    def test_cache_checkout_data_view(self):
+        """
+        Test that cache_checkout_data view works
+        """
+        response = self.client.get('/checkout/cache_checkout_data/')
+        self.assertEqual(response.status_code, 405)
