@@ -24,8 +24,8 @@ class UserProfile(models.Model):
     default_postcode = models.CharField(max_length=20, null=True, blank=True)
     default_country = CountryField(blank_label='Country', null=True,
                                    blank=True)
-    first_order_discount_available = models.CharField(max_length=2,
-                                                      null=True, blank=True)
+    # first_order_discount_available = models.CharField(max_length=2,
+    #                                                   null=True, blank=True)
 
     def __str__(self):
         return self.user.username

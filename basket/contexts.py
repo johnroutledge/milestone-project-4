@@ -15,8 +15,8 @@ def basket_contents(request):
 
     basket_items = []
     total = 0
-    discount = 0
-    discounted_total = 0
+    # discount = 0
+    # discounted_total = 0
     product_count = 0
     basket = request.session.get('basket', {})
 
@@ -51,22 +51,22 @@ def basket_contents(request):
         free_delivery_delta = 0
 
     # Calculate any applicable discounts
-    if request.user.is_authenticated:
-        profile = get_object_or_404(UserProfile, user=request.user)
-        if profile.first_order_discount_available == 'no':
-            grand_total = delivery + total
-        else:
-            discount = total * Decimal(settings.FIRST_ORDER_DISCOUNT / 100)
-            discounted_total = total - discount
-            grand_total = delivery + discounted_total
-    else:
-        grand_total = delivery + total
+    # if request.user.is_authenticated:
+    #     profile = get_object_or_404(UserProfile, user=request.user)
+    #     if profile.first_order_discount_available == 'no':
+    #         grand_total = delivery + total
+    #     else:
+    #         discount = total * Decimal(settings.FIRST_ORDER_DISCOUNT / 100)
+    #         discounted_total = total - discount
+    #         grand_total = delivery + discounted_total
+    # else:
+    grand_total = delivery + total
 
     context = {
         'basket_items': basket_items,
         'total': total,
-        'discount': discount,
-        'discounted_total': discounted_total,
+        # 'discount': discount,
+        # 'discounted_total': discounted_total,
         'product_count': product_count,
         'delivery': delivery,
         'free_delivery_delta': free_delivery_delta,
