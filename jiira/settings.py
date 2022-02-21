@@ -125,9 +125,6 @@ WSGI_APPLICATION = 'jiira.wsgi.application'
 
 
 # Connect to Postgres db if running on Heroku, otherwise connect to SQL Lite
-# DATABASES = {
-#         'default': dj_database_url.parse('postgres://eebnwyzvziunpe:4d568ffa163126653c793cf8dce35a6396043cc0009db769e00882f76ade4750@ec2-63-34-223-144.eu-west-1.compute.amazonaws.com:5432/da06gcgnt9b4qi')
-#     }
 if 'DATABASE_URL' in os.environ:
     DATABASES = {
         'default': dj_database_url.parse(os.environ.get('DATABASE_URL'))

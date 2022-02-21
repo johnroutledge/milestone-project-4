@@ -2,6 +2,7 @@
 {% if discount %}
     <h6>{{ first_order_discount }}% first order discount: -${{ discount|floatformat:2 }}</h6>
     <h6>Total: ${{ discounted_total|floatformat:2 }}</h6>
+    <h6>{{ grand_total|floatformat:2 }} DISCOUNT APPLIED</h6>
 {% endif %}
 {% if free_delivery_delta > 0 %}
     <p class="mb-1 text-info">
