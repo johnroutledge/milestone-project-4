@@ -8,21 +8,14 @@ from profiles.models import UserProfile
 
 
 def basket_contents(request):
-
-    if request.user.is_authenticated:
-        profile = get_object_or_404(UserProfile, user=request.user)
-        orders = profile.orders.all()
-        
-        if not orders:
-            discount = 1 - Decimal(settings.FIRST_ORDER_DISCOUNT / 100)
-        else:
-            discount = 0
-    else:
-        discount = 0
+    """
+    Retreive basket contents
+    Calculate delivery costs and discounts
+    """
 
     basket_items = []
     total = 0
-    # discount = 0
+    discount = 0
     discounted_total = 0
     product_count = 0
     basket = request.session.get('basket', {})
@@ -57,27 +50,17 @@ def basket_contents(request):
         delivery = 0
         free_delivery_delta = 0
 
-    # Calculate grand total
-    # if request.user.is_authenticated:
-    #     profile = get_object_or_404(UserProfile, user=request.user)
-    #     orders = profile.orders.all()
-
-    #     if not orders:
-    #         discount = total * Decimal(settings.FIRST_ORDER_DISCOUNT / 100)
-    #         discounted_total = total - discount
-    #         grand_total = delivery + discounted_total
-    #     else:
-    #         grand_total = delivery + total
-    # else:
-    #     grand_total = delivery + total
-
-    if discount:
-        discounted_total = total * discount
-        grand_total = delivery + discounted_total
+    # Calculate any applicable discounts
+    if request.user.is_authenticated:
+        profile = get_object_or_404(UserProfile, user=request.user)
+        if profile.first_order_discount_available == 'no':
+            grand_total = delivery + total
+        else:
+            discount = total * Decimal(settings.FIRST_ORDER_DISCOUNT / 100)
+            discounted_total = total - discount
+            grand_total = delivery + discounted_total
     else:
         grand_total = delivery + total
-
-    # grand_total = delivery + total
 
     context = {
         'basket_items': basket_items,

@@ -123,7 +123,6 @@ WSGI_APPLICATION = 'jiira.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/3.2/ref/settings/#databases
 
-
 # Connect to Postgres db if running on Heroku, otherwise connect to SQL Lite
 if 'DATABASE_URL' in os.environ:
     DATABASES = {
