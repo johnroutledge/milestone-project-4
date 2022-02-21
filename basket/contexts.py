@@ -50,21 +50,21 @@ def basket_contents(request):
         delivery = 0
         free_delivery_delta = 0
 
-    # Caulculate grand total
-    # if request.user.is_authenticated:
-    #     profile = get_object_or_404(UserProfile, user=request.user)
-    #     orders = profile.orders.all()
+    # Calculate grand total
+    if request.user.is_authenticated:
+        profile = get_object_or_404(UserProfile, user=request.user)
+        orders = profile.orders.all()
 
-    #     if not orders:
-    #         discount = total * Decimal(settings.FIRST_ORDER_DISCOUNT / 100)
-    #         discounted_total = total - discount
-    #         grand_total = delivery + discounted_total
-    #     else:
-    #         grand_total = delivery + total
-    # else:
-    #     grand_total = delivery + total
+        if not orders:
+            discount = total * Decimal(settings.FIRST_ORDER_DISCOUNT / 100)
+            discounted_total = total - discount
+            grand_total = delivery + discounted_total
+        else:
+            grand_total = delivery + total
+    else:
+        grand_total = delivery + total
 
-    grand_total = delivery + total
+    # grand_total = delivery + total
 
     context = {
         'basket_items': basket_items,
