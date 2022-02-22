@@ -165,7 +165,7 @@ The Jiira logo used in the nav bar and favicon was to maintain consistency and r
 
 *Generic*
 * Responsive design on the vast majority of devices
-* Delivery banner which displays the purchase requirement for free delivery and also the first order discount.
+* Delivery banner which displays the purchase requirement for free delivery and also product information.
 * Navigation bar, including logo and link to the home page, a search box, an account icon and shopping basket icon which also displays the number of items currently in the basket.
 * Links in the navigation bar collapse to a hamburger button on smaller devices such as smartphones and tablets.
 * Toast messages giving users meaningful feedback to their actions on the website.
@@ -230,6 +230,7 @@ As it was changed towards the end of development, all 'blog' references were lef
 * Skip navigation links for visitors to the site with certain disabilities to enhance their UX.
 * The ability to accept or edit cookies.
 * Marketing opt-in options on the registration page.
+* 20% first order discount (this was in the original version - see 'bugs' in testing readme)
 
 
 ***

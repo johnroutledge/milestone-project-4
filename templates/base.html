@@ -175,12 +175,12 @@
 
     <!----- Changing banner text, credit: Haritha Computers & Technology YouTube Channel ----->
     <script type="text/javascript">
-        var i=0;
+        var i=1;
 
         function textChange()
         {
         var banner=document.getElementById("changing-text");
-        var displayText=["Free delivery on orders over ${{ free_delivery_threshold }}","Get {{ first_order_discount }}% Off Your First Order"];
+        var displayText=["Free delivery on orders over ${{ free_delivery_threshold }}","New Products Added Every Month"];
         banner.innerHTML=displayText[i];
         i=(i+1)%displayText.length;
         }

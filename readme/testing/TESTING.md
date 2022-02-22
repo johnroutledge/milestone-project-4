@@ -116,8 +116,8 @@ Having run the coverage report with all the above tests in place, total coverage
 |  Navbar links                                 | View on mobile |  Should be visible as hamburger icon                      | PASS          |
 |  Navbar links                                 | Hover          |  Pink underline fade up                                   | PASS          |
 |  Hero image/video                             | Page load      |  Should be image on mobile, video on larger screens       | PASS          |
-|  First Order Discount CTA button              | Hover          |  Background change to pink and font to black              | PASS          |
-|  First Order Discount CTA button              | Click          |  Navigate to products page and display all products       | PASS          |
+|  Shop Now CTA button                          | Hover          |  Background change to pink and font to black              | PASS          |
+|  Shope Now Discount CTA button                | Click          |  Navigate to products page and display all products       | PASS          |
 |  Jewellery sections on homepage               | First scroll   |  Images and text should fade in                           | PASS          |
 |  Jewellery section images on homepage         | Hover          |  Border shadow change to pink                             | PASS          |
 |  Jewellery section images on homepage         | Click          |  Navigate to correct pages                                | PASS          |
@@ -177,8 +177,6 @@ Having run the coverage report with all the above tests in place, total coverage
 |  Basket page remove link                      | Click          |  Should remove product from basket                        | PASS          |
 |  Basket page remove link                      | Click          |  Should display success toast                             | PASS          |
 |  Basket page basket total                     | Page load      |  Should show correct basket total price                   | PASS          |
-|  Basket page first order discount CTA         | Page load      |  Should show first order discount CTA if not logged in    | PASS          |
-|  Basket page first order discount             | Page load      |  Should show correct discount if customer's first order   | PASS          |
 |  Basket page total                            | Page load      |  Should show correct total price after any discount       | PASS          |
 |  Basket page delivery charge CTA              | Page load      |  Should show CTA if delivery threshold not reached        | PASS          |
 |  Basket page delivery charge                  | Page load      |  Should show correct delivery amount                      | PASS          |
@@ -386,3 +384,21 @@ In an early version of the website, when clicking on the user profile icon in th
 Towards the end of development of the website, I decided to add the 'reviews' app in order to give users the ability to add product reviews. Once the initial code was in place, the review form wasn't appearing on the product details page. Having read and re-read my code for over an hour, I finally realised that it was a simple naming mistake in the view which was causing the problem. While a was passing a 'form' in, I had called it 'review_form' instead of 'form'. Once I changed the name to just 'form', the review form then rendered correctly on the product details page. Below are screenshots of the code before and after the changes:
 
 ![Review Form Bug](/readme/images/code/review-form-bug.png "Review Form Bug")
+
+3. Duplicate First Order Bug
+
+Just prior to submitting my project I noticed than in the production version a user's first order was being duplicated, but all subsequent orders were fine. It wasn't flagged up in development as the bug didn't occur - all first orders went through as expected. As I was unable to replicate it in the development environment, I turned to various sources to find a fix. Having researched numerous solutions on StackOverflow, Slack and finally Code Institute's Tutor Assistance (the latter involved several hours over two days and three different tutors), it was determined that the code causing the problem involved giving a user a 20% discount off their first order after going back through the commit history.
+
+The original code to calculate the 20% first order discount resided in contexts.py in the basket app. Fixes that were tried included the following:
+* Moving the code to the update_total function in models.py of the checkout app.
+* Deleting the Heroku Postgres database and building it again from scratch.
+* Adding a 'first_order_discount_available' field to the UserProfile model and then using that to trigger the first order discount.
+* Renaming the functions in signals.py in the checkout app.
+* Removing line breaks (put in after doing pep8 testing) in webhook_handler.py in the checkout app.
+
+Unfortunately, none of the above fixes worked and in the last conversation I had with Tutor Assistance, Scott told me it was an "incredibly obscure bug that takes the award for the strangest bug this yearso far!". In the end, I decided to remove the 20% first order discount feature completely, along with all associated code, which solved the problem. Once this project has been graded and I have more time, I will try and put the discount feature back in. Below are some screenshots of the issue:
+
+![Duplicate First Order Bug 1](/readme/images/code/duplicate_first_order_bug1.png "Duplicate First Order Bug 1")
+
+![Duplicate First Order Bug 2](/readme/images/code/duplicate_first_order_bug2.png "Duplicate First Order Bug 2")
+
