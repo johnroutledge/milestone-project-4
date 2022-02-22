@@ -370,7 +370,7 @@ All improvements were made to the accessibilty scores as these were the lowest o
 ![Contact Page Results](/readme/images/lighthouse/lighthouse_contact_page.png "Contact Page Results")
 
 
-## Notable Bug Fixes
+## Notable Bugs
 
 1. User Profile Drop-Down Menu (RESOLVED)
 
