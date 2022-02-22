@@ -340,8 +340,9 @@ As with testing, due to the amount of information regarding deployment, it has b
 - [Julio Codes YouTube channel](https://www.youtube.com/watch?v=sJ1uvHIJKTY&ab_channel=JulioCodes) for Sticky Nav after scroll.
 - The foundations of the blog app were laid by [Django Central](https://djangocentral.com/).
 - [Code Institute Alumni Aukje van der Wal](https://gitlab.com/Aukje/Dark-Luna/-/blob/master/contact/forms.py) for the basics of the contact app.
-- Fellow student Code Institute student, [Taylor Brookes](https://github.com/taybro23) for pointers on user reviews.
+- Fellow Code Institute student, [Taylor Brookes](https://github.com/taybro23) for pointers on user reviews.
 - [Bootstrap Documentation](https://getbootstrap.com/docs/4.0/components/modal/) for the 'confirm delete' modals.
+- Fellow Code Institute student, [suzybee1987](https://github.com/suzybee1987) for help with additional automated testing functions.
 
 **Acknowledgements**
 
