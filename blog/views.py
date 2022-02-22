@@ -1,8 +1,8 @@
 from django.shortcuts import render, redirect, reverse, get_object_or_404
 from django.contrib import messages
 from django.contrib.auth.decorators import login_required
-from .models import Post
 
+from .models import Post
 from profiles.models import UserProfile
 
 from .forms import CommentForm, PostForm
@@ -53,7 +53,7 @@ def add_blog_post(request):
     """ View to add a news (blog) post """
     if not request.user.is_superuser:
         messages.error(request, 'Jiira admin access only.')
-        return redirect(reverse('homepage'))
+        return redirect(reverse('home'))
 
     if request.method == 'POST':
         form = PostForm(request.POST, request.FILES)
@@ -82,7 +82,7 @@ def edit_blog_post(request, slug):
     """ A view to edit a edit a news (blog) post """
     if not request.user.is_superuser:
         messages.error(request, 'Jiira admin access only.')
-        return redirect(reverse('homepage'))
+        return redirect(reverse('home'))
 
     post = get_object_or_404(Post, slug=slug)
     if request.method == 'POST':

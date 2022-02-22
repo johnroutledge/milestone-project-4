@@ -12,7 +12,7 @@
 * [JavaScript Testing](#javascript-testing)
 * [Python Testing](#python-testing)
 * [Lighthouse Testing](#lighthouse-testing)
-* [Notable Bug Fixes](#notable-bug-fixes)
+* [Notable Bugs](#notable-bugs)
 
 
 ## Automated Testing
@@ -372,20 +372,20 @@ All improvements were made to the accessibilty scores as these were the lowest o
 
 ## Notable Bug Fixes
 
-1. User Profile Drop-Down Menu
+1. User Profile Drop-Down Menu (RESOLVED)
 
 In an early version of the website, when clicking on the user profile icon in the navbar, the resulting drop-down menu appeared partially off screen (see screenshots below). This occurred on both mobile and desktop versions. To fix the issue, the class 'dropdown-menu-right' was added to the offending div in both 'base.html' and 'mobile-top-header-html'. 
 
 ![User Profile Menu Bug](/readme/images/code/user-profile-menu-bug.png "User Profile Menu Bug")
 
 
-2. Review Form Bug
+2. Review Form Bug (RESOLVED)
 
 Towards the end of development of the website, I decided to add the 'reviews' app in order to give users the ability to add product reviews. Once the initial code was in place, the review form wasn't appearing on the product details page. Having read and re-read my code for over an hour, I finally realised that it was a simple naming mistake in the view which was causing the problem. While a was passing a 'form' in, I had called it 'review_form' instead of 'form'. Once I changed the name to just 'form', the review form then rendered correctly on the product details page. Below are screenshots of the code before and after the changes:
 
 ![Review Form Bug](/readme/images/code/review-form-bug.png "Review Form Bug")
 
-3. Duplicate First Order Bug
+3. Duplicate First Order Bug (UNRESOLVED)
 
 Just prior to submitting my project I noticed than in the production version a user's first order was being duplicated, but all subsequent orders were fine. It wasn't flagged up in development as the bug didn't occur - all first orders went through as expected. As I was unable to replicate it in the development environment, I turned to various sources to find a fix. Having researched numerous solutions on StackOverflow, Slack and finally Code Institute's Tutor Assistance (the latter involved several hours over two days and three different tutors), it was determined that the code causing the problem involved giving a user a 20% discount off their first order after going back through the commit history.
 
